@@ -1,0 +1,376 @@
+{
+  "Workouts":[
+    {
+      "name": "Chest Dips",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Assisted Chest Dip (Kneeling)",
+        "Band-Assisted Chest Dip",
+        "BW Assisted Chest Dip",
+        "Self-Assisted Chest Dip",
+        "Suspended Chest Dip",
+        "Cable Chest Dips",
+        "Lever Chest Dips",
+        "Sled Standing Chest Dips",
+        "Weighted Chest Dips"
+      ]
+    },
+    {
+      "name": "Chest Dips",
+      "targets": [
+        "Pectoralis Minor"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Assisted Chest Dip",
+        "Lever Chest Dips",
+        "Weighted Chest Dips"
+      ]
+    },
+    {
+      "name": "Bench Press",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "DB Bench Press",
+        "Decline Bench Press",
+        "Lever-Plate Loaded Bench Press",
+        "Lever-Selectorized Bench Press",
+        "Cable Bench Press",
+        "Smith Bench Press"
+      ]
+    },
+    {
+      "name": "Bench Press",
+      "targets": [
+        "Pectorlis Major-Clavicular"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Incline Bench Press",
+        "Cable Bench Press",
+        "Cable Incline Bench Press",
+        "DB Incline Bench Press",
+        "Lever Plate-Loaded Bench Press",
+        "Lever Selectorized Bench Press",,
+        "Smith Incline Bench Press"
+      ]
+    },
+    {
+      "name": "Flies",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Cable Decline Fly",
+        "Cable Lying Fly",
+        "Cable Standing Fly",
+        "Cable Seated Fly",
+        "Suspended Fly",
+        "DB Fly",
+        "DB Decline Fly",
+        "Lever Selectorized Decline Fly",
+        "Lever Selectorized Pec Deck Fly",
+        "Lever Selectorized Seated Fly",
+        "Lever Selectorized Lying Fly",
+        "Lever Selectorized Bent-Over Fly"
+      ]
+    },
+    {
+      "name": "Flies",
+      "targets": [
+        "Pectorlis Major-Clavicular"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Cable Incline Fly",
+        "Cable Standing Incline Fly",
+        "Suspended Fly",
+        "DB Incline Fly",
+        "Lever Selectorized Incline Fly"
+      ]
+    },
+    {
+      "name": "BW Sissy Squat",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Sissy Squat on Apparatus"
+      ]
+    },
+    {
+      "name": "BW Squat",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BW Balance Board Squat"
+      ]
+    },
+    {
+      "name": "BW Step-Up",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BW Lateral Ste[-Up",
+        "BW Step-Down - Alternating"
+      ]
+    },
+    {
+      "name": "Cable Single Leg Split Squat",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "One Arm",
+        "Two Arm"
+      ]
+    },
+    {
+      "name": "Cable Squats",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Cable Bar Squat",
+        "Belt  Squat (Half)"
+      ]
+    },
+    {
+      "name": "Cable Split Squat",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "One Arm"
+      ]
+    },
+    {
+      "name": "Cable Standing Leg Extension",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Cable Step-Down",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Cable Step-Up",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Stretch Kneeling",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Stretch Lever",
+      "targets": [
+        "Rectus Femoris",
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Stretch Lying (Prone)",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "PNF"
+        ]
+    },
+    {
+      "name": "Stretch Standing",
+      "targets": [
+        "Rectus Femoris",
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Towel",
+        "Apparatus"
+      ]
+    },
+    {
+      "name": "Lever Leg Extension",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Alternating Lever Leg Extension"
+      ]
+    },
+    {
+      "name": "Leg Presses",
+      "targets": [
+        "Pectorlis Major-Sternal",
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "45 Degree Leg Press",
+        "Single Leg 45 Degree Leg Press",
+        "Hack Press",
+        "Lying Leg Press",
+        "Seated Leg Press",
+        "Vertical Leg Press",
+        "Single Leg Press (Alternating or Single Leg)",
+        "Lever Single Leg",
+        "Standing Leg Press"
+      ]
+    },
+        {
+      "name": "BB Good morning",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Smith Good Morning"
+      ]
+    },
+    {
+      "name": "Glute-Ham Raise",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Glute-Ham Raise",
+        "BW Glute-Ham Raise",
+        "Weighted Glute-Ham Raise"
+      ]
+    },
+    {
+      "name": "Inverse Leg Curl",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Inverse Leg Curl",
+        "BW Inverse Leg Curl",
+        "SA Inverse Leg Curl",
+        "Suspended Inverse Leg Curl",
+        "Weighted Inverse Leg Curl"
+      ]
+    },
+    {
+      "name": "Leg Curl",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Leg Curl",
+        "BW Hanging/Ball/Power Wheel Leg Curl",
+        "Cable Lying/Standing/Bent-Over Leg Curl",
+        "Suspended Leg Curl",
+        "Lever Kneeling/Lying/Seated Leg Curl",
+        "Suspended Leg Curl"
+      ]
+    },
+    {
+      "name": "Hyperextension",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Hyperextension",
+        "BB Hyperextension 45 Degrees (Back Raise)",
+        "Suspended Hyperextension",
+        "Weight Hyperextension"
+      ]
+    },
+    {
+      "name": "Deadlift",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BB Deadlift",
+        "BB Trapbar Straight-Leg Deadlift",
+        "Cable Standing/Straight-Leg Deadlift",
+        "Lever Seated/Straight-Leg Deadlift",
+        "Smith Straight-Leg Deadlift"
+      ]
+    },
+    {
+      "name": "Hanging Hamstring Bridge",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    },
+    {
+      "name": "Hip Adduction",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "Cable Hip Adduction",
+        "Lever Seated Hip Adduction",
+        "Lever Lying Hip Adduction",
+        "Lever Standing Hip Adduction",
+        "Weight Hip Adduction"
+      ]
+    },
+    {
+      "name": "Side Bridge",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": [
+        "BW Angled Side Bridge",
+        "BW Bent Knee Side Bridge",
+        "BW Side Bridge",
+        "Suspended Side Bridge"
+      ]
+    },
+    {
+      "name": "Side Bend",
+      "targets": [
+        "Pectorlis Major-Sternal"
+      ],
+      "category": "Chest",
+      "variations": []
+    }
+  ]
+}

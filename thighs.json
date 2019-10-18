@@ -1,0 +1,407 @@
+{
+  "Workouts":[
+    {
+      "name": "BB Squats",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Full Squat",
+        "Hack Squat",
+        "Safety Squat",
+        "Trap Bar Squat",
+        "Zercher Squat",
+        "Chain Squat"
+      ]
+    },
+    {
+      "name": "BB Set Up",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Lateral"
+      ]
+    },
+    {
+      "name": "Lunges",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Rear Lunge",
+        "BB Side Lunge",
+        "BB Walking Lunge",
+        "Cable Rear Lunge",
+        "Cable Side Lunge",
+        "Cable Walking Lunge",
+        "DB Rear Lunge",
+        "DB Side Lunge",
+        "DB Walking Lunge",
+        "Lever Rear Lunge",
+        "Sled Rear Lunge",
+        "Smith Rear Lunge"
+      ]
+    },
+    {
+      "name": "Single Leg Split Squat",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Side Split Squat",
+        "BB Single Leg Squat",
+        "BB Split Squat",
+        "BW Side Split Squat",
+        "BW Single Leg Squat",
+        "BW Split Squat",
+        "Cable Side Split Squat",
+        "Cable Single Leg Squat",
+        "Cable Split Squat",
+        "SA Side Split Squat",
+        "Suspended Single Leg Squat",
+        "BB Split Squat",
+        "BB Side Split Squat",
+        "SA Single Leg Squat (Bar | Leg Wrapper)",
+        "Lever V-Squat (Split | Single Leg)"
+      ]
+    },
+    {
+      "name": "BW Sissy Squat",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Sissy Squat on Apparatus"
+      ]
+    },
+    {
+      "name": "BW Squat",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BW Balance Board Squat"
+      ]
+    },
+    {
+      "name": "BW Step-Up",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BW Lateral Ste[-Up",
+        "BW Step-Down - Alternating"
+      ]
+    },
+    {
+      "name": "Cable Single Leg Split Squat",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "One Arm",
+        "Two Arm"
+      ]
+    },
+    {
+      "name": "Cable Squats",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Cable Bar Squat",
+        "Belt  Squat (Half)"
+      ]
+    },
+    {
+      "name": "Cable Split Squat",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "One Arm"
+      ]
+    },
+    {
+      "name": "Cable Standing Leg Extension",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Cable Step-Down",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Cable Step-Up",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Stretch Kneeling",
+      "targets": [
+        "Rectus Femoris",
+        "Quadriceps"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Stretch Lever",
+      "targets": [
+        "Rectus Femoris",
+        "Quadriceps"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Stretch Lying (Prone)",
+      "targets": [
+        "Rectus Femoris",
+        "Quadriceps"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "PNF"
+        ]
+    },
+    {
+      "name": "Stretch Standing",
+      "targets": [
+        "Rectus Femoris",
+        "Quadriceps"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Towel",
+        "Apparatus"
+      ]
+    },
+    {
+      "name": "Lever Leg Extension",
+      "targets": [
+        "Quadriceps"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Alternating Lever Leg Extension"
+      ]
+    },
+    {
+      "name": "Leg Presses",
+      "targets": [
+        "Quadriceps",
+        "Gluteus Maximus",
+        "Adductor Magnus",
+        "Soleus",
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "45 Degree Leg Press",
+        "Single Leg 45 Degree Leg Press",
+        "Hack Press",
+        "Lying Leg Press",
+        "Seated Leg Press",
+        "Vertical Leg Press",
+        "Single Leg Press (Alternating or Single Leg)",
+        "Lever Single Leg",
+        "Standing Leg Press"
+      ]
+    },
+        {
+      "name": "BB Good morning",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Smith Good Morning"
+      ]
+    },
+    {
+      "name": "Glute-Ham Raise",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Glute-Ham Raise",
+        "BW Glute-Ham Raise",
+        "Weighted Glute-Ham Raise"
+      ]
+    },
+    {
+      "name": "Inverse Leg Curl",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Inverse Leg Curl",
+        "BW Inverse Leg Curl",
+        "SA Inverse Leg Curl",
+        "Suspended Inverse Leg Curl",
+        "Weighted Inverse Leg Curl"
+      ]
+    },
+    {
+      "name": "Leg Curl",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Leg Curl",
+        "BW Hanging/Ball/Power Wheel Leg Curl",
+        "Cable Lying/Standing/Bent-Over Leg Curl",
+        "Suspended Leg Curl",
+        "Lever Kneeling/Lying/Seated Leg Curl",
+        "Suspended Leg Curl"
+      ]
+    },
+    {
+      "name": "Hyperextension",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Hyperextension",
+        "BB Hyperextension 45 Degrees (Back Raise)",
+        "Suspended Hyperextension",
+        "Weight Hyperextension"
+      ]
+    },
+    {
+      "name": "Deadlift",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BB Deadlift",
+        "BB Trapbar Straight-Leg Deadlift",
+        "Cable Standing/Straight-Leg Deadlift",
+        "Lever Seated/Straight-Leg Deadlift",
+        "Smith Straight-Leg Deadlift"
+      ]
+    },
+    {
+      "name": "Hanging Hamstring Bridge",
+      "targets": [
+        "Hamstrings"
+      ],
+      "category": "Thighs",
+      "variations": []
+    },
+    {
+      "name": "Hip Adduction",
+      "targets": [
+        "Adductors"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "Cable Hip Adduction",
+        "Lever Seated Hip Adduction",
+        "Lever Lying Hip Adduction",
+        "Lever Standing Hip Adduction",
+        "Weight Hip Adduction"
+      ]
+    },
+    {
+      "name": "Side Bridge",
+      "targets": [
+        "Adductors"
+      ],
+      "category": "Thighs",
+      "variations": [
+        "BW Angled Side Bridge",
+        "BW Bent Knee Side Bridge",
+        "BW Side Bridge",
+        "Suspended Side Bridge"
+      ]
+    },
+    {
+      "name": "Side Bend",
+      "targets": [
+        "Adductors"
+      ],
+      "category": "Thighs",
+      "variations": []
+    }
+  ]
+}

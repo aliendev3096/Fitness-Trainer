@@ -9,7 +9,7 @@ class ProfileWindow(wx.Frame):
     def __init__(self, parent, title):
         wx.Frame.__init__(self, parent, title=title, size=(500, 250));
         self.setupForm();
-
+    def Open(self):
         self.Show(True);
 
     def setupForm(self):

@@ -5,10 +5,19 @@ class HomePanel(wx.Panel):
         super(HomePanel, self).__init__(parent)
         self.vbox = wx.BoxSizer(wx.VERTICAL);
 
+        # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
         self.welcomeBox.Add(self.welcomeText)
 
+        # Routine Type
+
+        # Routine Duration
+
+        # Rotate Workouts?
+
+        # 
+        # Muscle Group Target Selection
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(20, 370));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(20, 400), size=(100, 25));
@@ -16,13 +25,14 @@ class HomePanel(wx.Panel):
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
         self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles']
-        self.cbox = wx.CheckListBox(self, id=wx.NewId(), pos=(20, 450), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
-                           style=wx.RA_SPECIFY_ROWS);
+        self.cbox = wx.CheckListBox(self, id=wx.NewId(), pos=(20, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
+                           style=0);
         self.routineMetaBox.Add(self.mGText);
         self.routineMetaBox.Add(self.selectAllBtn);
         self.routineMetaBox.Add(self.deselectAllBtn);
         self.routineMetaBox.Add(self.cbox);
 
+        # Generate Routine Button
         self.vbox.Add(self.routineMetaBox);
     def onSelectAll(self, event=None):
         self.cbox.SetCheckedStrings(self.muscleGroupList);

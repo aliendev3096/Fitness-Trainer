@@ -70,7 +70,6 @@ class ProfileWindow(wx.Frame):
 
     def onDeleteProfile(self, event=None):
 
-        filename = "./profiles/{}.json".format(self.nameToBeDeleted.Value);
         try:
             os.remove('./profiles/{}.json'.format(self.nameToBeDeleted.Value))
         except EnvironmentError:

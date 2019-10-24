@@ -9,15 +9,25 @@ class HomePanel(wx.Panel):
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
         self.welcomeBox.Add(self.welcomeText)
-
+        self.vbox.Add(self.welcomeBox);
         # Routine Type
+        self.routineTypeBox = wx.BoxSizer(wx.HORIZONTAL);
+        self.toggleEnduranceButton = wx.ToggleButton(self, label="Endurance Focused", pos =(20, 110));
+        self.toggleStrengthButton = wx.ToggleButton(self, label="Strength Focused", pos =(170, 110));
+        self.routineTypeText = wx.StaticText(self, label="Select Workout Focus", pos=(20, 90));
+        self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleEndurance, self.toggleEnduranceButton);
+        self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleStrength, self.toggleStrengthButton);
+        self.routineTypeBox.Add(self.toggleEnduranceButton);
+        self.routineTypeBox.Add(self.toggleStrengthButton);
 
+        self.vbox.Add(self.routineTypeBox);
         # Routine Duration
 
         # Rotate Workouts?
 
-        # 
+        #
         # Muscle Group Target Selection
+        # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(20, 370));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(20, 400), size=(100, 25));
@@ -25,19 +35,28 @@ class HomePanel(wx.Panel):
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
         self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles']
-        self.cbox = wx.CheckListBox(self, id=wx.NewId(), pos=(20, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
+        self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(20, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
                            style=0);
         self.routineMetaBox.Add(self.mGText);
         self.routineMetaBox.Add(self.selectAllBtn);
         self.routineMetaBox.Add(self.deselectAllBtn);
-        self.routineMetaBox.Add(self.cbox);
+        self.routineMetaBox.Add(self.checkbox);
 
         # Generate Routine Button
         self.vbox.Add(self.routineMetaBox);
     def onSelectAll(self, event=None):
-        self.cbox.SetCheckedStrings(self.muscleGroupList);
+        self.checkbox.SetCheckedStrings(self.muscleGroupList);
     def onDeselectAll(self, event=None):
-        self.cbox.SetCheckedStrings([]);
+        self.checkbox.SetCheckedStrings([]);
+    def onToggleEndurance(self, event=None):
+        if(self.toggleEnduranceButton):
+            self.toggleEnduranceButton.SetValue(True);
+            self.toggleStrengthButton.SetValue(False);
+    def onToggleStrength(self, event=None):
+        if(self.toggleStrengthButton):
+            self.toggleStrengthButton.SetValue(True)
+            self.toggleEnduranceButton.SetValue(False)
+
 
 
 class RoutinePanel(wx.Panel):

@@ -11,39 +11,37 @@ class HomePanel(wx.Panel):
         self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
         self.welcomeBox.Add(self.welcomeText)
         self.vbox.Add(self.welcomeBox);
+        # Routine Duration
+        self.durationBox = wx.BoxSizer(wx.HORIZONTAL);
+        self.mGText = wx.StaticText(self, label="Select Start Date.", pos=(20, 280));
+        self.calendarStart = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=wx.DateTime().Today(), pos=(20, 175),
+                                            size=(220, 150), name="RoutineStartDate");
+        self.Bind(wx.adv.EVT_CALENDAR_WEEKDAY_CLICKED, self.onStartDateSelect, self.calendarStart);
+        self.durationBox.Add(self.calendarStart);
+        self.vbox.Add(self.durationBox);
         # Routine Type
         self.routineTypeBox = wx.BoxSizer(wx.HORIZONTAL);
-        self.toggleEnduranceButton = wx.ToggleButton(self, label="Endurance Focused", pos =(20, 300));
-        self.toggleStrengthButton = wx.ToggleButton(self, label="Strength Focused", pos =(170, 300));
-        self.routineTypeText = wx.StaticText(self, label="Select Workout Focus", pos=(20, 280));
+        self.toggleEnduranceButton = wx.ToggleButton(self, label="Endurance Focused", pos =(350, 300));
+        self.toggleStrengthButton = wx.ToggleButton(self, label="Strength Focused", pos =(500, 300));
+        self.routineTypeText = wx.StaticText(self, label="Select Workout Focus", pos=(350, 280));
         self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleEndurance, self.toggleEnduranceButton);
         self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleStrength, self.toggleStrengthButton);
         self.routineTypeBox.Add(self.toggleEnduranceButton);
         self.routineTypeBox.Add(self.toggleStrengthButton);
         self.vbox.Add(self.routineTypeBox);
-        # Routine Duration
-        self.durationBox = wx.BoxSizer(wx.HORIZONTAL);
-        self.calendarStart = wx.adv.CalendarCtrl(self, id=wx.ID_ANY, date=wx.DateTime().Today(), pos=(400, 60),
-                                            size=(220, 150), style=wx.adv.CAL_SUNDAY_FIRST, name="RoutineStartDate");
-        self.calendarEnd = wx.adv.CalendarCtrl(self, id=wx.ID_ANY, date=wx.DateTime().Today().Add(wx.DateSpan(weeks=1)), pos=(650, 60),
-                                                 size=(220, 150), style=wx.adv.CAL_SUNDAY_FIRST, name="RoutineEndDate");
-
-        self.durationBox.Add(self.calendarStart);
-        self.durationBox.Add(self.calendarEnd);
-        self.vbox.Add(self.durationBox);
         # Rotate Workouts?
 
         #
         # Muscle Group Target Selection
         # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
-        self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(20, 370));
-        self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(20, 400), size=(100, 25));
-        self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(120, 400), size=(100, 25));
+        self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 370));
+        self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 400), size=(100, 25));
+        self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(450, 400), size=(100, 25));
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
         self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles']
-        self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(20, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
+        self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
                            style=0);
         self.routineMetaBox.Add(self.mGText);
         self.routineMetaBox.Add(self.selectAllBtn);
@@ -67,18 +65,8 @@ class HomePanel(wx.Panel):
             self.toggleStrengthButton.SetValue(True)
             self.toggleEnduranceButton.SetValue(False)
     def onStartDateSelect(self, event=None):
-        if(self.toggleStrengthButton):
-            self.toggleStrengthButton.SetValue(True)
-            self.toggleEnduranceButton.SetValue(False)
-    def onEndDateSelect(self, event=None):
-        if(self.toggleStrengthButton):
-            self.toggleStrengthButton.SetValue(True)
-            self.toggleEnduranceButton.SetValue(False)
+        pass
 
-    def validateDate(self, event=None):
-        if(self.toggleStrengthButton):
-            self.toggleStrengthButton.SetValue(True)
-            self.toggleEnduranceButton.SetValue(False)
 
 
 

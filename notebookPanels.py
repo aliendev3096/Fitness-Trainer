@@ -16,7 +16,7 @@ class HomePanel(wx.Panel):
         self.routineStartDate = wx.DateTime().Today();
         self.routineEndDate = wx.DateTime().Today();
         self.duration = 0;
-        self.mGText = wx.StaticText(self, label="Select Start Date.", pos=(20, 280));
+        self.selectStartText = wx.StaticText(self, label="Select Start Date.", pos=(20, 280));
         self.calendarStart = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=self.routineStartDate, pos=(20, 175),
                                             size=(220, 150), name="RoutineStartDate");
         self.startDateText = wx.StaticText(self, label="Start Date: {}".format(wx.DateTime(self.routineStartDate).Format("%A, %B %d, %G")), pos=(20, 330));
@@ -25,13 +25,17 @@ class HomePanel(wx.Panel):
         self.customerWeeksText = wx.StaticText(self, label="Number in weeks: ", pos=(20, 400));
         self.customWeekInput = wx.TextCtrl(self, pos=(130, 400), size=(75, 25));
         self.addCustomWeeksBtn = wx.Button(self, label="Add", pos=(220, 400), size=(75, 25));
-        self.endDateText = wx.StaticText(self, label="End Date: {}".format(wx.DateTime(self.routineEndDate).Format("%A, %B %d, %G")), pos=(20, 450));
-        self.durationText = wx.StaticText(self, label="Routine Duration: {} Weeks".format(str(self.duration)), pos=(20, 470));
+        self.selectEndText = wx.StaticText(self, label="Select End Date.", pos=(20, 425));
+        self.calendarEnd = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=self.routineEndDate, pos=(20, 425),
+                                            size=(220, 50), name="RoutineStartDate");
+        self.endDateText = wx.StaticText(self, label="End Date: {}".format(wx.DateTime(self.routineEndDate).Format("%A, %B %d, %G")), pos=(20, 500));
+        self.durationText = wx.StaticText(self, label="Routine Duration: {} Weeks".format(str(self.duration)), pos=(20, 520));
 
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 1), self.addOneWeek);
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 2), self.addTwoWeeks);
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, self.customWeekInput.GetValue()), self.addCustomWeeksBtn);
         self.Bind(wx.adv.EVT_DATE_CHANGED, self.onStartDateSelect, self.calendarStart);
+        self.Bind(wx.adv.EVT_DATE_CHANGED, self.onEndDateSelect, self.calendarEnd);
 
         self.durationBox.Add(self.calendarStart);
         self.durationBox.Add(self.startDateText);
@@ -94,15 +98,32 @@ class HomePanel(wx.Panel):
             self.toggleEnduranceButton.SetValue(False)
     def onStartDateSelect(self, event=None):
         self.routineStartDate = self.calendarStart.GetValue();
-        self.startDateText.SetLabel(wx.DateTime(self.routineStartDate).Format("%A, %B %d %G"));
+        self.startDateText.SetLabel("Start Date: {}".format(wx.DateTime(self.routineStartDate).Format("%A, %B %d %G")))
         self.startDateText.Update();
+    def onEndDateSelect(self, event=None):
+        startDate = wx.DateTime(self.calendarStart.GetValue());
+        endDate = wx.DateTime(self.calendarEnd.GetValue());
+        if(startDate < endDate):
+            self.duration = abs(52 - endDate.GetWeekOfYear() + startDate.GetWeekOfYear() + (52 * (endDate.GetYear() - startDate.GetYear() -1)))
+            self.routineEndDate = endDate;
+            self.durationText.SetLabel("Routine Duration: {} Weeks".format(str(self.duration)));
+            self.endDateText.SetForegroundColour(wx.BLACK)
+            self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%A, %B %d %G")))
+            self.durationText.Update();
+            self.endDateText.Update();
+        else:
+            self.endDateText.SetForegroundColour(wx.RED)
+            self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%A, %B %d %G")))
+            self.endDateText.Update();
     def onAddWeeks(self, event=None, weeks=0):
         self.duration = weeks
         newEndDate = wx.DateTime(self.routineStartDate).Add(wx.DateSpan(weeks=int(self.duration)));
         self.routineEndDate = newEndDate
-        self.endDateText.SetLabel(wx.DateTime(newEndDate).Format("%A, %B %d %G"))
+        self.calendarEnd.SetValue(newEndDate)
+        self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(newEndDate).Format("%A, %B %d %G")))
         self.durationText.SetLabel("Routine Duration: {} Weeks".format(str(self.duration)));
         self.durationText.Update();
+        self.calendarEnd.Update();
 
 
 class RoutinePanel(wx.Panel):

@@ -8,11 +8,15 @@ class HomePanel(wx.Panel):
         self.validDuration = False;
         self.validRoutineType = False;
         self.validMuscleGroup = False;
+        self.rotate = False;
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
+        self.infotext = wx.TextCtrl(self, pos=(20,100), style=wx.TE_MULTILINE|wx.BORDER_NONE, size=(930, 100))
+        self.infotext.Value = "Fitness Trainer"
         self.welcomeBox.Add(self.welcomeText)
+        self.welcomeBox.Add(self.infotext)
         self.vbox.Add(self.welcomeBox);
         # Routine Duration
         self.durationBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -63,7 +67,8 @@ class HomePanel(wx.Panel):
         self.routineTypeBox.Add(self.toggleStrengthButton);
         self.vbox.Add(self.routineTypeBox);
         # Rotate Workouts?
-
+        self.rotateExercises = wx.CheckBox(self, id= wx.ID_ANY, label="Rotate Exercises", pos=(20, 600))
+        self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
         # Muscle Group Target Selection
         # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -88,6 +93,8 @@ class HomePanel(wx.Panel):
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
     # Event Handlers
+    def onRotate(self, event=None):
+        self.rotate = True;
     def onSelectAll(self, event=None):
         self.checkbox.SetCheckedStrings(self.muscleGroupList);
     def onDeselectAll(self, event=None):

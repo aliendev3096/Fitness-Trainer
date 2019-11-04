@@ -5,6 +5,9 @@ class HomePanel(wx.Panel):
     def __init__(self, parent):
         super(HomePanel, self).__init__(parent)
         self.vbox = wx.BoxSizer(wx.VERTICAL);
+        self.validDuration = False;
+        self.validRoutineType = False;
+        self.validMuscleGroup = False;
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -61,7 +64,6 @@ class HomePanel(wx.Panel):
         self.vbox.Add(self.routineTypeBox);
         # Rotate Workouts?
 
-        #
         # Muscle Group Target Selection
         # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -82,6 +84,8 @@ class HomePanel(wx.Panel):
 
         # Generate Routine Button
 
+        self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
+        self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
     # Event Handlers
     def onSelectAll(self, event=None):
@@ -92,10 +96,12 @@ class HomePanel(wx.Panel):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);
             self.toggleStrengthButton.SetValue(False);
+        self.validRoutineType = True;
     def onToggleStrength(self, event=None):
         if(self.toggleStrengthButton):
             self.toggleStrengthButton.SetValue(True)
             self.toggleEnduranceButton.SetValue(False)
+        self.validRoutineType = True;
     def onStartDateSelect(self, event=None):
         self.routineStartDate = self.calendarStart.GetValue();
         self.startDateText.SetLabel("Start Date: {}".format(wx.DateTime(self.routineStartDate).Format("%B, %D")))
@@ -142,7 +148,21 @@ class HomePanel(wx.Panel):
         self.durationText.SetLabel("Routine Duration: {} Weeks".format(str(self.duration)));
         self.durationText.Update();
         self.calendarEnd.Update();
+    def onGenerate(self, event=None):
+        errors = []
+        errorMessage = ""
+        if(not self.validRoutineType):
+            errors.append("No Routine Type Selected");
+        if(not self.validDuration):
+            errors.append("Invalid Duration -  See duration parameters for setting a valid date.");
+        if(not self.validMuscleGroup):
+            errors.append("You must select one or more muscle groups");
 
+        if(len(errors) > 0):
+            for error in errors:
+                errorMessage += error
+            errorDialog = wx.MessageDialog(self, message=errorMessage, caption="Failed to generate workouts")
+            errorDialog.ShowModal()
 
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):

@@ -1,6 +1,8 @@
 import wx;
 import wx.adv;
 
+SUCCESS_ICON = "images/success-icon.jpg"
+ERROR_ICON = "images/error-icon.jpg"
 class HomePanel(wx.Panel):
     def __init__(self, parent):
         super(HomePanel, self).__init__(parent)
@@ -13,7 +15,7 @@ class HomePanel(wx.Panel):
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
-        self.infotext = wx.TextCtrl(self, pos=(20,100), style=wx.TE_MULTILINE|wx.BORDER_NONE, size=(930, 100))
+        self.infotext = wx.TextCtrl(self, pos=(20,100), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
         self.infotext.Value = "Fitness Trainer"
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
@@ -66,7 +68,7 @@ class HomePanel(wx.Panel):
         self.routineTypeBox.Add(self.toggleEnduranceButton);
         self.routineTypeBox.Add(self.toggleStrengthButton);
         self.vbox.Add(self.routineTypeBox);
-        # Rotate Workouts?
+        # Rotate Workouts
         self.rotateExercises = wx.CheckBox(self, id= wx.ID_ANY, label="Rotate Exercises", pos=(20, 600))
         self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
         # Muscle Group Target Selection
@@ -87,18 +89,40 @@ class HomePanel(wx.Panel):
         self.routineMetaBox.Add(self.deselectAllBtn);
         self.routineMetaBox.Add(self.checkbox);
 
-        # Generate Routine Button
+        # Form Validation Status
+        self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
+        self.durationValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
+        self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.durationBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.durationValidationImage), pos=(925, 495))
 
+        self.typeValidationText = wx.StaticText(self, label="Routine Type", pos=(775, 540));
+        self.typeValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
+        self.typeValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.typeBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.typeValidationImage), pos=(925, 535))
+
+        self.muscleValidationText = wx.StaticText(self, label="Muscle Groups", pos=(775, 580));
+        self.muscleValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
+        self.muscleValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.muscleBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.muscleValidationImage), pos=(925, 575))
+
+        # Generate Routine Button
         self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
     # Event Handlers
     def onRotate(self, event=None):
-        self.rotate = True;
+        if(self.rotate):
+            self.rotate = False;
+        else:
+            self.rotate = True;
     def onSelectAll(self, event=None):
         self.checkbox.SetCheckedStrings(self.muscleGroupList);
+        self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.muscleBmp.SetBitmap(wx.BitmapFromImage(self.muscleValidationImage))
     def onDeselectAll(self, event=None):
         self.checkbox.SetCheckedStrings([]);
+        self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.muscleBmp.SetBitmap(wx.BitmapFromImage(self.muscleValidationImage))
     def onToggleEndurance(self, event=None):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);

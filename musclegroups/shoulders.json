@@ -1,0 +1,358 @@
+{
+    "Workouts":[
+        {
+            "name": "Behind Neck Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Behind Neck Press",
+                "Lever (plate loaded) Behind Neck Press",
+                "Smith Behind Neck Press"
+            ]
+        },
+        {
+            "name": "Front Raise",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Front Raise",
+                "Cable Front Raise",
+                "DB Front Raise",
+                "Lever (selectorized) Front Raise",
+                "Suspended Front Raise"
+            ]
+        },
+        {
+            "name": "Military Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Military Press",
+                "Lever (plate loaded) Military Press",
+
+
+            ]
+        },
+        {
+            "name": "Shoulder Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB shoulder press",
+                "Cable shoulder press",
+                "DB shoulder press",
+                "Lever (plate loaded) shoulder press",
+                "Lever (selectorized) shoulder press",
+                "sled shoulder press",
+                "smith shoulder press"
+            ]
+        },
+        {
+            "name": "Cable Bar",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "cable bar behind neck press",
+                "cable bar military press",
+                "cable bar shoulder press"
+            ]
+        },
+        {
+            "name": "Twisting Overhead Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "cable twisting overhead pass"
+            ]
+        },
+        {
+            "name": "Arnold Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Arnold Press"
+            ]
+        },
+        {
+            "name": "Reclined Shoulder Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations": [
+                "Lever (plate loaded) reclined shoulder press",
+                "Lever (selectorized) reclined shoulder press"
+            ]
+        },
+        {
+            "name": "Body Weight Handstand Shoulder Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations": []
+        },
+        {
+            "name": "Body Weight Pike Press",
+            "targets": [
+                "anterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations": []
+        },
+        {
+            "name": "Lateral Raise",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Cable Lateral Raise",
+                "DB Lateral Raise",
+                "Lever (plate loaded) Lateral Raise",
+                "Lever (selectorized) Lateral Raise"
+            ]
+        },
+        {
+            "name": "Upright Row",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Upright Row",
+                "Cable Upright Row",
+                "DB Upright Row",
+                "Smith Upright Row"
+            ]
+        },
+        {
+            "name": "Y Raise",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Cable Y Raise",
+                "Suspended Y Raise"
+            ]
+        },
+        {
+            "name": "Incline Lateral Raise",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Incline Lateral Raise"
+            ]
+        },
+        {
+            "name": "Lying Lateral Raise",
+            "targets": [
+                "Lateral deltoid",
+                "Supraspinatus"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Lying Lateral Raise"
+            ]
+        },
+        {
+            "name": "Raise",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Raise"
+            ]
+        },
+        {
+            "name": "BB Machine Upright Row",
+            "targets": [
+                "Lateral deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Lever (plate loaded) BB Machine Upright Row"
+            ]
+        },
+        {
+            "name": "Rear Delt Raise",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Rear Delt Raise",
+                "Lever (plate loaded) Rear Delt Raise"
+            ]
+        },
+        {
+            "name": "Rear Delt Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Rear Delt Row",
+                "Cable Rear Delt Raise",
+                "DB Rear Delt Row",
+                "Smith Rear Delt Row"
+            ]
+        },
+        {
+            "name": "Lying Rear Delt Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "BB Lying Rear Delt Row",
+                "DB Lying Rear Delt Row",
+                "Smith Rear Delt Row"
+            ]
+        },
+        {
+            "name": "Reverse Fly",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Cable Reverse Fly",
+                "Suspended Reverse Fly"
+            ]
+        },
+        {
+            "name": "Rear Lateral Raise",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Cable Rear Lateral Raise",
+                "DB Rear Lateral Raise",
+                "Lever (selectorized) Rear Lateral Raise"
+            ]
+        },
+        {
+            "name": "Cable Standing Cross Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "DB Side Lying Rear Delt Raise",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "Lying Rear Lateral Raise",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Lying Rear Lateral Raise",
+                "Lever (plate loaded) Lying Rear Lateral Raise",
+                "Lever (selectorized) Lying Rear Lateral Raise"
+            ]
+        },
+        {
+            "name": "Seated Rear Lateral Raise",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "DB Seated Rear Lateral Raise",
+                "Lever (plate loaded) Rear Lateral Raise"
+            ]
+        },
+        {
+            "name": "Lever (plate loaded) Incline Rear Delt Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "Seated Rear Delt Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Lever (plate loaded) Seated Rear Delt Row",
+                "Lever (selectorized) Seated Rear Delt Row",
+                "Suspended Rear Delt Row"
+            ]
+        },
+        {
+            "name": "Cable T-Bar Rear Delt Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Seated Reverse Fly",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Inverted Row",
+            "targets": [
+                "Posterior deltoid"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        },
+        {
+            "name": "Front Lateral Raise",
+            "targets": [
+                "Supraspinatus"
+            ],
+            "category": "shoulders",
+            "variations":[
+                "Cable Front Lateral Raise",
+                "DB Front Lateral Raise"
+            ]
+        },
+        {
+            "name": "DB Full Can Lateral Raise",
+            "targets": [
+                "Supraspinatus"
+            ],
+            "category": "shoulders",
+            "variations":[]
+        }
+        ]
+
+        }

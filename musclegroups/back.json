@@ -1,0 +1,490 @@
+{
+    "Workouts":[
+        {
+            "name": "Bent-over Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[
+                "BB Bent-over Row",
+                "DB Bent-over Row",
+                "Lever (plate loaded) Bent-over Row",
+                "Smith Bent-over Row"
+            ]
+        },
+        {
+            "name": "BB Cambered Bar Lying Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Incline Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Incline Row",
+                "Lever (plate loaded) Incline Row"
+            ]
+        },
+        {
+            "name": "Cable Kneeling Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lying Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Lying Row",
+                "DB Lying Row"
+            ]
+        },
+        {
+            "name": "Cable One Arm Bent-over Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Seated Rows",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Seated Rows",
+                "Lever (plate loaded) Seated Rows",
+                "Lever (plate loaded) Seated Rows (no chest pad)",
+                "Lever (selectorized) Seated Rows", 
+                "Lever (selectorized) Seated Rows (no chest pad)", 
+            ]
+        },
+        {
+            "name": "Cable Standing Rows",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) One Arm Standing Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) T-bar Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Seated High Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Underhand Seated Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Inverted Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[
+            "Weighted Inverted Row",
+            "Body Weight Inverted Row",
+            "Suspended Inverted Row"
+            ]
+        },
+        {
+            "name": "Body Weight Underhand Inverted Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Row",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Power Pull",
+            "targets": [
+                "General Back"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Parallel Close Grip Pull-up",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Assisted Parallel Close Grip Pull-up",
+                "Weighted Parallel Close Grip Pull-up",
+                "Body Weight Parallel Close Grip Pull-up",
+            ]
+        },
+        {
+            "name": "Pull-up",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Assisted Pull-up",
+                "Cable Pull-up",
+                "Weighted Pull-up",
+                "Band-assisted Pull-up",
+                "Body Weight Pull-up",
+                "Assisted (Partner) Pull-up",
+                "Self-assisted Pull-up",
+                "Suspension Pull-up"
+            ]
+        },
+        {
+            "name": "Chin-up",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Assisted Chin-up",
+                "Cable Chin-up",
+                "Weighted Chin-up",
+                "Band-assisted Chin-up",
+                "Body Weight Chin-up",
+                "Assisted (Partner) Chin-up",
+                "Self-assisted Chin-up"
+            ]
+        },
+        {
+            "name": "Pullover",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "BB Pullover",
+                "Cable Pullover",
+                "Lever (plate loaded) Pullover",
+                "Lever (selectorized) Pullover"
+            ]
+        },
+        {
+            "name": "Close Grip Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Close Grip Pullover",
+                "Lever (plate loaded) Close Grip Pullover",
+                "Lever (selectorized) Close Grip Pullover"
+            ]
+        },
+        {
+            "name": "Cable Kneeling Bent-over Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Pulldown",
+                "Lever (plate loaded) Pulldown",
+                "Lever (selectorized) Pulldown"
+            ]
+        },
+        {
+            "name": "Rear Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Rear Pulldown",
+                "Lever (plate loaded) Rear Pulldown"
+            ]
+        },
+        {
+            "name": "Cable Twisting Standing Overhead Pull",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Underhand Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Underhand Pulldown",
+                "Lever (plate loaded) Underhand Pulldown",
+                "Lever (selectorized) Underhand Pulldown"
+            ]
+        },
+        {
+            "name": "Front Pulldown",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Lever (plate loaded) Front Pulldown",
+                "Lever (selectorized) Front Pulldown"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Iron Cross",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Rear Pull-up",
+            "targets": [
+                "Latissimus Dorsi",
+                "Teres Major"
+            ],
+            "category": "back",
+            "variations":[
+                "Weighted Rear Pull-up",
+                "Band-assisted Rear Pull-up",
+                "Body Weight Rear Pull-up",
+                "Assisted (Partner) Rear Pull-up",
+                "Self-assisted Rear Pull-up"
+            ]
+        },
+        {
+            "name": "Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[
+                "BB Shrug",
+                "Cable Shrug",
+                "DB Shrug",
+                "Lever (plate loaded) Shrug",
+                "Lever (selectorized) Shrug",
+                "Smith Shrug"
+            ]
+        },
+        {
+            "name": "BB Cambered Bar Seated Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "BB Trap Bar Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Gripless Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[
+                "Lever (plate loaded) Gripless Shrug",
+                "Lever (selectorized) Gripless Shrug",
+                "Sled Gripless Shrug"
+            ]
+        },
+        {
+            "name": "Lever (plate loaded) Seated Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Seated Gripless Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Inverted Shrug",
+            "targets": [
+                "Trapezius",
+                "Upper Fibers",
+                "Levator Scapulae"
+            ],
+            "category": "back",
+            "variations":[
+                "Body Weight Inverted Shrug",
+                "Suspended Inverted Shrug"
+            ]
+        },
+        {
+            "name": "Seated Shoulder External Rotation",
+            "targets": [
+                "Infraspinatus",
+                "Teres Minor"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Seated Shoulder External Rotation",
+                "DB Seated Shoulder External Rotation"
+            ]
+        },
+        {
+            "name": "Upright Shoulder External Rotation",
+            "targets": [
+                "Infraspinatus",
+                "Teres Minor"
+            ],
+            "category": "back",
+            "variations":[
+                "Cable Upright Shoulder External Rotation",
+                "DB Upright Shoulder External Rotation",
+                "Lever (selectorized) Upright Shoulder External Rotation"
+            ]
+        },
+        {
+            "name": "DB Lying Shoulder External Rotation",
+            "targets": [
+                "Infraspinatus",
+                "Teres Minor"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Shoulder External Rotation",
+            "targets": [
+                "Infraspinatus",
+                "Teres Minor"
+            ],
+            "category": "back",
+            "variations":[
+                "Lever (plate loaded) Shoulder External Rotation",
+                "Lever (selectorized) Shoulder External Rotation",
+                "Suspended Shoulder External Rotation"
+            ]
+        },
+        {
+            "name": "Cable Seated Shoulder Internal Rotation",
+            "targets": [
+                "Subscapularis"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Cable Standing Shoulder Internal Rotation",
+            "targets": [
+                "Subscapularis"
+            ],
+            "category": "back",
+            "variations":[]
+        },
+        {
+            "name": "Shoulder Internal Rotation",
+            "targets": [
+                "Subscapularis"
+            ],
+            "category": "back",
+            "variations":[
+                "DB Shoulder Internal Rotation",
+                "Lever (plate loaded) Shoulder Internal Rotation",
+                "Lever (selectorized) Shoulder Internal Rotation"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Upright Shoulder Internal Rotation",
+            "targets": [
+                "Subscapularis"
+            ],
+            "category": "back",
+            "variations":[]
+        }
+
+
+
+    ]
+}

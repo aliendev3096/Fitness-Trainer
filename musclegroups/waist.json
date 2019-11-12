@@ -1,0 +1,656 @@
+{
+    "Workouts":[
+        {
+            "name": "Push Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Push Crunch",
+                "DB Push Crunch",
+                "Lever (selectorized) Push Crunch"
+            ]
+        },
+        {
+            "name": "Push Sit-up",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Push Sit-up",
+                "DB Push Sit-up"
+            ]
+        },
+        {
+            "name": "Lying Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Lying Crunch",
+                "Lever (plate loaded) Lying Crunch",
+                "Lever (selectorized) Lying Crunch"
+            ]
+        },
+        {
+            "name": "Lying Leg-Hip Raise",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Lying Lying Leg-Hip Raise",
+                "Lever (plate loaded) Lying Lying Leg-Hip Raise"
+            ]
+        },
+        {
+            "name": "Cable Kneeling Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Seated Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Seated Crunch",
+                "Lever (selectorized) Seated Crunch"
+            ]
+        },
+        {
+            "name": "Cable Standing Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) Lying Leg Raise Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Seated Leg Raise Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Lever (plate loaded) Seated Leg Raise Crunch",
+                "Lever (selectorized) Seated Leg Raise Crunch"
+            ]
+        },
+        {
+            "name": "Lever (plate loaded) Vertical Leg-Hip Raise",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Side Lying Leg-Hip Raise",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Leg Hip Raises",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Sled Leg Hip Raises",
+                "Weighted Leg Hip Raises",
+                "Body Weight Leg Hip Raises"
+            ]
+        },
+        {
+            "name": "Crunch",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Weighted Crunch",
+                "Body Weight Crunch"
+            ]
+        },
+        {
+            "name": "Sit-Ups",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Weighted Sit-ups",
+                "Body Weight Sit-ups"
+            ]
+        },
+        {
+            "name": "Jack-knife ",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[
+                "Body Weight Jack-knife Sit-up",
+                "Suspended Jack-knife",
+                "Suspended Jack-knife Pike"
+            ]
+        },
+        {
+            "name": "Body Weight V-Up",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Pull Through",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Rollout",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Plyometric Medicine Ball Sit-up",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Isometric Front Plank",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Isonetric Stability Ball Rollout",
+            "targets": [
+                "Rectus Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Abdominal Vacuum",
+            "targets": [
+                "Transverse Abdominis"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Cable Kneeling Twisting Crunch",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Russian Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Russian Twist",
+                "DB Russian Twist",
+                "Weighted Russian Twist"
+            ]
+        },
+        {
+            "name": "Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Side Bend",
+                "DB Side Bend",
+                "Weighted Side Bend",
+                "Body Weight Side Bend",
+                "Suspended Side Bend"
+            ]
+        },
+        {
+            "name": "DB 45 Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) BB Machine Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) Seated Twisting Leg Raise Crunch",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) Seated Side Leg Raise Crunch",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (slectorized) Kneeling Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lying Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Lever (selectorized) Lying Twist",
+                "Weighted Lying Twist",
+                "Body Weight Lying Twist"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Seated Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Side Crunch",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Side Crunch",
+                "Lever (selectorized) Side Crunch"
+            ]
+        },
+        {
+            "name": "Seated Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Seated Twist",
+                "Lever (selectorized) Seated Crunch"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Standing Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Sled Side Leg Hip Raise",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Twisting Crunches",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Weighted Twisting Crunches",
+                "Body Weight Twisting Crunches"
+            ]
+        },
+        {
+            "name": "Twisting Sit-ups",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Weighted Twisting Sit-ups",
+                "Body Weight Twisting Sit-ups"
+            ]
+        },
+        {
+            "name": "Body Weight Angled Side Bend",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Plank Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Side Bridge",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Sled Side Bridge",
+                "Suspended Side Bridge"
+            ]
+        },
+        {
+            "name": "Suspended Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Twisting Jack-knife",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Plyometric Broomstick Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Plyometric Medicine Ball Twist",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Isometric Side Plank",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Push Pull",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Push Pull",
+                "Lever (plate loaded) Push Pull"
+            ]
+        },
+        {
+            "name": "Cable One Arm Row",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Cable One Arm High Row",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "DB One Arm Straight Leg Deadlift",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) One Arm Jam",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) Power Tw",
+            "targets": [
+                "Obliques"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Hyperextension",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Hyperextension",
+                "Weighted Hyperextension",
+                "Body Weight Hyperextension",
+                "Suspended Hyperextension"
+            
+            ]
+        },
+        {
+            "name": "Hyperextension 45",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Hyperextension 45",
+                "Weighted Hyperextension 45"
+            ]
+        },
+        {
+            "name": "Bent Knee Good-morning",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Bent Knee Good-morning",
+                "Smith Bent Knee Good-morning"
+            ]
+        },
+        {
+            "name": "Deadlift",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "BB Deadlift",
+                "Lever (plate loaded) Deadlift",
+                "Smith Deadlift"
+            
+            ]
+        },
+        {
+            "name": "BB Trap Bar Stiff-leg Deadlift",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "BB Trap Bar Straight-leg Deadlift",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Stiff-leg Deadlift",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Stiff-leg Deadlift",
+                "Lever (plate loaded) Stiff-leg Deadlift",
+                "Smith Stiff-leg Deadlift"
+            ]
+        },
+        {
+            "name": "Straight-leg Deadlift",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "Cable Straight-leg Deadlift",
+                "DB Straight-leg Deadlift",
+                "Lever (plate loaded) Straight-leg Deadlift",
+                "Smith Straight-leg Deadlift"
+            ]
+        },
+        {
+            "name": "Back Extension",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[
+                "Lever (selectorized) Back Extension",
+                "Body Weight Back Extension"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Kneeling Back Extension",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Bird Dog",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Bird Dog on ball",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Hanging Hyperextension",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Superman",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Pull Through",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Isometric Decline Back Bridge",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+        {
+            "name": "Isometric Incline Back Bridge",
+            "targets": [
+                "Erector Spinae"
+            ],
+            "category": "waist",
+            "variations":[]
+        },
+
+
+       
+
+
+    ]
+}

@@ -1,0 +1,200 @@
+{
+    "Workouts":[
+        {
+            "name": "Reverse Curl",
+            "targets": [
+                "Brachioradialis"
+            ],
+            "category": "forearms",
+            "variations":[
+                "BB Reverse Curl",
+                "Cable Reverse Curl",
+                "Lever (selectorized) Reverse Curl"
+            ]
+        },
+        {
+            "name": "Reverse Preacher Curl",
+            "targets": [
+                "Brachioradialis"
+            ],
+            "category": "forearms",
+            "variations":[
+                "BB Preacher Reverse Curl",
+                "Cable Preacher Reverse Curl",
+                "Lever (selectorized) Preacher Reverse Curl"
+            ]
+        },
+        {
+            "name": "Hammer Curl",
+            "targets": [
+                "Brachioradialis"
+            ],
+            "category": "forearms",
+            "variations":[
+                "Cable Hammer Curl",
+                "DB Hammer Curl"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Hammer Preacher Curl",
+            "targets": [
+                "Brachioradialis"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Wrist Curl",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "BB Wrist Curl",
+                "Cable Wrist Curl",
+                "DB Wrist Curl",
+                "Lever (plate loaded) Wrist Curl",
+                "Lever (selectorized) Wrist Curl"
+            ]
+        },
+        {
+            "name": "Wrist Roller",
+            "targets": [
+                "Wrist Flexors",
+                "Wrist Extensors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "Cable Wrist Roller",
+                "Lever (selectorized) Wrist Roller"
+            ]
+        },
+        {
+            "name": "Ulnar Deviation",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "DB Ulnar Deviation",
+                "Lever (selectorized) Ulner Deviation"
+            ]
+        },
+        {
+            "name": "Grip",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "Lever (plate loaded) Grip",
+                "Lever (selectorized) Grip",
+                "Sled (plate loaded) Grip"
+            ]
+        },
+        {
+            "name": "Sled (selectorized) One Hand Grip",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Sled (plate loaded) One Hand",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Sled (plate loaded) One Hand Pinch Grip",
+            "targets": [
+                "Wrist Flexors"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Reverse Wrist Curl",
+            "targets": [
+                "Wrist Extensors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "BB Reverse Wrist Curl",
+                "Cable Reverse Wrist Curl",
+                "DB Reverse Wrist Curl",
+                "Lever (plate loaded) Reverse Wrist Curl",
+                "Lever (selectorized) Reverse Wrist Curl"
+            ]
+        },
+        {
+            "name": "Radial Deviation",
+            "targets": [
+                "Wrist Extensors"
+            ],
+            "category": "forearms",
+            "variations":[
+                "DB Radial Deviation",
+                "Lever (plate loaded) Radial Deviation"
+            ]
+        },
+        {
+            "name": "DB Lying Pronation",
+            "targets": [
+                "Pronators"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Seated Pronation",
+            "targets": [
+                "Pronators"
+            ],
+            "category": "forearms",
+            "variations":[
+                "DB Seated Pronation",
+                "Lever (selectorized) Pronation"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Standing Pronation",
+            "targets": [
+                "Pronators"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "DB Lying Supination",
+            "targets": [
+                "Supinators"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+        {
+            "name": "Seated Supination",
+            "targets": [
+                "Supinators"
+            ],
+            "category": "forearms",
+            "variations":[
+                "DB Seated Supination",
+                "Lever (selectorized) Seated Supination"
+            ]
+        },
+        {
+            "name": "Lever (selectorized) Standing Supination",
+            "targets": [
+                "Supinators"
+            ],
+            "category": "forearms",
+            "variations":[]
+        },
+
+    ]
+}

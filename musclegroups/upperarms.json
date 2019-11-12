@@ -1,0 +1,290 @@
+{
+    "Workouts":[
+        {
+            "name": "Triceps Dip",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "Assisted Triceps Dip",
+                "Cable Triceps Dip",
+                "Lever (plate loaded) Triceps Dip",
+                "Lever (selectorized) Triceps Dip",
+                "Weighted Triceps Dip",
+                "Band-assisted Triceps Dip",
+                "Body Weight Triceps Dip",
+                "Suspended Triceps Dip",
+                "Self-assisted Triceps Dip"
+            ]
+        },
+        {
+            "name": "Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Triceps Extension",
+                "Cable Triceps Extension",
+                "DB Triceps Extension",
+                "Lever (plate loaded) Triceps Extension",
+                "Lever (selectorized) Triceps Extension",
+                "Suspended Triceps Extension"
+            ]
+        },
+        {
+            "name": "Close Grip Bench Press",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Close Grip Bench Press",
+                "Lever (plate loaded) Close Grip Bench Press",
+                "Smith Close Grip Bench Press"
+            ]
+        },
+        {
+            "name": "BB JM Press",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Lying Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Lying Triceps Extension",
+                "Cable Lying Triceps Extension",
+                "DB Lying Triceps Extension"
+            ]
+        },
+        {
+            "name": "Cable Bent-over Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Cable Forward Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Incline Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "Cable Incline Triceps Extension",
+                "Lever (selectorized) Incline Triceps Extension"
+            ]
+        },
+        {
+            "name": "Cable Kneeling Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Pushdown",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "Cable Pushdown",
+                "Lever (selectorized) Pushdown"
+            ]
+        },
+        {
+            "name": "Cable Side Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "DB Kickback",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "DB One Arm Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Overhead Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Lever (selectorized) Seated Close Grip Press",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Sled Standing Triceps Dip",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Bench Dip",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "Weighted Bench Dip",
+                "Body Weight Bench Dip"
+            ]
+        },
+        {
+            "name": "Body Weight Suspended Triceps Extension",
+            "targets": [
+                "Triceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Curl",
+                "Cable Curl",
+                "DB Curl",
+                "Lever (selectorized) Curl"
+            ]
+        },
+        {
+            "name": "BB Drag Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Cable Alternating Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Cable Supine Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "DB Incline Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Chin-up",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Body Weight Underhand Inverted Row",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Preacher Curl",
+            "targets": [
+                "Brachialis"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Preacher Curl",
+                "Cable Preacher Curl",
+                "DB Preacher Curl",
+                "Lever (plate loaded) Preacher Curl",
+                "Lever (selectorized) Preacher Curl",
+            ]
+        },
+        {
+            "name": "Prone Incline Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[
+                "BB Prone Incline Curl",
+                "Cable Prone Incline Curl",
+                "DB Prone Incline Curl",
+            ]
+        },
+        {
+            "name": "DB Concentration Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        },
+        {
+            "name": "Suspended Arm Curl",
+            "targets": [
+                "Biceps Brachii"
+            ],
+            "category": "upperarms",
+            "variations":[]
+        }
+
+
+
+
+
+    ]
+}

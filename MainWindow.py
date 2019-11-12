@@ -5,7 +5,7 @@ import wx;
 import ProfileWindow;
 import json;
 import os;
-import notebookPanels;
+import NotebookPanels;
 
 class MainWindow(wx.Frame):
     def __init__(self, parent, title, active_user):
@@ -19,10 +19,10 @@ class MainWindow(wx.Frame):
 
     def createNoteBook(self):
         nb = wx.Notebook(self)
-        nb.AddPage(notebookPanels.HomePanel(nb), "Home")
-        nb.AddPage(notebookPanels.RoutinePanel(nb), "Routines")
-        nb.AddPage(notebookPanels.NotesPanel(nb), "Notes")
-        nb.AddPage(notebookPanels.RoutinePanel(nb), "Settings")
+        nb.AddPage(NotebookPanels.HomePanel(nb), "Home")
+        nb.AddPage(NotebookPanels.RoutinePanel(nb), "Routines")
+        nb.AddPage(NotebookPanels.NotesPanel(nb), "Notes")
+        nb.AddPage(NotebookPanels.RoutinePanel(nb), "Settings")
 
     def setupMenuBar(self):
         # Creating menus with event bindings

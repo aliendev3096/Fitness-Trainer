@@ -14,9 +14,16 @@ class HomePanel(wx.Panel):
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
-        self.welcomeText = wx.StaticText(self, label="Welcome to Fitness-Trainer", pos=(20,60));
+        self.welcomeText = wx.StaticText(self, label="Welcome to Dynamite Fit", pos=(20,60));
         self.infotext = wx.TextCtrl(self, pos=(20,100), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
-        self.infotext.Value = "Fitness Trainer"
+        self.infotext.Value = "Welcome to Dynamite Fit. This application is not intended to help with weight loss. " \
+                              "The purpose of Dynamite Fit is to provide a feeling for numerous diverse workouts to help you in your " \
+                              "journey to healthiness. If you are limited in anyway to perform any of these workouts, please do not feel " \
+                              "obligated to do them as there are plenty of other workouts to choose from. " \
+                              "For the purpose of simplicity, Dynamite Fit generates workout only up to a year from the start date, " \
+                              "although this is not recommended. \n" \
+                              "** To Begin, please provide the following: start date, end date, workout routine type and which muscle groups you with " \
+                              "to target. **"
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
         self.vbox.Add(self.welcomeBox);
@@ -71,13 +78,15 @@ class HomePanel(wx.Panel):
         # Rotate Workouts
         self.rotateExercises = wx.CheckBox(self, id= wx.ID_ANY, label="Rotate Exercises", pos=(20, 600))
         self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
+        self.rotateText = wx.TextCtrl(self, pos=(20,800), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
+        self.rotateText.value = "*Rotating workouts will ensure you don't perform the same workouts every week"
         # Muscle Group Target Selection
         # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 370));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 400), size=(100, 25));
         self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(450, 400), size=(100, 25));
-        self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles']
+        self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles', ]
         self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
                            style=0);
         self.Bind(wx.EVT_CHECKLISTBOX, self.onSingleCheck, self.checkbox)

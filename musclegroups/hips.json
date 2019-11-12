@@ -1,0 +1,204 @@
+{
+    "Workouts":[
+        {
+            "name": "Bent-knee Good-morning",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Bent-knee Good-morning",
+                "Smith Bent-knee Good-morning"
+            ]
+        },
+        {
+            "name": "Deadlifts",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Deadlifts",
+                "Lever (plate loaded) Deadlift",
+                "Smith Deadlifts"
+            ]
+        },
+        {
+            "name": "BB Hip Thrust",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Lunge",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Lunge",
+                "DB Lunge",
+                "Body Weight Lunge"
+            ]
+        },
+        {
+            "name": "Single Leg Split Squat",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Single Leg Split Squat",
+                "Cable Single Leg Split Squat",
+                "DB Single Leg Split Squat",
+                "Lever (plate loaded) Single Leg Split Squat",
+                "Smith Single Leg Split Squat",
+                "Body Weight Single Leg Split Squat",
+                "Suspended Single Leg Split Squat"
+            ]
+        },
+        {
+            "name": "Squat",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Squat",
+                "Cable Squat",
+                "DB Squat",
+                "Lever (plate loaded) Squat",
+                "Lever (selectorized) Squat",
+                "Sled Squat",
+                "Smith Squat",
+                "Body Weight Squat"
+            ]
+        },
+        {
+            "name": "Step-up",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "BB Step-up",
+                "Cable Step-up",
+                "DB Step-up",
+                "Body Weight Step-up"
+            ]
+        },
+        {
+            "name": "BB Trap Bar Deadlift",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Rear Lunge",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "Cable Rear Lunge",
+                "Lever (plate loaded) Rear Lunge",
+                "Sled Rear Lunge",
+                "Smith Rear Lunge"
+            ]
+        },
+        {
+            "name": "Split Squat",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "Cable Split Squat",
+                "Smith Split Squat",
+                "Body Weight Split Squat"
+            ]
+        },
+        {
+            "name": "Cable Standing Hip Extension",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Cable Stiff-leg Deadlift",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Single Leg Stiff Leg Deadlift",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "Body Weight Single Leg Stiff Leg Deadlift",
+                "DB Single Leg Stiff Leg Deadlift"
+            ]
+        },
+        {
+            "name": "Lever (plate loaded) Bent-over Rear Kick",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Leg Presses",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "Lever (plate loaded) Leg Presses",
+                "Lever (plate loaded) Leg Presses",
+                "Sled Leg Presses"
+            ]
+        },
+        {
+            "name": "Lever (plate loaded) Lying Hip Extension",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Lever (plate loaded) Power Runner",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[]
+        },
+        {
+            "name": "Reverse Hyper-extension",
+            "targets": [
+                "Gluteus Maximus"
+            ],
+            "category": "hips",
+            "variations":[
+                "Lever (plate loaded) Reverse Hyper-extension",
+                "Weighted Reverse Hyper-extension",
+                "Body Weight Reverse Hyper-extension"
+            ]
+        },
+        
+
+        
+    ]
+}

@@ -80,7 +80,7 @@ class HomePanel(wx.Panel):
         self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles']
         self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 430), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
                            style=0);
-
+        self.Bind(wx.EVT_CHECKLISTBOX, self.onSingleCheck, self.checkbox)
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
 
@@ -93,17 +93,17 @@ class HomePanel(wx.Panel):
         self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
         self.durationValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.durationBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.durationValidationImage), pos=(925, 495))
+        self.durationBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.durationValidationImage), pos=(925, 495))
 
         self.typeValidationText = wx.StaticText(self, label="Routine Type", pos=(775, 540));
         self.typeValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.typeValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.typeBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.typeValidationImage), pos=(925, 535))
+        self.typeBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.typeValidationImage), pos=(925, 535))
 
         self.muscleValidationText = wx.StaticText(self, label="Muscle Groups", pos=(775, 580));
         self.muscleValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.muscleValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.muscleBmp = wx.StaticBitmap(self, -1, wx.BitmapFromImage(self.muscleValidationImage), pos=(925, 575))
+        self.muscleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.muscleValidationImage), pos=(925, 575))
 
         # Generate Routine Button
         self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
@@ -115,24 +115,39 @@ class HomePanel(wx.Panel):
             self.rotate = False;
         else:
             self.rotate = True;
+    def onSingleCheck(self, event=None):
+        if (len(self.checkbox.GetCheckedStrings()) > 0):
+            self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+            self.validMuscleGroup = True
+        else:
+            self.validMuscleGroup = False
+            self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
     def onSelectAll(self, event=None):
+        self.validMuscleGroup = True
         self.checkbox.SetCheckedStrings(self.muscleGroupList);
         self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.muscleBmp.SetBitmap(wx.BitmapFromImage(self.muscleValidationImage))
+        self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
     def onDeselectAll(self, event=None):
+        self.validMuscleGroup = False
         self.checkbox.SetCheckedStrings([]);
         self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.muscleBmp.SetBitmap(wx.BitmapFromImage(self.muscleValidationImage))
+        self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
     def onToggleEndurance(self, event=None):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);
             self.toggleStrengthButton.SetValue(False);
         self.validRoutineType = True;
+        self.typeValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.typeBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.typeValidationImage), pos=(925, 535))
     def onToggleStrength(self, event=None):
         if(self.toggleStrengthButton):
             self.toggleStrengthButton.SetValue(True)
             self.toggleEnduranceButton.SetValue(False)
         self.validRoutineType = True;
+        self.typeValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.typeBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.typeValidationImage), pos=(925, 535))
     def onStartDateSelect(self, event=None):
         self.routineStartDate = self.calendarStart.GetValue();
         self.startDateText.SetLabel("Start Date: {}".format(wx.DateTime(self.routineStartDate).Format("%B, %D")))
@@ -142,8 +157,12 @@ class HomePanel(wx.Panel):
         endDate = wx.DateTime(self.calendarEnd.GetValue());
         if(startDate < endDate):
             if(endDate.GetYear() == startDate.GetYear()):
+                self.validDuration = True
                 self.duration = (int(endDate.Format("%j")) - int(startDate.Format("%j"))) // 7
                 self.days = (int(endDate.Format("%j")) - int(startDate.Format("%j"))) % 7
+                self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY,
+                                                        index=0).Scale(30, 30);
+                self.durationBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.durationValidationImage), pos=(925, 495))
             elif(endDate.GetYear() - startDate.GetYear() >= 2):
                 self.duration = 0
                 self.days = 0
@@ -151,14 +170,23 @@ class HomePanel(wx.Panel):
                     "Routine Duration: {} Weeks, {} Days".format(str(self.duration), str(self.days)));
                 self.endDateText.SetForegroundColour(wx.RED)
                 self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%B, %D")))
+                self.durationValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY,
+                                                        index=0).Scale(30, 30);
+                self.durationBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.durationValidationImage), pos=(925, 495))
+                self.validDuration = False
                 self.durationText.Update();
                 self.endDateText.Update();
+                self.durationBmp.Update();
                 return 0;
             else:
                 daysLeftInStartYear = 365 - int(startDate.Format("%j"))
                 daysSetInEndYear = abs(0 - int(endDate.Format("%j")))
                 self.duration = (daysLeftInStartYear + daysSetInEndYear) // 7
                 self.days = (daysLeftInStartYear + daysSetInEndYear) % 7
+                self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY,
+                                                        index=0).Scale(30, 30);
+                self.durationBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.durationValidationImage), pos=(925, 495))
+                self.validDuration = True
 
             self.routineEndDate = endDate;
             self.durationText.SetLabel("Routine Duration: {} Weeks, {} Days".format(str(self.duration), str(self.days)));
@@ -168,10 +196,15 @@ class HomePanel(wx.Panel):
             self.endDateText.Update();
         else:
             self.endDateText.SetForegroundColour(wx.RED)
+            self.durationValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY,
+                                                    index=0).Scale(30, 30);
+            self.durationBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.durationValidationImage), pos=(925, 495))
+            self.validDuration = False
             self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%B, %D")))
             self.endDateText.Update();
     def onAddWeeks(self, event=None, weeks=0):
         self.duration = weeks
+        self.validDuration = True
         newEndDate = wx.DateTime(self.routineStartDate).Add(wx.DateSpan(weeks=int(self.duration)));
         self.routineEndDate = newEndDate
         self.calendarEnd.SetValue(newEndDate)
@@ -183,11 +216,11 @@ class HomePanel(wx.Panel):
         errors = []
         errorMessage = ""
         if(not self.validRoutineType):
-            errors.append("No Routine Type Selected");
+            errors.append("No Routine Type Selected \n");
         if(not self.validDuration):
-            errors.append("Invalid Duration -  See duration parameters for setting a valid date.");
+            errors.append("Invalid Duration -  See duration parameters for setting a valid date. \n");
         if(not self.validMuscleGroup):
-            errors.append("You must select one or more muscle groups");
+            errors.append("You must select one or more muscle groups \n");
 
         if(len(errors) > 0):
             for error in errors:

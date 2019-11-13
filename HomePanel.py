@@ -87,17 +87,25 @@ class HomePanel(wx.Panel):
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 210));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 230), size=(100, 25));
         self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(450, 230), size=(100, 25));
-        self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles', ]
-        self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 270), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList,
-                           style=0);
-        self.Bind(wx.EVT_CHECKLISTBOX, self.onSingleCheck, self.checkbox)
+        self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles', 'General Back', 'Latissimus Dorsi/Teres Major', 'Trapezius', 'Infraspinatus/Teres Minor']
+        #self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 270), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList);
+        #self.Bind(wx.EVT_CHECKLISTBOX, self.onSingleCheck, self.checkbox)
+        self.checkBoxList = []
+        self.selectedMuscleGroups = [];
+        self.muscleGroupList.sort();
+        spacer = 270;
+        for muscle in self.muscleGroupList:
+            checkbox = wx.CheckBox(self, id=muscle, label=muscle, pos=(350, spacer))
+            self.Bind(wx.EVT_CHECKBOX, self.onSingleCheck, id=muscle)
+            self.checkBoxList.append(checkbox)
+            spacer = spacer + 20
+
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
 
         self.routineMetaBox.Add(self.mGText);
         self.routineMetaBox.Add(self.selectAllBtn);
         self.routineMetaBox.Add(self.deselectAllBtn);
-        self.routineMetaBox.Add(self.checkbox);
 
         # Form Validation Status
         self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
@@ -126,14 +134,7 @@ class HomePanel(wx.Panel):
         else:
             self.rotate = True;
     def onSingleCheck(self, event=None):
-        if (len(self.checkbox.GetCheckedStrings()) > 0):
-            self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
-            self.validMuscleGroup = True
-        else:
-            self.validMuscleGroup = False
-            self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+        print("singlechecked")
     def onSelectAll(self, event=None):
         self.validMuscleGroup = True
         self.checkbox.SetCheckedStrings(self.muscleGroupList);

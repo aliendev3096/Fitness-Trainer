@@ -16,7 +16,7 @@ class HomePanel(wx.Panel):
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
-        description = "Welcome to Dynamite Fit. This application is not intended to help with weight loss. " \
+        description = "This application is not intended to help with weight loss. " \
                               "The purpose of Dynamite Fit is to provide a feeling for diverse \n workouts to help you on your " \
                               "journey to healthiness. If you are limited in anyway to perform any of these workouts, please do not feel " \
                               "obligated to \n do them as there are plenty of other workouts to choose from. " \
@@ -26,7 +26,7 @@ class HomePanel(wx.Panel):
                               "to target. ** \n" \
                               "Workouts brought to you by: https://exrx.net/"
         self.welcomeText = wx.StaticText(self, label="Welcome to Dynamite Fit", pos=(20,60));
-        self.infotext = wx.StaticText(self, label=description, pos=(20,100), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
+        self.infotext = wx.StaticText(self, label=description, pos=(20,80), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 130))
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
         self.vbox.Add(self.welcomeBox);
@@ -39,11 +39,10 @@ class HomePanel(wx.Panel):
         self.calendarStart = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=self.routineStartDate, pos=(20, 100),
                                             size=(220, 150), name="RoutineStartDate");
         self.startDateText = wx.StaticText(self, label="Start Date: {}".format(wx.DateTime(self.routineStartDate).Format("%B, %D")), pos=(20, 260));
-        self.addOneWeek = wx.Button(self, label="Add 1 Week", pos =(20, 300));
-        self.addTwoWeeks = wx.Button(self, label="Add 2 Weeks", pos=(120, 300));
-        self.customerWeeksText = wx.StaticText(self, label="Number in weeks: ", pos=(20, 340));
-        self.customWeekInput = wx.TextCtrl(self, pos=(130, 340), size=(75, 25));
-        self.addCustomWeeksBtn = wx.Button(self, label="Add", pos=(220, 340), size=(75, 25));
+        self.addOneWeek = wx.Button(self, label="1 Week", pos =(20, 300));
+        self.addTwoWeeks = wx.Button(self, label="2 Weeks", pos=(120, 300));
+        self.customWeeksText = wx.StaticText(self, label="Number in weeks: ", pos=(20, 340));
+        self.customWeekInput = wx.Choice(self, pos=(140, 340), size=(75, 25), choices=["3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]);
         self.selectEndText = wx.StaticText(self, label="Select End Date.", pos=(20, 380));
         self.calendarEnd = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=self.routineEndDate, pos=(20, 380),
                                             size=(220, 50), name="RoutineStartDate");
@@ -52,7 +51,7 @@ class HomePanel(wx.Panel):
 
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 1), self.addOneWeek);
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 2), self.addTwoWeeks);
-        self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, self.customWeekInput.GetValue()), self.addCustomWeeksBtn);
+        self.Bind(wx.EVT_CHOICE, lambda event: self.onAddWeeks(event, int(self.customWeekInput.GetSelection())), self.customWeekInput);
         self.Bind(wx.adv.EVT_DATE_CHANGED, self.onStartDateSelect, self.calendarStart);
         self.Bind(wx.adv.EVT_DATE_CHANGED, self.onEndDateSelect, self.calendarEnd);
 
@@ -60,9 +59,8 @@ class HomePanel(wx.Panel):
         self.durationBox.Add(self.startDateText);
         self.durationBox.Add(self.addOneWeek);
         self.durationBox.Add(self.addTwoWeeks);
-        self.durationBox.Add(self.customerWeeksText);
+        self.durationBox.Add(self.customWeeksText);
         self.durationBox.Add(self.customWeekInput);
-        self.durationBox.Add(self.addCustomWeeksBtn);
         self.durationBox.Add(self.durationText);
         self.durationBox.Add(self.endDateText);
         self.vbox.Add(self.durationBox);
@@ -105,16 +103,50 @@ class HomePanel(wx.Panel):
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 210));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 230), size=(100, 25));
         self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(450, 230), size=(100, 25));
-        self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles', 'General Back', 'Latissimus Dorsi/Teres Major', 'Trapezius', 'Infraspinatus/Teres Minor']
+        self.muscleGroupList = ['Quadriceps',
+                                "Gluteus Maximus",
+                                "Anterior Deltoid",
+                                "Lateral Deltoid",
+                                "Posterior Deltoid",
+                                "Supraspinatus",
+                                'Hamstrings',
+                                'Soles',
+                                'General Back',
+                                'Latissimus Dorsi',
+                                'Trapezius',
+                                'Infraspinatus',
+                                'Subscapularis',
+                                "Pectorlis Major-Sternal",
+                                "Pectoralis Minor",
+                                "Pectorlis Major-Clavicular",
+                                "Brachioradialis",
+                                "Wrist Flexors",
+                                "Pronators",
+                                "Supinators",
+                                "Adductors",
+                                "Rectus Femoris",
+                                "Triceps Brachii",
+                                "Biceps Brachii",
+                                "Rectus Abdominis",
+                                "Obliques",
+                                "Erector Spinae"
+                                 ]
         self.checkBoxList = []
         self.selectedMuscleGroups = [];
         self.muscleGroupList.sort();
         spacer = 270;
-        for muscle in self.muscleGroupList:
-            cb = checkbox = wx.CheckBox(self, id=wx.ID_ANY, label=muscle, pos=(350, spacer), name=muscle)
+        spacer_2 = 270;
+        top_half = len(self.muscleGroupList)//2;
+        for muscle in self.muscleGroupList[0:top_half]:
+            cb = checkbox = wx.CheckBox(self, id=wx.ID_ANY, label=muscle, pos=(330, spacer), name=muscle)
             self.Bind(wx.EVT_CHECKBOX, self.onCheck, cb)
             self.checkBoxList.append(checkbox)
             spacer = spacer + 20
+        for muscle in self.muscleGroupList[top_half:-1]:
+            cb = checkbox = wx.CheckBox(self, id=wx.ID_ANY, label=muscle, pos=(470, spacer_2), name=muscle)
+            self.Bind(wx.EVT_CHECKBOX, self.onCheck, cb)
+            self.checkBoxList.append(checkbox)
+            spacer_2 = spacer_2 + 20
 
         self.selectAllBtn.Bind(wx.EVT_BUTTON, self.onSelectAll);
         self.deselectAllBtn.Bind(wx.EVT_BUTTON, self.onDeselectAll);
@@ -175,15 +207,14 @@ class HomePanel(wx.Panel):
             self.selectedMuscleGroups.append(box.GetName())
         self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
-        print(self.selectedMuscleGroups)
     def onDeselectAll(self, event=None):
+        if(self.validMuscleGroup == True):
+            for box in self.checkBoxList:
+                box.SetValue(False);
+                self.selectedMuscleGroups.remove(box.GetName())
         self.validMuscleGroup = False
-        for box in self.checkBoxList:
-            box.SetValue(False);
-            self.selectedMuscleGroups.remove(box.GetName())
         self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
-        print(self.selectedMuscleGroups)
     def onToggleBalanced(self, event=None):
         if(self.toggleBalanced):
             self.toggleBalanced.SetValue(True);
@@ -278,6 +309,7 @@ class HomePanel(wx.Panel):
         self.calendarEnd.Update();
     def onGenerate(self, event=None):
         errors = []
+        # Form Validation
         errorMessage = ""
         if(not self.validRoutineType):
             errors.append("No Routine Type Selected \n");
@@ -291,6 +323,10 @@ class HomePanel(wx.Panel):
                 errorMessage += error
             errorDialog = wx.MessageDialog(self, message=errorMessage, caption="Failed to generate workouts")
             errorDialog.ShowModal()
+        else:
+            # Change Notebook Pages
+            notebook = self.GetParent()
+            notebook.SetSelection(1)
 
 
 

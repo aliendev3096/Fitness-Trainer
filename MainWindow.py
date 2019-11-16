@@ -21,11 +21,11 @@ class MainWindow(wx.Frame):
         self.Show(True);
 
     def createNoteBook(self):
-        nb = wx.Notebook(self)
-        nb.AddPage(HomePanel.HomePanel(nb), "Home")
-        nb.AddPage(RoutinePanel.RoutinePanel(nb), "Routines")
-        nb.AddPage(NotesPanel.NotesPanel(nb), "Notes")
-        nb.AddPage(SettingsPanel.SettingsPanel(nb), "Settings")
+        self.nb = wx.Notebook(self)
+        self.nb.AddPage(HomePanel.HomePanel(self.nb), "Home")
+        self.nb.AddPage(RoutinePanel.RoutinePanel(self.nb), "Routines")
+        self.nb.AddPage(NotesPanel.NotesPanel(self.nb), "Notes")
+        self.nb.AddPage(SettingsPanel.SettingsPanel(self.nb), "Settings")
 
     def setupMenuBar(self):
         # Creating menus with event bindings

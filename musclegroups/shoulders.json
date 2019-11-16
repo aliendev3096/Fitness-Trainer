@@ -3,7 +3,7 @@
         {
             "name": "Behind Neck Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -15,7 +15,7 @@
         {
             "name": "Front Raise",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -29,7 +29,7 @@
         {
             "name": "Military Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -42,7 +42,7 @@
         {
             "name": "Shoulder Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -58,7 +58,7 @@
         {
             "name": "Cable Bar",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -70,7 +70,7 @@
         {
             "name": "Twisting Overhead Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -80,7 +80,7 @@
         {
             "name": "Arnold Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -90,7 +90,7 @@
         {
             "name": "Reclined Shoulder Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations": [
@@ -101,7 +101,7 @@
         {
             "name": "Body Weight Handstand Shoulder Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations": []
@@ -109,7 +109,7 @@
         {
             "name": "Body Weight Pike Press",
             "targets": [
-                "anterior deltoid"
+                "anterior Deltoid"
             ],
             "category": "shoulders",
             "variations": []
@@ -117,7 +117,7 @@
         {
             "name": "Lateral Raise",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -130,7 +130,7 @@
         {
             "name": "Upright Row",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -143,7 +143,7 @@
         {
             "name": "Y Raise",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -154,7 +154,7 @@
         {
             "name": "Incline Lateral Raise",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -164,7 +164,7 @@
         {
             "name": "Lying Lateral Raise",
             "targets": [
-                "Lateral deltoid",
+                "Lateral Deltoid",
                 "Supraspinatus"
             ],
             "category": "shoulders",
@@ -175,7 +175,7 @@
         {
             "name": "Raise",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -185,7 +185,7 @@
         {
             "name": "BB Machine Upright Row",
             "targets": [
-                "Lateral deltoid"
+                "Lateral Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -195,7 +195,7 @@
         {
             "name": "Rear Delt Raise",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -206,7 +206,7 @@
         {
             "name": "Rear Delt Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -219,7 +219,7 @@
         {
             "name": "Lying Rear Delt Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -231,7 +231,7 @@
         {
             "name": "Reverse Fly",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -242,7 +242,7 @@
         {
             "name": "Rear Lateral Raise",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -254,7 +254,7 @@
         {
             "name": "Cable Standing Cross Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]
@@ -262,7 +262,7 @@
         {
             "name": "DB Side Lying Rear Delt Raise",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]
@@ -270,7 +270,7 @@
         {
             "name": "Lying Rear Lateral Raise",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -282,7 +282,7 @@
         {
             "name": "Seated Rear Lateral Raise",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -293,7 +293,7 @@
         {
             "name": "Lever (plate loaded) Incline Rear Delt Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]
@@ -301,7 +301,7 @@
         {
             "name": "Seated Rear Delt Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -313,7 +313,7 @@
         {
             "name": "Cable T-Bar Rear Delt Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]
@@ -321,7 +321,7 @@
         {
             "name": "Lever (selectorized) Seated Reverse Fly",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]
@@ -329,7 +329,7 @@
         {
             "name": "Body Weight Inverted Row",
             "targets": [
-                "Posterior deltoid"
+                "Posterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[]

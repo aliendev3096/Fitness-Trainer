@@ -7,10 +7,12 @@ class HomePanel(wx.Panel):
     def __init__(self, parent):
         super(HomePanel, self).__init__(parent)
         self.vbox = wx.BoxSizer(wx.VERTICAL);
+        # Form Validations
         self.validDuration = False;
         self.validRoutineType = False;
         self.validMuscleGroup = False;
         self.rotate = False;
+        self.validScheduleType = False;
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -76,13 +78,29 @@ class HomePanel(wx.Panel):
         self.routineTypeBox.Add(self.toggleEnduranceButton);
         self.routineTypeBox.Add(self.toggleStrengthButton);
         self.vbox.Add(self.routineTypeBox);
+        # Routine Schedule
+        self.routineScheduleBox = wx.BoxSizer(wx.HORIZONTAL);
+        self.toggleBalanced = wx.ToggleButton(self, label="Balance Groups", pos =(650, 280));
+        self.togglePriority = wx.ToggleButton(self, label="Prioritize Groups", pos =(770, 280));
+        self.routineScheduleText = wx.StaticText(self, label="Select Muscle Group Ordering", pos=(650, 260));
+        self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleBalanced, self.toggleBalanced);
+        self.Bind(wx.EVT_TOGGLEBUTTON, self.onTogglePriority, self.togglePriority);
+
+        self.routineScheduleBox.Add(self.toggleBalanced);
+        self.routineScheduleBox.Add(self.togglePriority);
+
+        # Routine Schedule Details
+        self.amountOfWorkouts = 4
+        self.routineDetailsText = wx.StaticText(self, label="How many workouts/day?", pos=(650, 320));
+        self.customDetailsInput = wx.Choice(self, pos=(820, 320), size=(75, 25), choices=["1", "2", "3", "4", "5", "6", "7", "8"]);
+        self.customDetailsInput.SetSelection(self.amountOfWorkouts-1)
+        self.Bind(wx.EVT_CHOICE, self.onChoice, self.customDetailsInput)
         # Rotate Workouts
         self.rotateExercises = wx.CheckBox(self, id= wx.ID_ANY, label="Rotate Exercises", pos=(20, 600))
         self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
         rotateStaticText = "* Rotating workouts will ensure you don't perform the same workouts every week."
         self.rotateText = wx.StaticText(self, label=rotateStaticText,  pos=(20,630), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
         # Muscle Group Target Selection
-        # self.checkbox.GetCheckedStrings() => Retrieve Muscle Groups from form.
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 210));
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 230), size=(100, 25));
@@ -106,6 +124,11 @@ class HomePanel(wx.Panel):
         self.routineMetaBox.Add(self.deselectAllBtn);
 
         # Form Validation Status
+        self.scheduleValidationText = wx.StaticText(self, label="Schedule Type", pos=(775, 460));
+        self.scheduleValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
+        self.scheduleValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
+
         self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
         self.durationValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
@@ -115,6 +138,7 @@ class HomePanel(wx.Panel):
         self.typeValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.typeValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.typeBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.typeValidationImage), pos=(925, 535))
+
 
         self.muscleValidationText = wx.StaticText(self, label="Muscle Groups", pos=(775, 580));
         self.muscleValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
@@ -126,6 +150,8 @@ class HomePanel(wx.Panel):
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
     # Event Handlers
+    def onChoice(self, event=None):
+        self.amountOfWorkouts = event.GetEventObject().GetSelection()-1;
     def onRotate(self, event=None):
         if(self.rotate):
             self.rotate = False;
@@ -158,6 +184,20 @@ class HomePanel(wx.Panel):
         self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
         print(self.selectedMuscleGroups)
+    def onToggleBalanced(self, event=None):
+        if(self.toggleBalanced):
+            self.toggleBalanced.SetValue(True);
+            self.togglePriority.SetValue(False);
+        self.validScheduleType = True;
+        self.scheduleValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
+    def onTogglePriority(self, event=None):
+        if(self.togglePriority):
+            self.togglePriority.SetValue(True)
+            self.toggleBalanced.SetValue(False)
+        self.validScheduleType = True;
+        self.scheduleValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
     def onToggleEndurance(self, event=None):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);

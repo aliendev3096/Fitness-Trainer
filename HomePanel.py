@@ -88,15 +88,13 @@ class HomePanel(wx.Panel):
         self.selectAllBtn = wx.Button(self, id=wx.NewId(), label="Select All", pos=(350, 230), size=(100, 25));
         self.deselectAllBtn = wx.Button(self, id=wx.NewId(), label="Deselect All", pos=(450, 230), size=(100, 25));
         self.muscleGroupList = ['Quadriceps', 'Hamstrings', 'Soles', 'General Back', 'Latissimus Dorsi/Teres Major', 'Trapezius', 'Infraspinatus/Teres Minor']
-        #self.checkbox = wx.CheckListBox(self, id=wx.NewId(), pos=(350, 270), size=(200, 25*len(self.muscleGroupList)), choices=self.muscleGroupList);
-        #self.Bind(wx.EVT_CHECKLISTBOX, self.onSingleCheck, self.checkbox)
         self.checkBoxList = []
         self.selectedMuscleGroups = [];
         self.muscleGroupList.sort();
         spacer = 270;
         for muscle in self.muscleGroupList:
-            checkbox = wx.CheckBox(self, id=muscle, label=muscle, pos=(350, spacer))
-            self.Bind(wx.EVT_CHECKBOX, self.onSingleCheck, id=muscle)
+            cb = checkbox = wx.CheckBox(self, id=wx.ID_ANY, label=muscle, pos=(350, spacer), name=muscle)
+            self.Bind(wx.EVT_CHECKBOX, self.onCheck, cb)
             self.checkBoxList.append(checkbox)
             spacer = spacer + 20
 
@@ -133,18 +131,33 @@ class HomePanel(wx.Panel):
             self.rotate = False;
         else:
             self.rotate = True;
-    def onSingleCheck(self, event=None):
-        print("singlechecked")
+    def onCheck(self, event=None):
+        if event.IsChecked():
+            self.selectedMuscleGroups.append(event.GetEventObject().GetName())
+            self.validMuscleGroup = True
+            self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+        else:
+            self.selectedMuscleGroups.remove(event.GetEventObject().GetName())
+            self.validMuscleGroup = False
+            self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
     def onSelectAll(self, event=None):
         self.validMuscleGroup = True
-        self.checkbox.SetCheckedStrings(self.muscleGroupList);
+        for box in self.checkBoxList:
+            box.SetValue(True);
+            self.selectedMuscleGroups.append(box.GetName())
         self.muscleValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+        print(self.selectedMuscleGroups)
     def onDeselectAll(self, event=None):
         self.validMuscleGroup = False
-        self.checkbox.SetCheckedStrings([]);
+        for box in self.checkBoxList:
+            box.SetValue(False);
+            self.selectedMuscleGroups.remove(box.GetName())
         self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+        print(self.selectedMuscleGroups)
     def onToggleEndurance(self, event=None):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);

@@ -1,6 +1,6 @@
 # Author: Jeff Vang
 # https://exrx.net/Lists/Directory
-from classes import Workout, DailyRoutine, WeeklyRoutine
+from classes import Workout, Session, Routine
 import MainWindow;
 import wx;
 import os;

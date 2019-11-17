@@ -1,5 +1,7 @@
 import wx;
 import wx.adv;
+import json;
+import classes;
 
 SUCCESS_ICON = "images/success-icon.jpg"
 ERROR_ICON = "images/error-icon.jpg"
@@ -12,6 +14,7 @@ class HomePanel(wx.Panel):
         self.validRoutineType = False;
         self.validMuscleGroup = False;
         self.rotate = False;
+        self.exclude = False;
         self.validScheduleType = False;
 
         # Intro Text
@@ -35,6 +38,7 @@ class HomePanel(wx.Panel):
         self.routineStartDate = wx.DateTime().Today();
         self.routineEndDate = wx.DateTime().Today();
         self.duration = 0;
+        self.days = 0;
         self.selectStartText = wx.StaticText(self, label="Select Start Date.", pos=(20, 200));
         self.calendarStart = wx.adv.DatePickerCtrl(self, id=wx.ID_ANY, dt=self.routineStartDate, pos=(20, 100),
                                             size=(220, 150), name="RoutineStartDate");
@@ -93,6 +97,10 @@ class HomePanel(wx.Panel):
         self.customDetailsInput = wx.Choice(self, pos=(820, 320), size=(75, 25), choices=["1", "2", "3", "4", "5", "6", "7", "8"]);
         self.customDetailsInput.SetSelection(self.amountOfWorkouts-1)
         self.Bind(wx.EVT_CHOICE, self.onChoice, self.customDetailsInput)
+        # Exclude Weekends
+        self.excludeWeekends = wx.CheckBox(self, id= wx.ID_ANY, label="Exclude Weekends", pos=(20, 570))
+        self.Bind(wx.EVT_CHECKBOX, self.onExclude, self.excludeWeekends)
+
         # Rotate Workouts
         self.rotateExercises = wx.CheckBox(self, id= wx.ID_ANY, label="Rotate Exercises", pos=(20, 600))
         self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
@@ -129,8 +137,7 @@ class HomePanel(wx.Panel):
                                 "Biceps Brachii",
                                 "Rectus Abdominis",
                                 "Obliques",
-                                "Erector Spinae"
-                                 ]
+                                "Erector Spinae"]
         self.checkBoxList = []
         self.selectedMuscleGroups = [];
         self.muscleGroupList.sort();
@@ -178,6 +185,8 @@ class HomePanel(wx.Panel):
         self.muscleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.muscleValidationImage), pos=(925, 575))
 
         # Generate Routine Button
+        self.routineName = wx.TextCtrl(self, value="", pos=(775, 610), size=(200, 20))
+        self.routineName.SetHint("Enter a routine name")
         self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
@@ -189,6 +198,11 @@ class HomePanel(wx.Panel):
             self.rotate = False;
         else:
             self.rotate = True;
+    def onExclude(self, event=None):
+        if(self.exclude):
+            self.exclude = False;
+        else:
+            self.exclude = True;
     def onCheck(self, event=None):
         if event.IsChecked():
             self.selectedMuscleGroups.append(event.GetEventObject().GetName())
@@ -324,9 +338,47 @@ class HomePanel(wx.Panel):
             errorDialog = wx.MessageDialog(self, message=errorMessage, caption="Failed to generate workouts")
             errorDialog.ShowModal()
         else:
+            newRoutine = classes.Routine(name=self.routineName)
+            self.generateRoutine(newRoutine)
+            # Save Data
+            # user = self.GetParent().GetParent().active_user.replace("&", "");
+            # with open('{}.json'.format(user)) as userjson:
+            #     userData = json.load(userjson);
+            #     userData["Routines"].append(newRoutine)
+            #     json.dump(userData, userjson);
+
             # Change Notebook Pages
             notebook = self.GetParent()
             notebook.SetSelection(1)
 
+    def generateRoutine(self, routine):
+        if self.exclude:
+            routineDays = 5 * self.duration + self.days
+        else:
+            routineDays = 7 * self.duration + self.days
+        musclegroups = self.muscleGroupList;
+        if self.toggleBalanced == True:
+            for day in range(1, routineDays+1):
+                if (len(musclegroups) <= self.amountOfWorkouts):
+                    startDate = wx.DateTime(self.calendarStart.GetValue());
+                    if self.exclude:
+                        nextDay = startDate.Add(wx.DateSpan(days=day))
+                        while (nextDay.GetWeekDayName() == wx.DateTime.Sat or nextDay.GetWeekDayName() == wx.DateTime.Sun):
+                            nextDay = startDate.Add(wx.DateSpan(days=1))
+                    else:
+                        nextDay = startDate.Add(wx.DateSpan(days=day))
 
+                    newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(isBalanced=True, groups=musclegroups))
+                    routine.addSession(newSession)
+                else:
+                    pass
 
+    def generateWorkouts(self, isBalanced, groups):
+        workouts = [];
+        if isBalanced:
+            for workout in range(self.amountOfWorkouts):
+                for group in groups:
+                    newWorkout = classes.Workout()
+                    workouts.append(newWorkout)
+        else:
+            pass

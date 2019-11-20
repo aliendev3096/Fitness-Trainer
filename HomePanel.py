@@ -182,7 +182,7 @@ class HomePanel(wx.Panel):
 
     # Event Handlers
     def onChoice(self, event=None):
-        self.amountOfWorkouts = event.GetEventObject().GetSelection()-1;
+        self.amountOfWorkouts = event.GetEventObject().GetSelection();
     def onRotate(self, event=None):
         if(self.rotate):
             self.rotate = False;
@@ -201,9 +201,10 @@ class HomePanel(wx.Panel):
             self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
         else:
             self.selectedMuscleGroups.remove(event.GetEventObject().GetName())
-            self.validMuscleGroup = False
-            self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-            self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+            if(len(self.selectedMuscleGroups) == 0):
+                self.validMuscleGroup = False
+                self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+                self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
     def onSelectAll(self, event=None):
         self.validMuscleGroup = True
         for box in self.checkBoxList:
@@ -346,8 +347,15 @@ class HomePanel(wx.Panel):
             routineDays = 7 * self.duration + self.days
 
         # Copy Musclegroups List
-        musclegroups = self.muscleGroupList;
-
+        mgStart = 0
+        mgEnd = self.amountOfWorkouts + 1
+        # If we target less/equal groups than workouts/day, send the entire list of groups
+        if(len(self.selectedMuscleGroups) <= mgEnd):
+            musclegroups = self.selectedMuscleGroups;
+        # Else, we have more groups to account for in single session, send only a subset
+        else:
+            musclegroups = self.selectedMuscleGroups[mgStart:mgEnd];
+        print(musclegroups)
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
             startDate = wx.DateTime(self.calendarStart.GetValue());
@@ -359,13 +367,29 @@ class HomePanel(wx.Panel):
                 nextDay = startDate.Add(wx.DateSpan(days=day))
 
             nextDay = nextDay.Format("%A, %D");
-            newSession = classes.Session(date=nextDay, workouts=[]) # workouts=self.generateWorkouts(groups=musclegroups))
+
+
+            newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups))
             routine.addSession(newSession)
+
+            # Use the next section of muscle groups for the next day
+            mgStart = mgEnd;
+            mgEnd += self.amountOfWorkouts + 1
+            # If we reach the end of the muscle groups list, wrap around to beginning of list.
+            if len(self.selectedMuscleGroups) < mgEnd:
+                musclegroups = self.selectedMuscleGroups[mgStart:-1]
+                mgStart = 0;
+                mgEnd = self.amountOfWorkouts + 1
+                musclegroups.append(self.selectedMuscleGroups[mgStart:mgEnd])
+            else:
+                musclegroups = self.selectedMuscleGroups[mgStart:mgEnd]
+
         return routine
     def generateWorkouts(self, groups):
-        workouts = [];
-        for workout in range(self.amountOfWorkouts):
-            for group in groups:
-
-                newWorkout = classes.Workout()
-                workouts.append(newWorkout)
+        # workouts = [];
+        # for workout in range(self.amountOfWorkouts):
+        #     for group in groups:
+        #
+        #         newWorkout = classes.Workout()
+        #         workouts.append(newWorkout)
+        return groups;

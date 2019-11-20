@@ -1,9 +1,10 @@
 class Workout:
-    def __init__(self, name, muscleGroup, reps=10, sets=3):
+    def __init__(self, name, muscleGroup, reps, sets, weight=0):
         self.workoutName = name;
         self.muscleGroup = muscleGroup;
         self.reps = reps;
         self.sets = sets;
+        self.weight = weight;
     def getMuscleGroups(self):
         return self.muscleGroup;
 

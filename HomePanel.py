@@ -20,9 +20,11 @@ class HomePanel(wx.Panel):
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         description = "This application is not intended to help with weight loss. " \
                               "The purpose of Dynamite Fit is to provide a feeling for diverse \n workouts to help you on your " \
-                              "journey to healthiness. If you are limited in anyway to perform any of these workouts, please do not feel " \
-                              "obligated to \n do them as there are plenty of other workouts to choose from. " \
-                              "For the purpose of simplicity, Dynamite Fit generates workout only up to a year \n from the start date, " \
+                              "journey to healthiness. By no means should you follow these workouts strictly. \n You are " \
+                              "free to manipulate your workouts as you want. If you are limited in anyway to perform any of these workouts, " \
+                              "please do not feel obligated to \n do them as there are plenty of other workouts to choose from." \
+                              "Dynamite Fit is intended ONLY as a guide. \n" \
+                              "For the purpose of simplicity, Dynamite Fit generates workout only up to a year from the start date, " \
                               "although this is not recommended. \n" \
                               "** To Begin, please provide the following: start date, end date, workout routine type and which muscle groups you with " \
                               "to target. ** \n" \
@@ -355,7 +357,7 @@ class HomePanel(wx.Panel):
         # Else, we have more groups to account for in single session, send only a subset
         else:
             musclegroups = self.selectedMuscleGroups[mgStart:mgEnd];
-        print(musclegroups)
+
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
             startDate = wx.DateTime(self.calendarStart.GetValue());
@@ -369,7 +371,7 @@ class HomePanel(wx.Panel):
             nextDay = nextDay.Format("%A, %D");
 
 
-            newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups))
+            newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups, tracker=routine.tracker))
             routine.addSession(newSession)
 
             # Use the next section of muscle groups for the next day
@@ -386,10 +388,13 @@ class HomePanel(wx.Panel):
 
         return routine
     def generateWorkouts(self, groups):
-        # workouts = [];
-        # for workout in range(self.amountOfWorkouts):
-        #     for group in groups:
-        #
-        #         newWorkout = classes.Workout()
-        #         workouts.append(newWorkout)
-        return groups;
+        workouts = [];
+        # Generate a workout for each muscle group
+        for group in groups:
+            if self.toggleEnduranceButton.GetValue() == True:
+                newWorkout = classes.Workout(reps=20, sets=3)
+
+            else:
+                newWorkout = classes.Workout(reps=5, sets=3)
+            workouts.append(newWorkout)
+        return workouts;

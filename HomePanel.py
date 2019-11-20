@@ -9,13 +9,12 @@ class HomePanel(wx.Panel):
     def __init__(self, parent):
         super(HomePanel, self).__init__(parent)
         self.vbox = wx.BoxSizer(wx.VERTICAL);
-        # Form Validations
+        # Set Form Validations to False, we don't start with a valid form.
         self.validDuration = False;
         self.validRoutineType = False;
         self.validMuscleGroup = False;
         self.rotate = False;
         self.exclude = False;
-        self.validScheduleType = False;
 
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
@@ -33,6 +32,7 @@ class HomePanel(wx.Panel):
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
         self.vbox.Add(self.welcomeBox);
+
         # Routine Duration
         self.durationBox = wx.BoxSizer(wx.HORIZONTAL);
         self.routineStartDate = wx.DateTime().Today();
@@ -68,6 +68,7 @@ class HomePanel(wx.Panel):
         self.durationBox.Add(self.durationText);
         self.durationBox.Add(self.endDateText);
         self.vbox.Add(self.durationBox);
+
         # Routine Type
         self.routineTypeBox = wx.BoxSizer(wx.HORIZONTAL);
         self.toggleEnduranceButton = wx.ToggleButton(self, label="Endurance Focused", pos =(650, 230));
@@ -80,16 +81,6 @@ class HomePanel(wx.Panel):
         self.routineTypeBox.Add(self.toggleEnduranceButton);
         self.routineTypeBox.Add(self.toggleStrengthButton);
         self.vbox.Add(self.routineTypeBox);
-        # Routine Schedule
-        self.routineScheduleBox = wx.BoxSizer(wx.HORIZONTAL);
-        self.toggleBalanced = wx.ToggleButton(self, label="Balance Groups", pos =(650, 280));
-        self.togglePriority = wx.ToggleButton(self, label="Prioritize Groups", pos =(770, 280));
-        self.routineScheduleText = wx.StaticText(self, label="Select Muscle Group Ordering", pos=(650, 260));
-        self.Bind(wx.EVT_TOGGLEBUTTON, self.onToggleBalanced, self.toggleBalanced);
-        self.Bind(wx.EVT_TOGGLEBUTTON, self.onTogglePriority, self.togglePriority);
-
-        self.routineScheduleBox.Add(self.toggleBalanced);
-        self.routineScheduleBox.Add(self.togglePriority);
 
         # Routine Schedule Details
         self.amountOfWorkouts = 4
@@ -97,6 +88,8 @@ class HomePanel(wx.Panel):
         self.customDetailsInput = wx.Choice(self, pos=(820, 320), size=(75, 25), choices=["1", "2", "3", "4", "5", "6", "7", "8"]);
         self.customDetailsInput.SetSelection(self.amountOfWorkouts-1)
         self.Bind(wx.EVT_CHOICE, self.onChoice, self.customDetailsInput)
+        self.relationshipNoteText = wx.StaticText(self, label="* Each Workout in a session corresponds to a single muscle group.", pos=(20, 650));
+
         # Exclude Weekends
         self.excludeWeekends = wx.CheckBox(self, id= wx.ID_ANY, label="Exclude Weekends", pos=(20, 570))
         self.Bind(wx.EVT_CHECKBOX, self.onExclude, self.excludeWeekends)
@@ -106,6 +99,7 @@ class HomePanel(wx.Panel):
         self.Bind(wx.EVT_CHECKBOX, self.onRotate, self.rotateExercises)
         rotateStaticText = "* Rotating workouts will ensure you don't perform the same workouts every week."
         self.rotateText = wx.StaticText(self, label=rotateStaticText,  pos=(20,630), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 100))
+
         # Muscle Group Target Selection
         self.routineMetaBox = wx.BoxSizer(wx.HORIZONTAL);
         self.mGText = wx.StaticText(self, label="Select which muscle groups to target.", pos=(350, 210));
@@ -163,11 +157,6 @@ class HomePanel(wx.Panel):
         self.routineMetaBox.Add(self.deselectAllBtn);
 
         # Form Validation Status
-        self.scheduleValidationText = wx.StaticText(self, label="Schedule Type", pos=(775, 460));
-        self.scheduleValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
-        self.scheduleValidationImage = wx.Image(name="images/error-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
-
         self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
         self.durationValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
@@ -185,11 +174,12 @@ class HomePanel(wx.Panel):
         self.muscleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.muscleValidationImage), pos=(925, 575))
 
         # Generate Routine Button
-        self.routineName = wx.TextCtrl(self, value="", pos=(775, 610), size=(200, 20))
+        self.routineName = wx.TextCtrl(self, value="", pos=(775, 610), size=(200, 25))
         self.routineName.SetHint("Enter a routine name")
         self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
+
     # Event Handlers
     def onChoice(self, event=None):
         self.amountOfWorkouts = event.GetEventObject().GetSelection()-1;
@@ -229,20 +219,6 @@ class HomePanel(wx.Panel):
         self.validMuscleGroup = False
         self.muscleValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
         self.muscleBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
-    def onToggleBalanced(self, event=None):
-        if(self.toggleBalanced):
-            self.toggleBalanced.SetValue(True);
-            self.togglePriority.SetValue(False);
-        self.validScheduleType = True;
-        self.scheduleValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
-    def onTogglePriority(self, event=None):
-        if(self.togglePriority):
-            self.togglePriority.SetValue(True)
-            self.toggleBalanced.SetValue(False)
-        self.validScheduleType = True;
-        self.scheduleValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-        self.scheduleBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.scheduleValidationImage), pos=(925, 455))
     def onToggleEndurance(self, event=None):
         if(self.toggleEnduranceButton):
             self.toggleEnduranceButton.SetValue(True);
@@ -333,52 +309,63 @@ class HomePanel(wx.Panel):
             errors.append("You must select one or more muscle groups \n");
 
         if(len(errors) > 0):
+            # Check for Errors based on Form Validation
             for error in errors:
                 errorMessage += error
             errorDialog = wx.MessageDialog(self, message=errorMessage, caption="Failed to generate workouts")
             errorDialog.ShowModal()
         else:
-            newRoutine = classes.Routine(name=self.routineName)
-            self.generateRoutine(newRoutine)
-            # Save Data
-            # user = self.GetParent().GetParent().active_user.replace("&", "");
-            # with open('{}.json'.format(user)) as userjson:
-            #     userData = json.load(userjson);
-            #     userData["Routines"].append(newRoutine)
-            #     json.dump(userData, userjson);
+            # Instantiate Routine
+            newEmptyRoutine = classes.Routine(name=self.routineName.GetValue())
+            newRoutine = self.generateRoutine(newEmptyRoutine)
+
+            # Open File for Reading and Deserialize
+            user = self.GetParent().GetParent().active_user.replace("&", "");
+            with open('./profiles/{}.json'.format(user), 'r') as userjson:
+                data = json.load(userjson)
+
+            # Serialize Routine
+            serialized = json.dumps(newRoutine.__dict__, default=lambda o: o.__dict__).replace("\n", "");
+
+            # Deserialize and Append
+            data["Routines"].append(json.loads(serialized))
+
+            # Serialize and Save to json File
+            with open('./profiles/{}.json'.format(user), 'w+') as updatedUserJson:
+                json.dump(data, updatedUserJson, indent=4);
 
             # Change Notebook Pages
             notebook = self.GetParent()
             notebook.SetSelection(1)
 
     def generateRoutine(self, routine):
+        # Set Days based on exclude weekends parameter
         if self.exclude:
             routineDays = 5 * self.duration + self.days
         else:
             routineDays = 7 * self.duration + self.days
+
+        # Copy Musclegroups List
         musclegroups = self.muscleGroupList;
-        if self.toggleBalanced == True:
-            for day in range(1, routineDays+1):
-                if (len(musclegroups) <= self.amountOfWorkouts):
-                    startDate = wx.DateTime(self.calendarStart.GetValue());
-                    if self.exclude:
-                        nextDay = startDate.Add(wx.DateSpan(days=day))
-                        while (nextDay.GetWeekDayName() == wx.DateTime.Sat or nextDay.GetWeekDayName() == wx.DateTime.Sun):
-                            nextDay = startDate.Add(wx.DateSpan(days=1))
-                    else:
-                        nextDay = startDate.Add(wx.DateSpan(days=day))
 
-                    newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(isBalanced=True, groups=musclegroups))
-                    routine.addSession(newSession)
-                else:
-                    pass
+        # Create a Workout Session for each day in a single routine
+        for day in range(0, routineDays+1):
+            startDate = wx.DateTime(self.calendarStart.GetValue());
+            if self.exclude:
+                nextDay = startDate.Add(wx.DateSpan(days=day))
+                while (nextDay.GetWeekDay() == wx.DateTime.Sat or nextDay.GetWeekDay() == wx.DateTime.Sun):
+                    nextDay = startDate.Add(wx.DateSpan(days=1))
+            else:
+                nextDay = startDate.Add(wx.DateSpan(days=day))
 
-    def generateWorkouts(self, isBalanced, groups):
+            nextDay = nextDay.Format("%A, %D");
+            newSession = classes.Session(date=nextDay, workouts=[]) # workouts=self.generateWorkouts(groups=musclegroups))
+            routine.addSession(newSession)
+        return routine
+    def generateWorkouts(self, groups):
         workouts = [];
-        if isBalanced:
-            for workout in range(self.amountOfWorkouts):
-                for group in groups:
-                    newWorkout = classes.Workout()
-                    workouts.append(newWorkout)
-        else:
-            pass
+        for workout in range(self.amountOfWorkouts):
+            for group in groups:
+
+                newWorkout = classes.Workout()
+                workouts.append(newWorkout)

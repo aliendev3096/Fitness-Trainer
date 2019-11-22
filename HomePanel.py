@@ -2,6 +2,8 @@ import wx;
 import wx.adv;
 import json;
 import classes;
+from helpers import searchWorkouts
+from helpers import getLeastUsedWorkout
 
 SUCCESS_ICON = "images/success-icon.jpg"
 ERROR_ICON = "images/error-icon.jpg"
@@ -382,19 +384,41 @@ class HomePanel(wx.Panel):
                 musclegroups = self.selectedMuscleGroups[mgStart:-1]
                 mgStart = 0;
                 mgEnd = self.amountOfWorkouts + 1
-                musclegroups.append(self.selectedMuscleGroups[mgStart:mgEnd])
+                musclegroups.extend(self.selectedMuscleGroups[mgStart:mgEnd])
             else:
                 musclegroups = self.selectedMuscleGroups[mgStart:mgEnd]
 
         return routine
-    def generateWorkouts(self, groups):
+    def generateWorkouts(self, groups, tracker):
         workouts = [];
         # Generate a workout for each muscle group
         for group in groups:
             if self.toggleEnduranceButton.GetValue() == True:
-                newWorkout = classes.Workout(reps=20, sets=3)
-
+                reps = 20
+                sets = 3
             else:
-                newWorkout = classes.Workout(reps=5, sets=3)
+                reps = 5
+                sets = 2
+            # Search for workouts of a muscle group
+            newWorkoutsAsList = searchWorkouts(group);
+            # Search for least used workout in routine
+            singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker)
+
+            # Extract workout properties
+            name = singleWorkout.get("name")
+            targets = singleWorkout.get("targets")
+            variations = singleWorkout.get("variations")
+
+            # Create the workout & add to session
+            newWorkout = classes.Workout(name=name, muscleGroup=targets[0],
+                                         reps=reps, sets=sets, variations=variations)
+
+            # Track the workout to the routine history
+            # If it exists, add a count, else add one to the count
+            if(name in tracker.keys()):
+                tracker[name] = tracker[name] + 1
+            else:
+                tracker[name] = 1
+            # Add workout to session workout list
             workouts.append(newWorkout)
         return workouts;

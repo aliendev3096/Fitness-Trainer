@@ -133,6 +133,7 @@ class HomePanel(wx.Panel):
                                 "Rectus Femoris",
                                 "Triceps Brachii",
                                 "Biceps Brachii",
+                                "Brachialis",
                                 "Rectus Abdominis",
                                 "Obliques",
                                 "Erector Spinae"]
@@ -321,7 +322,8 @@ class HomePanel(wx.Panel):
             errorDialog.ShowModal()
         else:
             # Instantiate Routine
-            newEmptyRoutine = classes.Routine(name=self.routineName.GetValue())
+            newEmptyRoutine = classes.Routine(name=self.routineName.GetValue(), session=[], tracker={})
+            # Generate Routine
             newRoutine = self.generateRoutine(newEmptyRoutine)
 
             # Open File for Reading and Deserialize
@@ -335,9 +337,11 @@ class HomePanel(wx.Panel):
             # Deserialize and Append
             data["Routines"].append(json.loads(serialized))
 
-            # Serialize and Save to json File
+            # Serialize and Save to json profile
             with open('./profiles/{}.json'.format(user), 'w+') as updatedUserJson:
                 json.dump(data, updatedUserJson, indent=4);
+
+            # Update Menu Bar with Routine Selection
 
             # Change Notebook Pages
             notebook = self.GetParent()
@@ -363,6 +367,7 @@ class HomePanel(wx.Panel):
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
             startDate = wx.DateTime(self.calendarStart.GetValue());
+            # Exclude weekends logic
             if self.exclude:
                 nextDay = startDate.Add(wx.DateSpan(days=day))
                 while (nextDay.GetWeekDay() == wx.DateTime.Sat or nextDay.GetWeekDay() == wx.DateTime.Sun):
@@ -372,7 +377,7 @@ class HomePanel(wx.Panel):
 
             nextDay = nextDay.Format("%A, %D");
 
-
+            # Create Session
             newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups, tracker=routine.tracker))
             routine.addSession(newSession)
 
@@ -405,9 +410,9 @@ class HomePanel(wx.Panel):
             singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker)
 
             # Extract workout properties
-            name = singleWorkout.get("name")
-            targets = singleWorkout.get("targets")
-            variations = singleWorkout.get("variations")
+            name = singleWorkout["name"]
+            targets = singleWorkout["targets"]
+            variations = singleWorkout["variations"]
 
             # Create the workout & add to session
             newWorkout = classes.Workout(name=name, muscleGroup=targets[0],

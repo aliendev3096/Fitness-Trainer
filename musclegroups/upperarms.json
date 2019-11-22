@@ -250,7 +250,7 @@
                 "Cable Preacher Curl",
                 "DB Preacher Curl",
                 "Lever (plate loaded) Preacher Curl",
-                "Lever (selectorized) Preacher Curl",
+                "Lever (selectorized) Preacher Curl"
             ]
         },
         {
@@ -262,7 +262,7 @@
             "variations":[
                 "BB Prone Incline Curl",
                 "Cable Prone Incline Curl",
-                "DB Prone Incline Curl",
+                "DB Prone Incline Curl"
             ]
         },
         {
@@ -281,10 +281,5 @@
             "category": "upperarms",
             "variations":[]
         }
-
-
-
-
-
     ]
 }

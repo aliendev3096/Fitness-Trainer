@@ -5,19 +5,19 @@ def searchWorkouts(musclegroup):
     if musclegroup in ["Rectus Abdominis", "Obliques" , "Erector Spinae", "Transverse Abdominis"]:
         with open("./musclegroups/waist.json", 'r') as waistjson:
             workouts = json.load(waistjson)
-            allWorkouts = workouts.get("Workouts", "");
+            allWorkouts = workouts["Workouts"];
             return getGroupWorkouts(musclegroup, allWorkouts)
     elif musclegroup in ["Biceps Brachii",  "Triceps Brachii" , "Brachialis"]:
-        with open("./musclegroups/waist.json", 'r') as upperarmsjson:
+        with open("./musclegroups/upperarms.json", 'r') as upperarmsjson:
             workouts = json.load(upperarmsjson)
-            allWorkouts = workouts.get("Workouts", "");
+            allWorkouts = workouts["Workouts"];
             return getGroupWorkouts(musclegroup, allWorkouts)
 
 def getGroupWorkouts(musclegroup, allowedWorkouts):
     groupWorkouts = []
     for workout in allowedWorkouts:
         # Compare only first muscle group, even though some workouts are multi targeting
-        if(workout.get("targets")[0] == musclegroup):
+        if(workout["targets"][0] == musclegroup):
             groupWorkouts.append(workout)
     # Lets shuffle so we don't get the same ordered list when generating workouts
     return groupWorkouts# random.shuffle(groupWorkouts)
@@ -30,7 +30,7 @@ def getLeastUsedWorkout(workouts, tracker):
     # Iterate over list to find any untracked workouts
     for workout in workouts:
         # If workout is not tracked, return it
-        if workout.get("name", "") not in tracker.keys():
+        if workout["name"] not in tracker.keys():
             return workout
 
     # This only happens if all workouts within a muscle group have been used at least once
@@ -41,6 +41,5 @@ def getLeastUsedWorkout(workouts, tracker):
 
     # Get the workout object with least used name
     for workout in workouts:
-        if leastUsedWorkoutName == workout.get("name", ""):
+        if leastUsedWorkoutName == workout["name"]:
             return workout
-

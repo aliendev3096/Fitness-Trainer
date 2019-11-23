@@ -15,6 +15,7 @@ class HomePanel(wx.Panel):
         self.validDuration = False;
         self.validRoutineType = False;
         self.validMuscleGroup = False;
+        self.validRoutineName = False;
         self.rotate = False;
         self.exclude = False;
 
@@ -162,6 +163,11 @@ class HomePanel(wx.Panel):
         self.routineMetaBox.Add(self.deselectAllBtn);
 
         # Form Validation Status
+        self.routineNameValidationText = wx.StaticText(self, label="Routine Name", pos=(775, 460));
+        self.routineNameValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
+        self.routineNameValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.routineNameBmp = wx.StaticBitmap(self, -1, wx.Bitmap(self.routineNameValidationImage), pos=(925, 455))
+
         self.durationValidationText = wx.StaticText(self, label="Routine Duration", pos=(775, 500));
         self.durationValidationText.SetFont(wx.Font(18, wx.DECORATIVE, wx.NORMAL, wx.NORMAL))
         self.durationValidationImage = wx.Image(name="images/success-icon.jpg", type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
@@ -182,10 +188,37 @@ class HomePanel(wx.Panel):
         self.routineName = wx.TextCtrl(self, value="", pos=(775, 610), size=(200, 25))
         self.routineName.SetHint("Enter a routine name")
         self.generateWorkoutBtn = wx.Button(self, label="Generate Workout", pos =(775, 600), size=(200, 100));
+        self.Bind(wx.EVT_TEXT, self.validateRoutineName, self.routineName)
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
 
     # Event Handlers
+    def validateRoutineName(self, event=None):
+
+        # Get Main Window to retrieve routine names off menus
+        mainWindow = self.GetParent().GetParent();
+        menusCount = len(mainWindow.windowMenuBar.GetMenus())
+        # If there is no menu, there are no routine, any name is valid
+        if menusCount == 4:
+            self.validRoutineName = True
+            self.routineNameValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+            self.routineNameBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+        else:
+            # Get what is typed by user
+            name = event.GetEventObject().GetLineText(0);
+            # Iterate over list to compare routine names
+            routineMenu = mainWindow.windowMenuBar.GetMenu(4)
+            for menuItem in routineMenu.GetMenuItems():
+                if name.lower() == menuItem.GetLabel().lower():
+                    self.validRoutineName = False
+                    self.routineNameValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+                    self.routineNameBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+                    return
+
+        self.validRoutineName = True
+        self.routineNameValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
+        self.routineNameBmp.SetBitmap(wx.Bitmap(self.routineNameValidationImage))
+
     def onChoice(self, event=None):
         self.amountOfWorkouts = event.GetEventObject().GetSelection();
     def onRotate(self, event=None):
@@ -365,7 +398,6 @@ class HomePanel(wx.Panel):
         else:
             routineDays = 7 * self.duration + self.days
 
-        # Copy Musclegroups List
         mgStart = 0
         mgEnd = self.amountOfWorkouts + 1
         # If we target less/equal groups than workouts/day, send the entire list of groups

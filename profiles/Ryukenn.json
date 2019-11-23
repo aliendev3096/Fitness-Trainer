@@ -1,4 +1,223 @@
 {
-  "Username": "Ryukenn",
-  "Routines": []
+    "Username": "Ryukenn",
+    "Routines": [
+        {
+            "routineName": "TESTRYUKENN",
+            "sessions": [
+                {
+                    "date": "Friday, 11/22/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Cable Kneeling Twisting Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Push Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Push Crunch",
+                                "DB Push Crunch",
+                                "Lever (selectorized) Push Crunch"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Saturday, 11/23/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Russian Twist",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Russian Twist",
+                                "DB Russian Twist",
+                                "Weighted Russian Twist"
+                            ]
+                        },
+                        {
+                            "workoutName": "Push Sit-up",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Push Sit-up",
+                                "DB Push Sit-up"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Sunday, 11/24/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Side Bend",
+                                "DB Side Bend",
+                                "Weighted Side Bend",
+                                "Body Weight Side Bend",
+                                "Suspended Side Bend"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lying Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Lying Crunch",
+                                "Lever (plate loaded) Lying Crunch",
+                                "Lever (selectorized) Lying Crunch"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 11/25/19",
+                    "workouts": [
+                        {
+                            "workoutName": "DB 45 Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Lying Leg-Hip Raise",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Lying Lying Leg-Hip Raise",
+                                "Lever (plate loaded) Lying Lying Leg-Hip Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Tuesday, 11/26/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Lever (plate loaded) BB Machine Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Cable Kneeling Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        }
+                    ]
+                },
+                {
+                    "date": "Wednesday, 11/27/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Lever (plate loaded) Seated Twisting Leg Raise Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Seated Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Seated Crunch",
+                                "Lever (selectorized) Seated Crunch"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Thursday, 11/28/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Lever (plate loaded) Seated Side Leg Raise Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Cable Standing Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        }
+                    ]
+                },
+                {
+                    "date": "Friday, 11/29/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Lever (slectorized) Kneeling Twist",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) Lying Leg Raise Crunch",
+                            "muscleGroup": "Rectus Abdominis",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        }
+                    ]
+                }
+            ],
+            "tracker": {
+                "Cable Kneeling Twisting Crunch": 1,
+                "Push Crunch": 1,
+                "Russian Twist": 1,
+                "Push Sit-up": 1,
+                "Side Bend": 1,
+                "Lying Crunch": 1,
+                "DB 45 Side Bend": 1,
+                "Lying Leg-Hip Raise": 1,
+                "Lever (plate loaded) BB Machine Side Bend": 1,
+                "Cable Kneeling Crunch": 1,
+                "Lever (plate loaded) Seated Twisting Leg Raise Crunch": 1,
+                "Seated Crunch": 1,
+                "Lever (plate loaded) Seated Side Leg Raise Crunch": 1,
+                "Cable Standing Crunch": 1,
+                "Lever (slectorized) Kneeling Twist": 1,
+                "Lever (plate loaded) Lying Leg Raise Crunch": 1
+            }
+        }
+    ]
 }

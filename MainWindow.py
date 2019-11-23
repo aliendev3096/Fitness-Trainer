@@ -15,7 +15,7 @@ class MainWindow(wx.Frame):
         wx.Frame.__init__(self, parent, title=title, size=(1000, 750));
         self.active_user = active_user;
         self.routines = routines
-        self.active_routine = routines[0];
+        self.active_routine = routines[0] if len(routines) > 0 else None;
 
         self.setupMenuBar();
 
@@ -70,7 +70,8 @@ class MainWindow(wx.Frame):
 
         # Create Routine Menus if any exists under set profile
         routineTab = wx.Menu();
-        if(len(self.routines) > 0):
+        # if there is no active routine, there are no routines to iterate over
+        if(type(self.active_routine) != type(None)):
             for routine in self.routines:
                 routineOption = routineTab.Append(wx.NewId(), "&{}".format(routine["routineName"]), "Change to Routine {}".format(routine["routineName"]));
                 self.Bind(wx.EVT_MENU, self.OnSwitchRoutine, routineOption);
@@ -102,12 +103,37 @@ class MainWindow(wx.Frame):
         # Switch Current Active User
         menuId = event.GetId()
         obj = event.GetEventObject()
-        self.active_user = obj.GetLabel(menuId);
+        self.active_user = obj.GetLabel(menuId).replace("&", "");
         self.windowMenuBar.SetMenuLabel(3, self.active_user);
+        # Get Home Page, we need to revalidate routine name if a user has entered a routine name
+        homePage = self.nb.GetPage(0)
+        homePage.routineName.SetValue("")
+        # Load new user existing routines
+        with open('./profiles/{}.json'.format(self.active_user), 'r') as userjson:
+            userData = json.load(userjson)
+            if(len(userData["Routines"]) > 0):
+                self.routines = userData["Routines"]
+                self.active_routine = self.routines[0]
+
+                # Dyanmically generate new routines menu if routines exist for user
+                routineTab = wx.Menu();
+                for routine in self.routines:
+                    routineOption = routineTab.Append(wx.NewId(), "&{}".format(routine["routineName"]),
+                                                      "Change to Routine {}".format(routine["routineName"]));
+                    self.Bind(wx.EVT_MENU, self.OnSwitchRoutine, routineOption);
+                self.windowMenuBar.Append(routineTab, self.active_routine["routineName"]);
+
+            else:
+                self.routines = []
+                self.active_routine = None
+
+                # new active user has no routines, clear the routine menu
+                self.windowMenuBar.Remove(4);
+
 
     # Menu Event Handler
     def OnSwitchRoutine(self, event=None):
-        # Switch Current Active User
+        # Switch Current Active Routine
         menuId = event.GetId()
         obj = event.GetEventObject()
         self.active_routine = obj.GetLabel(menuId);

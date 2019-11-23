@@ -335,13 +335,24 @@ class HomePanel(wx.Panel):
             serialized = json.dumps(newRoutine.__dict__, default=lambda o: o.__dict__).replace("\n", "");
 
             # Deserialize and Append
-            data["Routines"].append(json.loads(serialized))
+            deserialized = json.loads(serialized)
+            data["Routines"].append(deserialized)
+
+            # Update Menu Bar with Routine Selection
+            mainWindow = self.GetParent().GetParent();
+            # If there are 5 menus, we have routines
+            if len(mainWindow.windowMenuBar.GetMenus()) == 5:
+                routineMenu = mainWindow.windowMenuBar.GetMenu(4)
+                tab = routineMenu.Append(wx.NewId(), "&{}".format(deserialized["routineName"]), "Change to Routine {}".format(deserialized["routineName"]))
+                mainWindow.Bind(wx.EVT_MENU, mainWindow.OnSwitchRoutine, tab);
+            else:
+                routineTab = wx.Menu();
+                tab = routineTab.Append(wx.NewId(), "&{}".format(deserialized["routineName"]), "Change to Routine {}".format(deserialized["routineName"]));
+                mainWindow.Bind(wx.EVT_MENU, mainWindow.OnSwitchRoutine, tab);
 
             # Serialize and Save to json profile
             with open('./profiles/{}.json'.format(user), 'w+') as updatedUserJson:
                 json.dump(data, updatedUserJson, indent=4);
-
-            # Update Menu Bar with Routine Selection
 
             # Change Notebook Pages
             notebook = self.GetParent()

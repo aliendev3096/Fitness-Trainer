@@ -24,8 +24,19 @@ def main():
     except FileNotFoundError:
         wx.MessageBox('No Settings were found.', 'Info', wx.OK | wx.ICON_INFORMATION);
 
+    # Load Routines if any exist
+    try:
+        with open('./profiles/{}.json'.format(active_user), 'r') as userjson:
+            userData = json.load(userjson)
+            if(len(userData["Routines"]) > 0):
+                routines = userData["Routines"]
+            else:
+                routines = []
+    except FileNotFoundError:
+        wx.MessageBox('No Routines were found.', 'Info', wx.OK | wx.ICON_INFORMATION);
+
     app = wx.App();
-    frame = MainWindow.MainWindow(None, "PyExFitness", active_user);
+    frame = MainWindow.MainWindow(None, "PyExFitness", active_user, routines);
     app.MainLoop();
 
 

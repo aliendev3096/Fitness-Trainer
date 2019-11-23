@@ -11,9 +11,12 @@ import NotesPanel;
 import SettingsPanel;
 
 class MainWindow(wx.Frame):
-    def __init__(self, parent, title, active_user):
+    def __init__(self, parent, title, active_user, routines):
         wx.Frame.__init__(self, parent, title=title, size=(1000, 750));
         self.active_user = active_user;
+        self.routines = routines
+        self.active_routine = routines[0];
+
         self.setupMenuBar();
 
         self.createNoteBook();
@@ -64,6 +67,15 @@ class MainWindow(wx.Frame):
         self.windowMenuBar.Append(profileTab, "Profile");
         self.windowMenuBar.Append(themeTab, "Theme");
         self.windowMenuBar.Append(userTab, self.active_user);
+
+        # Create Routine Menus if any exists under set profile
+        routineTab = wx.Menu();
+        if(len(self.routines) > 0):
+            for routine in self.routines:
+                routineOption = routineTab.Append(wx.NewId(), "&{}".format(routine["routineName"]), "Change to Routine {}".format(routine["routineName"]));
+                self.Bind(wx.EVT_MENU, self.OnSwitchRoutine, routineOption);
+            self.windowMenuBar.Append(routineTab, self.active_routine["routineName"]);
+
         self.SetMenuBar(self.windowMenuBar);
 
     # Menu Event Handler
@@ -92,6 +104,14 @@ class MainWindow(wx.Frame):
         obj = event.GetEventObject()
         self.active_user = obj.GetLabel(menuId);
         self.windowMenuBar.SetMenuLabel(3, self.active_user);
+
+    # Menu Event Handler
+    def OnSwitchRoutine(self, event=None):
+        # Switch Current Active User
+        menuId = event.GetId()
+        obj = event.GetEventObject()
+        self.active_routine = obj.GetLabel(menuId);
+        self.windowMenuBar.SetMenuLabel(4, self.active_routine);
 
     # Menu Event Handler
     def onLightTheme(self, event=None):

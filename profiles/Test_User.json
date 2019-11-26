@@ -1,4 +1,590 @@
 {
     "Username": "Test_User",
-    "Routines": []
+    "Routines": [
+        {
+            "routineName": "TEST",
+            "sessions": [
+                {
+                    "date": "Monday, 11/25/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Cable Kneeling Twisting Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Parallel Close Grip Pull-up",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Parallel Close Grip Pull-up",
+                                "Weighted Parallel Close Grip Pull-up",
+                                "Body Weight Parallel Close Grip Pull-up"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Lateral Raise",
+                                "DB Lateral Raise",
+                                "Lever (plate loaded) Lateral Raise",
+                                "Lever (selectorized) Lateral Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Tuesday, 11/26/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Russian Twist",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Russian Twist",
+                                "DB Russian Twist",
+                                "Weighted Russian Twist"
+                            ]
+                        },
+                        {
+                            "workoutName": "Pull-up",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Pull-up",
+                                "Cable Pull-up",
+                                "Weighted Pull-up",
+                                "Band-assisted Pull-up",
+                                "Body Weight Pull-up",
+                                "Assisted (Partner) Pull-up",
+                                "Self-assisted Pull-up",
+                                "Suspension Pull-up"
+                            ]
+                        },
+                        {
+                            "workoutName": "Upright Row",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Upright Row",
+                                "Cable Upright Row",
+                                "DB Upright Row",
+                                "Smith Upright Row"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Wednesday, 11/27/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Side Bend",
+                                "DB Side Bend",
+                                "Weighted Side Bend",
+                                "Body Weight Side Bend",
+                                "Suspended Side Bend"
+                            ]
+                        },
+                        {
+                            "workoutName": "Chin-up",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chin-up",
+                                "Cable Chin-up",
+                                "Weighted Chin-up",
+                                "Band-assisted Chin-up",
+                                "Body Weight Chin-up",
+                                "Assisted (Partner) Chin-up",
+                                "Self-assisted Chin-up"
+                            ]
+                        },
+                        {
+                            "workoutName": "Y Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Y Raise",
+                                "Suspended Y Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Thursday, 11/28/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "DB 45 Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Pullover",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Pullover",
+                                "Cable Pullover",
+                                "Lever (plate loaded) Pullover",
+                                "Lever (selectorized) Pullover"
+                            ]
+                        },
+                        {
+                            "workoutName": "Incline Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Incline Lateral Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Friday, 11/29/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) BB Machine Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Close Grip Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Close Grip Pullover",
+                                "Lever (plate loaded) Close Grip Pullover",
+                                "Lever (selectorized) Close Grip Pullover"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lying Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Lying Lateral Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/02/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) Seated Twisting Leg Raise Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Cable Kneeling Bent-over Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/02/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) Seated Side Leg Raise Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Pulldown",
+                                "Lever (plate loaded) Pulldown",
+                                "Lever (selectorized) Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "BB Machine Upright Row",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) BB Machine Upright Row"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/02/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (slectorized) Kneeling Twist",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Rear Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Rear Pulldown",
+                                "Lever (plate loaded) Rear Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Lateral Raise",
+                                "DB Lateral Raise",
+                                "Lever (plate loaded) Lateral Raise",
+                                "Lever (selectorized) Lateral Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Tuesday, 12/03/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lying Twist",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (selectorized) Lying Twist",
+                                "Weighted Lying Twist",
+                                "Body Weight Lying Twist"
+                            ]
+                        },
+                        {
+                            "workoutName": "Cable Twisting Standing Overhead Pull",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Upright Row",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Upright Row",
+                                "Cable Upright Row",
+                                "DB Upright Row",
+                                "Smith Upright Row"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Wednesday, 12/04/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (selectorized) Seated Side Bend",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Underhand Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Underhand Pulldown",
+                                "Lever (plate loaded) Underhand Pulldown",
+                                "Lever (selectorized) Underhand Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "Y Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Y Raise",
+                                "Suspended Y Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Thursday, 12/05/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
+                            ]
+                        },
+                        {
+                            "workoutName": "Side Crunch",
+                            "muscleGroup": "Obliques",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Side Crunch",
+                                "Lever (selectorized) Side Crunch"
+                            ]
+                        },
+                        {
+                            "workoutName": "Front Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) Front Pulldown",
+                                "Lever (selectorized) Front Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "Incline Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Incline Lateral Raise"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tracker": {
+                "Chest Dips": 11,
+                "Cable Kneeling Twisting Crunch": 1,
+                "Parallel Close Grip Pull-up": 1,
+                "Lateral Raise": 2,
+                "Russian Twist": 1,
+                "Pull-up": 1,
+                "Upright Row": 2,
+                "Side Bend": 1,
+                "Chin-up": 1,
+                "Y Raise": 2,
+                "DB 45 Side Bend": 1,
+                "Pullover": 1,
+                "Incline Lateral Raise": 2,
+                "Lever (plate loaded) BB Machine Side Bend": 1,
+                "Close Grip Pulldown": 1,
+                "Lying Lateral Raise": 1,
+                "Lever (plate loaded) Seated Twisting Leg Raise Crunch": 1,
+                "Cable Kneeling Bent-over Pulldown": 1,
+                "Raise": 1,
+                "Lever (plate loaded) Seated Side Leg Raise Crunch": 1,
+                "Pulldown": 1,
+                "BB Machine Upright Row": 1,
+                "Lever (slectorized) Kneeling Twist": 1,
+                "Rear Pulldown": 1,
+                "Lying Twist": 1,
+                "Cable Twisting Standing Overhead Pull": 1,
+                "Lever (selectorized) Seated Side Bend": 1,
+                "Underhand Pulldown": 1,
+                "Side Crunch": 1,
+                "Front Pulldown": 1
+            }
+        }
+    ]
 }

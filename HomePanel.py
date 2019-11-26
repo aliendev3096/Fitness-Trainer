@@ -2,7 +2,7 @@ import wx;
 import wx.adv;
 import json;
 import classes;
-from helpers import searchWorkouts
+from helpers import searchWorkoutsByGroup
 from helpers import getLeastUsedWorkout
 
 SUCCESS_ICON = "images/success-icon.jpg"
@@ -449,11 +449,11 @@ class HomePanel(wx.Panel):
                 reps = 5
                 sets = 2
             # Search for workouts of a muscle group
-            newWorkoutsAsList = searchWorkouts(group);
-
-            # Search for least used workout in routine
-            singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker)
+            newWorkoutsAsList = searchWorkoutsByGroup(group);
             print(group)
+            # Search for least used workout in routine
+            singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker, group)
+
             # Extract workout properties
             name = singleWorkout["name"]
             targets = singleWorkout["targets"]

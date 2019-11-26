@@ -2,16 +2,55 @@ import json;
 import random
 
 def searchWorkouts(musclegroup):
-    if musclegroup in ["Rectus Abdominis", "Obliques" , "Erector Spinae", "Transverse Abdominis"]:
-        with open("./musclegroups/waist.json", 'r') as waistjson:
-            workouts = json.load(waistjson)
+    # Waist
+    if musclegroup in ["Rectus Abdominis", "Obliques", "Erector Spinae", "Transverse Abdominis"]:
+        with open("./musclegroups/waist.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
             allWorkouts = workouts["Workouts"];
             return getGroupWorkouts(musclegroup, allWorkouts)
-    elif musclegroup in ["Biceps Brachii",  "Triceps Brachii" , "Brachialis"]:
-        with open("./musclegroups/upperarms.json", 'r') as upperarmsjson:
-            workouts = json.load(upperarmsjson)
+    # Upperarms
+    elif musclegroup in ["Biceps Brachii",  "Triceps Brachii", "Brachialis"]:
+        with open("./musclegroups/upperarms.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
             allWorkouts = workouts["Workouts"];
             return getGroupWorkouts(musclegroup, allWorkouts)
+    # Thighs
+    elif musclegroup in ["Quadriceps",  "Rectus Femoris" , "Hamstrings", "Adductors"]:
+        with open("./musclegroups/thighs.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+    # Shoulders
+    elif musclegroup in ["Supraspinatus",  "Posterior Deltoid", "Lateral Deltoid", "Anterior Deltoid"]:
+        with open("./musclegroups/shoulders.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+    #Hips
+    elif musclegroup in ["Gluteus Maximus"]:
+        with open("./musclegroups/hips.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+    # Forearms
+    elif musclegroup in ["Brachioradialis",  "Wrist Flexors", "Wrist Extensors", "Pronators", "Supinators"]:
+        with open("./musclegroups/forearms.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+    # Chest
+    elif musclegroup in ["Pectorlis Major-Sternal",  "Pectoralis Minor", "Pectorlis Major-Clavicular"]:
+        with open("./musclegroups/chest.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+    # Back
+    elif musclegroup in ["Infraspinatus",  "Trapezius", "Subscapularis", "Latissimus Dorsi",  "General Back"]:
+        with open("./musclegroups/back.json", 'r') as jsonfile:
+            workouts = json.load(jsonfile)
+            allWorkouts = workouts["Workouts"];
+            return getGroupWorkouts(musclegroup, allWorkouts)
+
 
 def getGroupWorkouts(musclegroup, allowedWorkouts):
     groupWorkouts = []

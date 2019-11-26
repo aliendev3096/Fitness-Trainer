@@ -3,7 +3,7 @@
         {
             "name": "Behind Neck Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -15,7 +15,7 @@
         {
             "name": "Front Raise",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -29,7 +29,7 @@
         {
             "name": "Military Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -42,7 +42,7 @@
         {
             "name": "Shoulder Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -58,7 +58,7 @@
         {
             "name": "Cable Bar",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -70,7 +70,7 @@
         {
             "name": "Twisting Overhead Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -80,7 +80,7 @@
         {
             "name": "Arnold Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations":[
@@ -90,7 +90,7 @@
         {
             "name": "Reclined Shoulder Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations": [
@@ -109,7 +109,7 @@
         {
             "name": "Body Weight Pike Press",
             "targets": [
-                "anterior Deltoid"
+                "Anterior Deltoid"
             ],
             "category": "shoulders",
             "variations": []

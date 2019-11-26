@@ -194,7 +194,6 @@
     {
       "name": "Stretch Lever",
       "targets": [
-        "Rectus Femoris",
         "Pectorlis Major-Sternal"
       ],
       "category": "Chest",
@@ -213,7 +212,6 @@
     {
       "name": "Stretch Standing",
       "targets": [
-        "Rectus Femoris",
         "Pectorlis Major-Sternal"
       ],
       "category": "Chest",

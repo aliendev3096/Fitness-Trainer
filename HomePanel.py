@@ -117,7 +117,6 @@ class HomePanel(wx.Panel):
                                 "Posterior Deltoid",
                                 "Supraspinatus",
                                 'Hamstrings',
-                                'Soles',
                                 'General Back',
                                 'Latissimus Dorsi',
                                 'Trapezius',
@@ -128,6 +127,7 @@ class HomePanel(wx.Panel):
                                 "Pectorlis Major-Clavicular",
                                 "Brachioradialis",
                                 "Wrist Flexors",
+                                "Wrist Extensors",
                                 "Pronators",
                                 "Supinators",
                                 "Adductors",
@@ -137,7 +137,8 @@ class HomePanel(wx.Panel):
                                 "Brachialis",
                                 "Rectus Abdominis",
                                 "Obliques",
-                                "Erector Spinae"]
+                                "Erector Spinae",
+                                "Transverse Abdominis"]
         self.checkBoxList = []
         self.selectedMuscleGroups = [];
         self.muscleGroupList.sort();
@@ -449,9 +450,10 @@ class HomePanel(wx.Panel):
                 sets = 2
             # Search for workouts of a muscle group
             newWorkoutsAsList = searchWorkouts(group);
+
             # Search for least used workout in routine
             singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker)
-
+            print(group)
             # Extract workout properties
             name = singleWorkout["name"]
             targets = singleWorkout["targets"]

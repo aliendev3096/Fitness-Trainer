@@ -134,7 +134,19 @@ class MainWindow(wx.Frame):
                                                       "Change to Routine {}".format(routine["routineName"]));
                     self.Bind(wx.EVT_MENU, self.OnSwitchRoutine, routineOption);
                 self.windowMenuBar.Append(routineTab, self.active_routine["routineName"]);
-
+                workouts = []
+                # Update list view with first routine
+                for routine in self.routines:
+                    if routine["routineName"] == self.active_routine["routineName"]:
+                        self.active_routine = routine
+                        # Change Routine View
+                        sessions = self.active_routine["sessions"]
+                        for session in sessions:
+                            for workout in session["workouts"]:
+                                # Append the date to each workout for ObjectListView grouping
+                                workout["date"] = session["date"]
+                            workouts.extend(session["workouts"])
+                        self.routinePage.routineView.SetObjects(workouts)
             else:
                 # No routines, clear active statuses
                 self.routines = []

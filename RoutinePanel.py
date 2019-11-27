@@ -4,7 +4,8 @@ from ObjectListView import ObjectListView, ColumnDefn, GroupListView
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):
         super(RoutinePanel, self).__init__(parent)
-        # Set Sizers
+        self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000,1000))
+        # Set Sizer
         self.routineViewSizer = wx.BoxSizer(wx.VERTICAL)
 
         self.active_routine = self.GetParent().GetParent().active_routine
@@ -14,7 +15,7 @@ class RoutinePanel(wx.Panel):
         else:
             self.sessions = []
 
-        self.routineView = GroupListView(self, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
+        self.routineView = GroupListView(self.viewPanel, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
 
         self.routineView.SetColumns([
             ColumnDefn("Date", "left", 200, "date"),
@@ -26,7 +27,7 @@ class RoutinePanel(wx.Panel):
             ColumnDefn("Reps", "left", 50, "reps")
         ])
 
-        self.routineView.cellEditMode = ObjectListView.CELLEDIT_SINGLECLICK
+        self.routineView.cellEditMode = ObjectListView.CELLEDIT_DOUBLECLICK
 
         self.routineViewSizer.Add(self.routineView, 1, wx.ALL | wx.EXPAND, 5)
         self.SetSizer(self.routineViewSizer)
@@ -48,7 +49,7 @@ class RoutinePanel(wx.Panel):
                     workout["date"] = session["date"]
 
                 self.sessions.extend(session["workouts"])
-            print(self.sessions)
+
             self.routineView.SetObjects(self.sessions)
 
 

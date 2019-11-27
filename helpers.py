@@ -59,7 +59,8 @@ def getGroupWorkouts(musclegroup, allowedWorkouts):
         if(workout["targets"][0] == musclegroup):
             groupWorkouts.append(workout)
     # Lets shuffle so we don't get the same ordered list when generating workouts
-    return groupWorkouts # random.shuffle(groupWorkouts)
+    random.shuffle(groupWorkouts)
+    return groupWorkouts
 
 def getLeastUsedWorkout(workouts, tracker, musclegroup):
     trackedMuscleGroups = {}

@@ -413,7 +413,8 @@ class HomePanel(wx.Panel):
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
             musclegroups = []
-
+            # Set start date add days too for the routine
+            startDate = wx.DateTime(self.calendarStart.GetValue());
             # Iterate over muscle group list and reset counter if we reach the end
             for index in range(0, self.amountOfWorkouts):
                 if muscleIndex >= len(self.selectedMuscleGroups):

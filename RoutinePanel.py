@@ -1,5 +1,5 @@
 import wx;
-from ObjectListView import ObjectListView, ColumnDefn
+from ObjectListView import ObjectListView, ColumnDefn, GroupListView
 
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):
@@ -14,15 +14,16 @@ class RoutinePanel(wx.Panel):
         else:
             self.sessions = []
 
-        self.routineView = ObjectListView(self, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
+        self.routineView = GroupListView(self, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
 
         self.routineView.SetColumns([
-            ColumnDefn("Workout Name", "left", 220, "workoutName"),
+            ColumnDefn("Date", "left", 200, "date"),
+            ColumnDefn("Workout Name", "left", 280, "workoutName"),
             ColumnDefn("Target", "left", 200, "muscleGroup"),
-            ColumnDefn("Weight", "left", 180, "weight"),
-            ColumnDefn("Variations", "left", 180, "variations"),
-            ColumnDefn("Sets", "right", 100, "sets"),
-            ColumnDefn("Reps", "left", 180, "reps")
+            ColumnDefn("Variations", "left", 290, "variations"),
+            ColumnDefn("Weight", "left", 50, "weight"),
+            ColumnDefn("Sets", "right", 50, "sets"),
+            ColumnDefn("Reps", "left", 50, "reps")
         ])
 
         self.routineView.cellEditMode = ObjectListView.CELLEDIT_SINGLECLICK
@@ -42,8 +43,12 @@ class RoutinePanel(wx.Panel):
 
             # For each session, append the workouts
             for session in sessions:
-                self.sessions.extend(session["workouts"])
+                for workout in session["workouts"]:
+                    # Append the date to each workout for ObjectListView grouping
+                    workout["date"] = session["date"]
 
+                self.sessions.extend(session["workouts"])
+            print(self.sessions)
             self.routineView.SetObjects(self.sessions)
 
 

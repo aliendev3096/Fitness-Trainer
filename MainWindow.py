@@ -158,6 +158,9 @@ class MainWindow(wx.Frame):
                 # Change Routine View
                 sessions = self.active_routine["sessions"]
                 for session in sessions:
+                    for workout in session["workouts"]:
+                        # Append the date to each workout for ObjectListView grouping
+                        workout["date"] = session["date"]
                     workouts.extend(session["workouts"])
                 self.routinePage.routineView.SetObjects(workouts)
 

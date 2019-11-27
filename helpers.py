@@ -62,7 +62,7 @@ def getGroupWorkouts(musclegroup, allowedWorkouts):
     random.shuffle(groupWorkouts)
     return groupWorkouts
 
-def getLeastUsedWorkout(workouts, tracker, musclegroup):
+def getLeastUsedWorkout(workouts, tracker):
     trackedMuscleGroups = {}
     # if nothing has been tracked before, just return the first in the list
     if len(tracker) == 0:

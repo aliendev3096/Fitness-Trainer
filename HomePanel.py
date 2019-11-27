@@ -426,7 +426,6 @@ class HomePanel(wx.Panel):
 
             nextDay = nextDay.Format("%A, %D");
 
-            print("Creating session with {} workouts".format(len(musclegroups)))
             # Create Session
             newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups, tracker=routine.tracker))
             routine.addSession(newSession)
@@ -446,7 +445,7 @@ class HomePanel(wx.Panel):
             newWorkoutsAsList = searchWorkoutsByGroup(group);
 
             # Search for least used workout in routine
-            singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker, group)
+            singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker)
 
             # Extract workout properties
             name = singleWorkout["name"]

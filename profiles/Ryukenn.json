@@ -218,6 +218,330 @@
                 "Lever (slectorized) Kneeling Twist": 1,
                 "Lever (plate loaded) Lying Leg Raise Crunch": 1
             }
+        },
+        {
+            "routineName": "TestRoutine",
+            "sessions": [
+                {
+                    "date": "Wednesday, 11/27/19",
+                    "workouts": [
+                        {
+                            "workoutName": "BB Hip Thrust",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Glute-Ham Raise",
+                            "muscleGroup": "Hamstrings",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Glute-Ham Raise",
+                                "BW Glute-Ham Raise",
+                                "Weighted Glute-Ham Raise"
+                            ]
+                        },
+                        {
+                            "workoutName": "Incline Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Incline Lateral Raise"
+                            ]
+                        },
+                        {
+                            "workoutName": "Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) Shoulder External Rotation",
+                                "Lever (selectorized) Shoulder External Rotation",
+                                "Suspended Shoulder External Rotation"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Thursday, 11/28/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Rear Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Rear Pulldown",
+                                "Lever (plate loaded) Rear Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) Lying Hip Extension",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Inverse Leg Curl",
+                            "muscleGroup": "Hamstrings",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Inverse Leg Curl",
+                                "BW Inverse Leg Curl",
+                                "SA Inverse Leg Curl",
+                                "Suspended Inverse Leg Curl",
+                                "Weighted Inverse Leg Curl"
+                            ]
+                        },
+                        {
+                            "workoutName": "Y Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Y Raise",
+                                "Suspended Y Raise"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/02/19",
+                    "workouts": [
+                        {
+                            "workoutName": "DB Lying Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Close Grip Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Close Grip Pullover",
+                                "Lever (plate loaded) Close Grip Pullover",
+                                "Lever (selectorized) Close Grip Pullover"
+                            ]
+                        },
+                        {
+                            "workoutName": "Single Leg Stiff Leg Deadlift",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Body Weight Single Leg Stiff Leg Deadlift",
+                                "DB Single Leg Stiff Leg Deadlift"
+                            ]
+                        },
+                        {
+                            "workoutName": "BB Good morning",
+                            "muscleGroup": "Hamstrings",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Smith Good Morning"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Thursday, 12/05/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Raise"
+                            ]
+                        },
+                        {
+                            "workoutName": "Seated Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Seated Shoulder External Rotation",
+                                "DB Seated Shoulder External Rotation"
+                            ]
+                        },
+                        {
+                            "workoutName": "Front Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) Front Pulldown",
+                                "Lever (selectorized) Front Pulldown"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (plate loaded) Bent-over Rear Kick",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": []
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/09/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Deadlift",
+                            "muscleGroup": "Hamstrings",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Deadlift",
+                                "BB Trapbar Straight-Leg Deadlift",
+                                "Cable Standing/Straight-Leg Deadlift",
+                                "Lever Seated/Straight-Leg Deadlift",
+                                "Smith Straight-Leg Deadlift"
+                            ]
+                        },
+                        {
+                            "workoutName": "BB Machine Upright Row",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) BB Machine Upright Row"
+                            ]
+                        },
+                        {
+                            "workoutName": "Upright Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Cable Upright Shoulder External Rotation",
+                                "DB Upright Shoulder External Rotation",
+                                "Lever (selectorized) Upright Shoulder External Rotation"
+                            ]
+                        },
+                        {
+                            "workoutName": "Rear Pull-up",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Weighted Rear Pull-up",
+                                "Band-assisted Rear Pull-up",
+                                "Body Weight Rear Pull-up",
+                                "Assisted (Partner) Rear Pull-up",
+                                "Self-assisted Rear Pull-up"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "date": "Monday, 12/16/19",
+                    "workouts": [
+                        {
+                            "workoutName": "Deadlifts",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Deadlifts",
+                                "Lever (plate loaded) Deadlift",
+                                "Smith Deadlifts"
+                            ]
+                        },
+                        {
+                            "workoutName": "Hyperextension",
+                            "muscleGroup": "Hamstrings",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "BB Hyperextension",
+                                "BB Hyperextension 45 Degrees (Back Raise)",
+                                "Suspended Hyperextension",
+                                "Weight Hyperextension"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lying Lateral Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "DB Lying Lateral Raise"
+                            ]
+                        },
+                        {
+                            "workoutName": "Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": 20,
+                            "sets": 3,
+                            "weight": 0,
+                            "variations": [
+                                "Lever (plate loaded) Shoulder External Rotation",
+                                "Lever (selectorized) Shoulder External Rotation",
+                                "Suspended Shoulder External Rotation"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "tracker": {
+                "BB Hip Thrust": 1,
+                "Glute-Ham Raise": 1,
+                "Incline Lateral Raise": 1,
+                "Shoulder External Rotation": 2,
+                "Rear Pulldown": 1,
+                "Lever (plate loaded) Lying Hip Extension": 1,
+                "Inverse Leg Curl": 1,
+                "Y Raise": 1,
+                "DB Lying Shoulder External Rotation": 1,
+                "Close Grip Pulldown": 1,
+                "Single Leg Stiff Leg Deadlift": 1,
+                "BB Good morning": 1,
+                "Raise": 1,
+                "Seated Shoulder External Rotation": 1,
+                "Front Pulldown": 1,
+                "Lever (plate loaded) Bent-over Rear Kick": 1,
+                "Deadlift": 1,
+                "BB Machine Upright Row": 1,
+                "Upright Shoulder External Rotation": 1,
+                "Rear Pull-up": 1,
+                "Deadlifts": 1,
+                "Hyperextension": 1,
+                "Lying Lateral Raise": 1
+            }
         }
     ]
 }

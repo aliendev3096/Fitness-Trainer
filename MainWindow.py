@@ -25,10 +25,17 @@ class MainWindow(wx.Frame):
 
     def createNoteBook(self):
         self.nb = wx.Notebook(self)
-        self.nb.AddPage(HomePanel.HomePanel(self.nb), "Home")
-        self.nb.AddPage(RoutinePanel.RoutinePanel(self.nb), "Routines")
-        self.nb.AddPage(NotesPanel.NotesPanel(self.nb), "Notes")
-        self.nb.AddPage(SettingsPanel.SettingsPanel(self.nb), "Settings")
+        self.homePage = HomePanel.HomePanel(self.nb)
+        self.nb.AddPage(self.homePage, "Home")
+        self.routinePage = RoutinePanel.RoutinePanel(self.nb);
+        self.nb.AddPage(self.routinePage, "Routines")
+        self.notesPage = NotesPanel.NotesPanel(self.nb)
+        self.nb.AddPage(self.notesPage, "Notes")
+        self.settingsPage = SettingsPanel.SettingsPanel(self.nb)
+        self.nb.AddPage(self.settingsPage, "Settings")
+
+        # Binding method listener to set routine when note page has changed
+        self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.onPageChangeListener, self.nb)
 
     def setupMenuBar(self):
         # Creating menus with event bindings
@@ -139,8 +146,23 @@ class MainWindow(wx.Frame):
         # Switch Current Active Routine
         menuId = event.GetId()
         obj = event.GetEventObject()
-        self.active_routine = obj.GetLabel(menuId);
-        self.windowMenuBar.SetMenuLabel(4, self.active_routine);
+        routineName = obj.GetLabel(menuId).replace("&", "");
+        with open("profiles/{}.json".format(self.active_user), 'r') as outfile:
+            userWorkouts = json.load(outfile);
+            routines = userWorkouts["Routines"]
+        workouts = []
+        # Set active routine to routine object
+        for routine in routines:
+            if routine["routineName"] == routineName:
+                self.active_routine = routine
+                # Change Routine View
+                sessions = self.active_routine["sessions"]
+                for session in sessions:
+                    workouts.extend(session["workouts"])
+                self.routinePage.routineView.SetObjects(workouts)
+
+        self.windowMenuBar.SetMenuLabel(4, routineName);
+
 
     # Menu Event Handler
     def onLightTheme(self, event=None):
@@ -151,4 +173,18 @@ class MainWindow(wx.Frame):
         self.SetBackgroundColour(wx.Colour(43, 45, 46));
         self.Update();
         self.Show(True);
+
+    # Routine Event Handler
+    def onPageChangeListener(self, event=None):
+        page = event.GetEventObject()
+        activePage = page.GetPageText(page.GetSelection())
+        switch = {
+            "Home": self.homePage,
+            "Routines": self.routinePage,
+            "Notes": self.notesPage,
+            "Settings": self.settingsPage
+        }
+        listener = switch.get(activePage, lambda: "")
+        listener.onPageChangeListener();
+
 

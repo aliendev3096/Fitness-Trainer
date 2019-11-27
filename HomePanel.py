@@ -193,6 +193,11 @@ class HomePanel(wx.Panel):
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
 
+    # Home Event Handler
+    def onPageChangeListener(self, event=None):
+        # clear form
+        pass
+
     # Event Handlers
     def validateRoutineName(self, event=None):
 

@@ -203,7 +203,7 @@ class HomePanel(wx.Panel):
         if menusCount == 4:
             self.validRoutineName = True
             self.routineNameValidationImage = wx.Image(name=SUCCESS_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-            self.routineNameBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+            self.routineNameBmp.SetBitmap(wx.Bitmap(self.routineNameValidationImage))
         else:
             # Get what is typed by user
             name = event.GetEventObject().GetLineText(0);
@@ -213,7 +213,7 @@ class HomePanel(wx.Panel):
                 if name.lower() == menuItem.GetLabel().lower():
                     self.validRoutineName = False
                     self.routineNameValidationImage = wx.Image(name=ERROR_ICON, type=wx.BITMAP_TYPE_ANY, index=0).Scale(30, 30);
-                    self.routineNameBmp.SetBitmap(wx.Bitmap(self.muscleValidationImage))
+                    self.routineNameBmp.SetBitmap(wx.Bitmap(self.routineNameValidationImage))
                     return
 
         self.validRoutineName = True
@@ -221,7 +221,7 @@ class HomePanel(wx.Panel):
         self.routineNameBmp.SetBitmap(wx.Bitmap(self.routineNameValidationImage))
 
     def onChoice(self, event=None):
-        self.amountOfWorkouts = event.GetEventObject().GetSelection();
+        self.amountOfWorkouts = event.GetEventObject().GetSelection() + 1;
     def onRotate(self, event=None):
         if(self.rotate):
             self.rotate = False;
@@ -393,24 +393,29 @@ class HomePanel(wx.Panel):
             notebook.SetSelection(1)
 
     def generateRoutine(self, routine):
+        print("Routine generating for {} workouts/day".format(str(self.amountOfWorkouts)))
         # Set Days based on exclude weekends parameter
         if self.exclude:
             routineDays = 5 * self.duration + self.days
         else:
             routineDays = 7 * self.duration + self.days
 
-        mgStart = 0
-        mgEnd = self.amountOfWorkouts + 1
-        # If we target less/equal groups than workouts/day, send the entire list of groups
-        if(len(self.selectedMuscleGroups) <= mgEnd):
-            musclegroups = self.selectedMuscleGroups;
-        # Else, we have more groups to account for in single session, send only a subset
-        else:
-            musclegroups = self.selectedMuscleGroups[mgStart:mgEnd];
+        # Accumulate Count to iterate over muscle groups
+        muscleIndex = 0
 
+        # Set start date add days too for the routine
+        startDate = wx.DateTime(self.calendarStart.GetValue());
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
-            startDate = wx.DateTime(self.calendarStart.GetValue());
+            musclegroups = []
+
+            # Iterate over muscle group list and reset counter if we reach the end
+            for index in range(0, self.amountOfWorkouts):
+                if muscleIndex >= len(self.selectedMuscleGroups):
+                    muscleIndex = 0
+                musclegroups.append(self.selectedMuscleGroups[muscleIndex])
+                muscleIndex += 1
+
             # Exclude weekends logic
             if self.exclude:
                 nextDay = startDate.Add(wx.DateSpan(days=day))
@@ -421,21 +426,10 @@ class HomePanel(wx.Panel):
 
             nextDay = nextDay.Format("%A, %D");
 
+            print("Creating session with {} workouts".format(len(musclegroups)))
             # Create Session
             newSession = classes.Session(date=nextDay, workouts=self.generateWorkouts(groups=musclegroups, tracker=routine.tracker))
             routine.addSession(newSession)
-
-            # Use the next section of muscle groups for the next day
-            mgStart = mgEnd;
-            mgEnd += self.amountOfWorkouts + 1
-            # If we reach the end of the muscle groups list, wrap around to beginning of list.
-            if len(self.selectedMuscleGroups) < mgEnd:
-                musclegroups = self.selectedMuscleGroups[mgStart:-1]
-                mgStart = 0;
-                mgEnd = self.amountOfWorkouts + 1
-                musclegroups.extend(self.selectedMuscleGroups[mgStart:mgEnd])
-            else:
-                musclegroups = self.selectedMuscleGroups[mgStart:mgEnd]
 
         return routine
     def generateWorkouts(self, groups, tracker):
@@ -450,7 +444,7 @@ class HomePanel(wx.Panel):
                 sets = 2
             # Search for workouts of a muscle group
             newWorkoutsAsList = searchWorkoutsByGroup(group);
-            print(group)
+
             # Search for least used workout in routine
             singleWorkout = getLeastUsedWorkout(newWorkoutsAsList, tracker, group)
 

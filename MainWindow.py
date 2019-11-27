@@ -105,6 +105,11 @@ class MainWindow(wx.Frame):
         obj = event.GetEventObject()
         self.active_user = obj.GetLabel(menuId).replace("&", "");
         self.windowMenuBar.SetMenuLabel(3, self.active_user);
+
+        # Remove routines if there were any before we switch users
+        if len(self.windowMenuBar.GetMenus()) > 4:
+            self.windowMenuBar.Remove(4);
+
         # Get Home Page, we need to revalidate routine name if a user has entered a routine name
         homePage = self.nb.GetPage(0)
         homePage.routineName.SetValue("")
@@ -124,11 +129,9 @@ class MainWindow(wx.Frame):
                 self.windowMenuBar.Append(routineTab, self.active_routine["routineName"]);
 
             else:
+                # No routines, clear active statuses
                 self.routines = []
                 self.active_routine = None
-
-                # new active user has no routines, clear the routine menu
-                self.windowMenuBar.Remove(4);
 
 
     # Menu Event Handler

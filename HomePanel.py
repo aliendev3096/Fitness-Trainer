@@ -60,7 +60,8 @@ class HomePanel(wx.Panel):
 
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 1), self.addOneWeek);
         self.Bind(wx.EVT_BUTTON, lambda event: self.onAddWeeks(event, 2), self.addTwoWeeks);
-        self.Bind(wx.EVT_CHOICE, lambda event: self.onAddWeeks(event, int(self.customWeekInput.GetSelection())), self.customWeekInput);
+
+        self.Bind(wx.EVT_CHOICE, lambda event: self.onAddWeeks(event, int(self.customWeekInput.GetString(self.customWeekInput.GetSelection()))), self.customWeekInput);
         self.Bind(wx.adv.EVT_DATE_CHANGED, self.onStartDateSelect, self.calendarStart);
         self.Bind(wx.adv.EVT_DATE_CHANGED, self.onEndDateSelect, self.calendarEnd);
 
@@ -333,6 +334,7 @@ class HomePanel(wx.Panel):
             self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%B, %D")))
             self.endDateText.Update();
     def onAddWeeks(self, event=None, weeks=0):
+        print(weeks)
         self.duration = weeks
         self.validDuration = True
         newEndDate = wx.DateTime(self.routineStartDate).Add(wx.DateSpan(weeks=int(self.duration)));
@@ -342,6 +344,7 @@ class HomePanel(wx.Panel):
         self.durationText.SetLabel("Routine Duration: {} Weeks".format(str(self.duration)));
         self.durationText.Update();
         self.calendarEnd.Update();
+
     def onGenerate(self, event=None):
         errors = []
         # Form Validation

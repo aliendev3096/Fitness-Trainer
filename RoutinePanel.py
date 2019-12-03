@@ -4,7 +4,7 @@ from ObjectListView import ObjectListView, ColumnDefn, GroupListView
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):
         super(RoutinePanel, self).__init__(parent)
-        self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000,1000))
+        self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000, 1000))
         # Set Sizer
         self.routineViewSizer = wx.BoxSizer(wx.VERTICAL)
 

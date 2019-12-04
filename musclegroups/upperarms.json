@@ -240,20 +240,6 @@
             "variations":[]
         },
         {
-            "name": "Preacher Curl",
-            "targets": [
-                "Brachialis"
-            ],
-            "category": "upperarms",
-            "variations":[
-                "BB Preacher Curl",
-                "Cable Preacher Curl",
-                "DB Preacher Curl",
-                "Lever (plate loaded) Preacher Curl",
-                "Lever (selectorized) Preacher Curl"
-            ]
-        },
-        {
             "name": "Prone Incline Curl",
             "targets": [
                 "Biceps Brachii"

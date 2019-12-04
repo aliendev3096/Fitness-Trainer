@@ -135,7 +135,6 @@ class HomePanel(wx.Panel):
                                 "Rectus Femoris",
                                 "Triceps Brachii",
                                 "Biceps Brachii",
-                                "Brachialis",
                                 "Rectus Abdominis",
                                 "Obliques",
                                 "Erector Spinae",
@@ -334,7 +333,6 @@ class HomePanel(wx.Panel):
             self.endDateText.SetLabel("End Date: {}".format(wx.DateTime(endDate).Format("%B, %D")))
             self.endDateText.Update();
     def onAddWeeks(self, event=None, weeks=0):
-        print(weeks)
         self.duration = weeks
         self.validDuration = True
         newEndDate = wx.DateTime(self.routineStartDate).Add(wx.DateSpan(weeks=int(self.duration)));
@@ -401,7 +399,6 @@ class HomePanel(wx.Panel):
             notebook.SetSelection(1)
 
     def generateRoutine(self, routine):
-        print("Routine generating for {} workouts/day".format(str(self.amountOfWorkouts)))
         # Set Days based on exclude weekends parameter
         if self.exclude:
             routineDays = 5 * self.duration + self.days
@@ -411,8 +408,6 @@ class HomePanel(wx.Panel):
         # Accumulate Count to iterate over muscle groups
         muscleIndex = 0
 
-        # Set start date add days too for the routine
-        startDate = wx.DateTime(self.calendarStart.GetValue());
         # Create a Workout Session for each day in a single routine
         for day in range(0, routineDays+1):
             musclegroups = []
@@ -445,11 +440,11 @@ class HomePanel(wx.Panel):
         # Generate a workout for each muscle group
         for group in groups:
             if self.toggleEnduranceButton.GetValue() == True:
-                reps = 20
-                sets = 3
+                reps = "20"
+                sets = "3"
             else:
-                reps = 5
-                sets = 2
+                reps = "5"
+                sets = "2"
             # Search for workouts of a muscle group
             newWorkoutsAsList = searchWorkoutsByGroup(group);
 
@@ -462,7 +457,7 @@ class HomePanel(wx.Panel):
             variations = singleWorkout["variations"]
 
             # Create the workout & add to session
-            newWorkout = classes.Workout(name=name, muscleGroup=targets[0],
+            newWorkout = classes.Workout(name=name, muscleGroup=targets[0], weight="0",
                                          reps=reps, sets=sets, variations=variations)
 
             # Track the workout to the routine history

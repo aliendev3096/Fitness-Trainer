@@ -3,6 +3,7 @@
 
 import wx;
 import ProfileWindow;
+import classes;
 import json;
 import os;
 import HomePanel;
@@ -41,8 +42,12 @@ class MainWindow(wx.Frame):
         # Creating menus with event bindings
         # Create File Menu
         fileTab = wx.Menu();
-        fileExportOption = fileTab.Append(wx.NewId(), "&Export", "Export Weekly Routine");
+        saveOption = fileTab.Append(wx.NewId(), "&Save Routine", "Save Weekly Routine");
+        self.Bind(wx.EVT_MENU, self.OnSave, saveOption);
+        fileExportOption = fileTab.Append(wx.NewId(), "&Export Routine", "Export Weekly Routine");
         self.Bind(wx.EVT_MENU, self.OnExport, fileExportOption);
+        deleteOption = fileTab.Append(wx.NewId(), "&Delete Routine", "Delete Current Weekly Routine");
+        self.Bind(wx.EVT_MENU, self.OnDelete, deleteOption);
         fileQuitOption = fileTab.Append(wx.NewId(), "&Quit", "Quit PyExFitness");
         self.Bind(wx.EVT_MENU, self.OnFileQuit, fileQuitOption);
 
@@ -87,6 +92,53 @@ class MainWindow(wx.Frame):
         self.SetMenuBar(self.windowMenuBar);
 
     # Menu Event Handler
+    def OnSave(self, event=None):
+        routinePage = self.nb.GetPage(1)
+
+        # Load new user existing routines
+        with open('./profiles/{}.json'.format(self.active_user), 'r') as userjson:
+            userData = json.load(userjson)
+            userData["Routines"];
+        routineObjects = routinePage.routineView.GetObjects()
+        # Reconstruct data from list view
+        for routine in userData["Routines"]:
+            if routine["routineName"] == self.active_routine["routineName"]:
+                # Clear the workouts for each session
+                for session in routine["sessions"]:
+                    session["workouts"] = []
+
+                # Repopulate the workouts
+                for workout in routineObjects:
+                    for session in routine["sessions"]:
+                        if workout["date"] == session["date"]:
+                            # Create new workout
+                            newWorkout = classes.Workout(name=workout["workoutName"], muscleGroup=workout["muscleGroup"],
+                                                                       reps=workout["reps"], sets=workout["sets"], variations=workout["variations"])
+                            # Serialize Workouts
+                            serialized = json.dumps(newWorkout.__dict__, default=lambda o: o.__dict__).replace("\n", "");
+
+                            # Deserialize and Append
+                            deserialized = json.loads(serialized)
+                            session["workouts"].append(deserialized)
+
+        # Serialize and Save to json profile
+        with open('./profiles/{}.json'.format(self.active_user), 'w+') as updatedUserJson:
+            json.dump(userData, updatedUserJson, indent=4);
+    def OnDelete(self, event=None):
+        routinePage = self.nb.GetPage(1)
+        # Load new user existing routines
+        with open('./profiles/{}.json'.format(self.active_user), 'r') as userjson:
+            userData = json.load(userjson)
+            userData["Routines"];
+
+        for routine in userData["Routines"]:
+            if routine["routineName"] == self.active_routine["routineName"]:
+                userData["Routines"].remove(routine);
+
+        # Serialize and Save to json profile
+        with open('./profiles/{}.json'.format(self.active_user), 'w+') as updatedUserJson:
+            json.dump(userData, updatedUserJson, indent=4);
+
     def OnFileQuit(self, event=None):
         self.Close();
 
@@ -127,7 +179,7 @@ class MainWindow(wx.Frame):
                 self.routines = userData["Routines"]
                 self.active_routine = self.routines[0]
 
-                # Dyanmically generate new routines menu if routines exist for user
+                # Dynamically generate new routines menu if routines exist for user
                 routineTab = wx.Menu();
                 for routine in self.routines:
                     routineOption = routineTab.Append(wx.NewId(), "&{}".format(routine["routineName"]),

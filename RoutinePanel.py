@@ -3,8 +3,7 @@ from ObjectListView import ObjectListView, ColumnDefn, GroupListView
 
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):
-        super(RoutinePanel, self).__init__(parent, wx.ID_ANY, size=(50, 50))
-        #self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000,1000))
+        super(RoutinePanel, self).__init__(parent, wx.ID_ANY)
 
         self.active_routine = self.GetParent().GetParent().active_routine
 
@@ -19,8 +18,7 @@ class RoutinePanel(wx.Panel):
             ColumnDefn("Date", "left", 200, "date"),
             ColumnDefn("Workout Name", "left", 280, "workoutName"),
             ColumnDefn("Target", "left", 200, "muscleGroup"),
-            ColumnDefn("Variations", "left", 290, "variations"),
-            ColumnDefn("Weight", "left", 50, "weight"),
+            ColumnDefn("Weight", "left", 150, "weight"),
             ColumnDefn("Sets", "right", 50, "sets"),
             ColumnDefn("Reps", "left", 50, "reps")
         ])

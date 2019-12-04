@@ -36,7 +36,7 @@ def main():
         wx.MessageBox('No Routines were found.', 'Info', wx.OK | wx.ICON_INFORMATION);
 
     app = wx.App();
-    frame = MainWindow.MainWindow(None, "PyExFitness", active_user, routines);
+    frame = MainWindow.MainWindow(None, "MyTrainer", active_user, routines);
     app.MainLoop();
 
 

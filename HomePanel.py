@@ -389,7 +389,7 @@ class HomePanel(wx.Panel):
                 routineTab = wx.Menu();
                 tab = routineTab.Append(wx.NewId(), "&{}".format(deserialized["routineName"]), "Change to Routine {}".format(deserialized["routineName"]));
                 mainWindow.Bind(wx.EVT_MENU, mainWindow.OnSwitchRoutine, tab);
-
+                mainWindow.windowMenuBar.Append(routineTab, deserialized["routineName"]);
             # Serialize and Save to json profile
             with open('./profiles/{}.json'.format(user), 'w+') as updatedUserJson:
                 json.dump(data, updatedUserJson, indent=4);

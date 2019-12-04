@@ -2,57 +2,48 @@
     "Username": "Test_User",
     "Routines": [
         {
-            "routineName": "vfvfer",
+            "routineName": "Test",
             "sessions": [
                 {
                     "date": "Tuesday, 12/03/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bends",
+                            "workoutName": "Side Bend",
                             "muscleGroup": "Adductors",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Military Press",
+                            "muscleGroup": "Anterior Deltoid",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "BB Military Press",
+                                "Lever (plate loaded) Military Press"
                             ]
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "DB Incline Curl",
+                            "muscleGroup": "Biceps Brachii",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
-                            ]
+                            "weight": "0",
+                            "variations": []
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Reverse Curl",
+                            "muscleGroup": "Brachioradialis",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "BB Reverse Curl",
+                                "Cable Reverse Curl",
+                                "Lever (selectorized) Reverse Curl"
                             ]
                         }
                     ]
@@ -61,46 +52,42 @@
                     "date": "Wednesday, 12/04/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Suspended Pull Through",
+                            "muscleGroup": "Erector Spinae",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Kneeling Row",
+                            "muscleGroup": "General Back",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Rear Lunge",
+                            "muscleGroup": "Gluteus Maximus",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "Cable Rear Lunge",
+                                "Lever (plate loaded) Rear Lunge",
+                                "Sled Rear Lunge",
+                                "Smith Rear Lunge"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "BB Good morning",
+                            "muscleGroup": "Hamstrings",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": []
-                        },
-                        {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "Smith Good Morning"
                             ]
                         }
                     ]
@@ -109,53 +96,43 @@
                     "date": "Thursday, 12/05/19",
                     "workouts": [
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Upright Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "Cable Upright Shoulder External Rotation",
+                                "DB Upright Shoulder External Rotation",
+                                "Lever (selectorized) Upright Shoulder External Rotation"
                             ]
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Y Raise",
+                            "muscleGroup": "Lateral Deltoid",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "Cable Y Raise",
+                                "Suspended Y Raise"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Kneeling Bent-over Pulldown",
+                            "muscleGroup": "Latissimus Dorsi",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Kneeling Twisting Crunch",
+                            "muscleGroup": "Obliques",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
-                            ]
+                            "weight": "0",
+                            "variations": []
                         }
                     ]
                 },
@@ -163,52 +140,46 @@
                     "date": "Friday, 12/06/19",
                     "workouts": [
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Chest Dips",
+                            "muscleGroup": "Pectoralis Minor",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "Assisted Chest Dip",
+                                "Lever Chest Dips",
+                                "Weighted Chest Dips"
                             ]
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Flies",
+                            "muscleGroup": "Pectorlis Major-Clavicular",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "Cable Incline Fly",
+                                "Cable Standing Incline Fly",
+                                "Suspended Fly",
+                                "DB Incline Fly",
+                                "Lever Selectorized Incline Fly"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Step-Down",
+                            "muscleGroup": "Pectorlis Major-Sternal",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Lever (selectorized) Seated Reverse Fly",
+                            "muscleGroup": "Posterior Deltoid",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
-                            ]
+                            "weight": "0",
+                            "variations": []
                         }
                     ]
                 },
@@ -216,48 +187,45 @@
                     "date": "Saturday, 12/07/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "DB Lying Pronation",
+                            "muscleGroup": "Pronators",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "BW Step-Up",
+                            "muscleGroup": "Quadriceps",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "BW Lateral Ste[-Up",
+                                "BW Step-Down - Alternating"
                             ]
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Sit-Ups",
+                            "muscleGroup": "Rectus Abdominis",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "Weighted Sit-ups",
+                                "Body Weight Sit-ups"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Stretch Standing",
+                            "muscleGroup": "Rectus Femoris",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": []
+                            "weight": "0",
+                            "variations": [
+                                "Towel",
+                                "Apparatus"
+                            ]
                         }
                     ]
                 },
@@ -265,52 +233,42 @@
                     "date": "Sunday, 12/08/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Standing Shoulder Internal Rotation",
+                            "muscleGroup": "Subscapularis",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
-                            ]
-                        },
-                        {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Seated Supination",
+                            "muscleGroup": "Supinators",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "DB Seated Supination",
+                                "Lever (selectorized) Seated Supination"
                             ]
                         },
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Front Lateral Raise",
+                            "muscleGroup": "Supraspinatus",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "Cable Front Lateral Raise",
+                                "DB Front Lateral Raise"
                             ]
+                        },
+                        {
+                            "workoutName": "Abdominal Vacuum",
+                            "muscleGroup": "Transverse Abdominis",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": []
                         }
                     ]
                 },
@@ -318,51 +276,51 @@
                     "date": "Monday, 12/09/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Gripless Shrug",
+                            "muscleGroup": "Trapezius",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
+                                "Lever (plate loaded) Gripless Shrug",
+                                "Lever (selectorized) Gripless Shrug",
+                                "Sled Gripless Shrug"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Body Weight Suspended Triceps Extension",
+                            "muscleGroup": "Triceps Brachii",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
+                        },
+                        {
+                            "workoutName": "Reverse Wrist Curl",
+                            "muscleGroup": "Wrist Extensors",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": [
+                                "BB Reverse Wrist Curl",
+                                "Cable Reverse Wrist Curl",
+                                "DB Reverse Wrist Curl",
+                                "Lever (plate loaded) Reverse Wrist Curl",
+                                "Lever (selectorized) Reverse Wrist Curl"
+                            ]
                         },
                         {
                             "workoutName": "Hip Adduction",
                             "muscleGroup": "Adductors",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
                                 "Cable Hip Adduction",
                                 "Lever Seated Hip Adduction",
                                 "Lever Lying Hip Adduction",
                                 "Lever Standing Hip Adduction",
                                 "Weight Hip Adduction"
-                            ]
-                        },
-                        {
-                            "workoutName": "Side Bridge",
-                            "muscleGroup": "Adductors",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": 0,
-                            "variations": [
-                                "BW Angled Side Bridge",
-                                "BW Bent Knee Side Bridge",
-                                "BW Side Bridge",
-                                "Suspended Side Bridge"
                             ]
                         }
                     ]
@@ -371,56 +329,79 @@
                     "date": "Tuesday, 12/10/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Arnold Press",
+                            "muscleGroup": "Anterior Deltoid",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
-                            "variations": []
-                        },
-                        {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "DB Arnold Press"
                             ]
                         },
                         {
-                            "workoutName": "Side Bend",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Cable Supine Curl",
+                            "muscleGroup": "Biceps Brachii",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Hip Adduction",
-                            "muscleGroup": "Adductors",
+                            "workoutName": "Reverse Preacher Curl",
+                            "muscleGroup": "Brachioradialis",
                             "reps": "20",
                             "sets": "3",
-                            "weight": 0,
+                            "weight": "0",
                             "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
+                                "BB Preacher Reverse Curl",
+                                "Cable Preacher Reverse Curl",
+                                "Lever (selectorized) Preacher Reverse Curl"
                             ]
+                        },
+                        {
+                            "workoutName": "Body Weight Bird Dog on ball",
+                            "muscleGroup": "Erector Spinae",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": []
                         }
                     ]
                 }
             ],
             "tracker": {
-                "Side Bend": 11,
-                "Side Bridge": 10,
-                "Hip Adduction": 11
+                "Side Bend": 1,
+                "Military Press": 1,
+                "DB Incline Curl": 1,
+                "Reverse Curl": 1,
+                "Suspended Pull Through": 1,
+                "Cable Kneeling Row": 1,
+                "Rear Lunge": 1,
+                "BB Good morning": 1,
+                "Upright Shoulder External Rotation": 1,
+                "Y Raise": 1,
+                "Cable Kneeling Bent-over Pulldown": 1,
+                "Cable Kneeling Twisting Crunch": 1,
+                "Chest Dips": 1,
+                "Flies": 1,
+                "Cable Step-Down": 1,
+                "Lever (selectorized) Seated Reverse Fly": 1,
+                "DB Lying Pronation": 1,
+                "BW Step-Up": 1,
+                "Sit-Ups": 1,
+                "Stretch Standing": 1,
+                "Cable Standing Shoulder Internal Rotation": 1,
+                "Seated Supination": 1,
+                "Front Lateral Raise": 1,
+                "Abdominal Vacuum": 1,
+                "Gripless Shrug": 1,
+                "Body Weight Suspended Triceps Extension": 1,
+                "Reverse Wrist Curl": 1,
+                "Hip Adduction": 1,
+                "Arnold Press": 1,
+                "Cable Supine Curl": 1,
+                "Reverse Preacher Curl": 1,
+                "Body Weight Bird Dog on ball": 1
             }
         }
     ]

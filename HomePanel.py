@@ -7,6 +7,7 @@ from helpers import getLeastUsedWorkout
 
 SUCCESS_ICON = "images/success-icon.jpg"
 ERROR_ICON = "images/error-icon.jpg"
+# To do: Reorganize this
 class HomePanel(wx.Panel):
     def __init__(self, parent):
         super(HomePanel, self).__init__(parent)

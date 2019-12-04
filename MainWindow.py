@@ -9,7 +9,6 @@ import os;
 import HomePanel;
 import RoutinePanel;
 import NotesPanel;
-import SettingsPanel;
 
 class MainWindow(wx.Frame):
     def __init__(self, parent, title, active_user, routines):
@@ -32,8 +31,6 @@ class MainWindow(wx.Frame):
         self.nb.AddPage(self.routinePage, "Routines")
         self.notesPage = NotesPanel.NotesPanel(self.nb)
         self.nb.AddPage(self.notesPage, "Notes")
-        self.settingsPage = SettingsPanel.SettingsPanel(self.nb)
-        self.nb.AddPage(self.settingsPage, "Settings")
 
         # Binding method listener to set routine when note page has changed
         self.Bind(wx.EVT_NOTEBOOK_PAGE_CHANGED, self.onPageChangeListener, self.nb)
@@ -92,6 +89,7 @@ class MainWindow(wx.Frame):
         self.SetMenuBar(self.windowMenuBar);
 
     # Menu Event Handler
+    # To dos save notes
     def OnSave(self, event=None):
         routinePage = self.nb.GetPage(1)
 
@@ -139,11 +137,14 @@ class MainWindow(wx.Frame):
         with open('./profiles/{}.json'.format(self.active_user), 'w+') as updatedUserJson:
             json.dump(userData, updatedUserJson, indent=4);
 
+        #To do: Remove from menu bar
+
     def OnFileQuit(self, event=None):
         self.Close();
 
     # Menu Event Handler
     def OnExport(self, event=None):
+        # To do
         self.Close();
 
     # Menu Event Handler
@@ -249,7 +250,6 @@ class MainWindow(wx.Frame):
             "Home": self.homePage,
             "Routines": self.routinePage,
             "Notes": self.notesPage,
-            "Settings": self.settingsPage
         }
         listener = switch.get(activePage, lambda: "")
         listener.onPageChangeListener();

@@ -3,10 +3,8 @@ from ObjectListView import ObjectListView, ColumnDefn, GroupListView
 
 class RoutinePanel(wx.Panel):
     def __init__(self, parent):
-        super(RoutinePanel, self).__init__(parent)
-        self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000, 1000))
-        # Set Sizer
-        self.routineViewSizer = wx.BoxSizer(wx.VERTICAL)
+        super(RoutinePanel, self).__init__(parent, wx.ID_ANY, size=(50, 50))
+        #self.viewPanel = wx.Panel(self, wx.ID_ANY, pos=(0, 50), size=(1000,1000))
 
         self.active_routine = self.GetParent().GetParent().active_routine
 
@@ -15,7 +13,7 @@ class RoutinePanel(wx.Panel):
         else:
             self.sessions = []
 
-        self.routineView = GroupListView(self.viewPanel, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
+        self.routineView = GroupListView(self, wx.ID_ANY, style=wx.LC_REPORT|wx.SUNKEN_BORDER)
 
         self.routineView.SetColumns([
             ColumnDefn("Date", "left", 200, "date"),
@@ -28,10 +26,10 @@ class RoutinePanel(wx.Panel):
         ])
 
         self.routineView.cellEditMode = ObjectListView.CELLEDIT_DOUBLECLICK
-
+        self.routineViewSizer = wx.BoxSizer(wx.VERTICAL)
         self.routineViewSizer.Add(self.routineView, 1, wx.ALL | wx.EXPAND, 5)
         self.SetSizer(self.routineViewSizer)
-        self.routineView.Show()
+
 
     # Routine Event Handler
     def onPageChangeListener(self, event=None):

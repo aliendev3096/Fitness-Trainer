@@ -5,51 +5,59 @@
             "routineName": "Test",
             "sessions": [
                 {
-                    "date": "Tuesday, 12/03/19",
+                    "date": "Thursday, 12/05/19",
                     "workouts": [
                         {
-                            "workoutName": "Side Bend",
+                            "workoutName": "Side Bridge",
                             "muscleGroup": "Adductors",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": []
+                            "variations": [
+                                "BW Angled Side Bridge",
+                                "BW Bent Knee Side Bridge",
+                                "BW Side Bridge",
+                                "Suspended Side Bridge"
+                            ]
                         },
                         {
-                            "workoutName": "Military Press",
+                            "workoutName": "Arnold Press",
                             "muscleGroup": "Anterior Deltoid",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": [
-                                "BB Military Press",
-                                "Lever (plate loaded) Military Press"
+                                "DB Arnold Press"
                             ]
                         },
                         {
-                            "workoutName": "DB Incline Curl",
+                            "workoutName": "Prone Incline Curl",
                             "muscleGroup": "Biceps Brachii",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": []
+                            "variations": [
+                                "BB Prone Incline Curl",
+                                "Cable Prone Incline Curl",
+                                "DB Prone Incline Curl"
+                            ]
                         },
                         {
-                            "workoutName": "Reverse Curl",
+                            "workoutName": "Reverse Preacher Curl",
                             "muscleGroup": "Brachioradialis",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": [
-                                "BB Reverse Curl",
-                                "Cable Reverse Curl",
-                                "Lever (selectorized) Reverse Curl"
+                                "BB Preacher Reverse Curl",
+                                "Cable Preacher Reverse Curl",
+                                "Lever (selectorized) Preacher Reverse Curl"
                             ]
                         }
                     ]
                 },
                 {
-                    "date": "Wednesday, 12/04/19",
+                    "date": "Friday, 12/06/19",
                     "workouts": [
                         {
                             "workoutName": "Suspended Pull Through",
@@ -60,7 +68,7 @@
                             "variations": []
                         },
                         {
-                            "workoutName": "Cable Kneeling Row",
+                            "workoutName": "Lever (selectorized) Seated High Row",
                             "muscleGroup": "General Back",
                             "reps": "20",
                             "sets": "3",
@@ -68,66 +76,59 @@
                             "variations": []
                         },
                         {
-                            "workoutName": "Rear Lunge",
+                            "workoutName": "BB Trap Bar Deadlift",
                             "muscleGroup": "Gluteus Maximus",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": "0",
-                            "variations": [
-                                "Cable Rear Lunge",
-                                "Lever (plate loaded) Rear Lunge",
-                                "Sled Rear Lunge",
-                                "Smith Rear Lunge"
-                            ]
-                        },
-                        {
-                            "workoutName": "BB Good morning",
-                            "muscleGroup": "Hamstrings",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": "0",
-                            "variations": [
-                                "Smith Good Morning"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "date": "Thursday, 12/05/19",
-                    "workouts": [
-                        {
-                            "workoutName": "Upright Shoulder External Rotation",
-                            "muscleGroup": "Infraspinatus",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": "0",
-                            "variations": [
-                                "Cable Upright Shoulder External Rotation",
-                                "DB Upright Shoulder External Rotation",
-                                "Lever (selectorized) Upright Shoulder External Rotation"
-                            ]
-                        },
-                        {
-                            "workoutName": "Y Raise",
-                            "muscleGroup": "Lateral Deltoid",
-                            "reps": "20",
-                            "sets": "3",
-                            "weight": "0",
-                            "variations": [
-                                "Cable Y Raise",
-                                "Suspended Y Raise"
-                            ]
-                        },
-                        {
-                            "workoutName": "Cable Kneeling Bent-over Pulldown",
-                            "muscleGroup": "Latissimus Dorsi",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": []
                         },
                         {
-                            "workoutName": "Cable Kneeling Twisting Crunch",
+                            "workoutName": "Hanging Hamstring Bridge",
+                            "muscleGroup": "Hamstrings",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": []
+                        }
+                    ]
+                },
+                {
+                    "date": "Saturday, 12/07/19",
+                    "workouts": [
+                        {
+                            "workoutName": "DB Lying Shoulder External Rotation",
+                            "muscleGroup": "Infraspinatus",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": []
+                        },
+                        {
+                            "workoutName": "Raise",
+                            "muscleGroup": "Lateral Deltoid",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": [
+                                "DB Raise"
+                            ]
+                        },
+                        {
+                            "workoutName": "Pullover",
+                            "muscleGroup": "Latissimus Dorsi",
+                            "reps": "20",
+                            "sets": "3",
+                            "weight": "0",
+                            "variations": [
+                                "BB Pullover",
+                                "Cable Pullover",
+                                "Lever (plate loaded) Pullover",
+                                "Lever (selectorized) Pullover"
+                            ]
+                        },
+                        {
+                            "workoutName": "Lever (selectorized) Standing Side Bend",
                             "muscleGroup": "Obliques",
                             "reps": "20",
                             "sets": "3",
@@ -137,7 +138,7 @@
                     ]
                 },
                 {
-                    "date": "Friday, 12/06/19",
+                    "date": "Sunday, 12/08/19",
                     "workouts": [
                         {
                             "workoutName": "Chest Dips",
@@ -152,21 +153,23 @@
                             ]
                         },
                         {
-                            "workoutName": "Flies",
+                            "workoutName": "Bench Press",
                             "muscleGroup": "Pectorlis Major-Clavicular",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": [
-                                "Cable Incline Fly",
-                                "Cable Standing Incline Fly",
-                                "Suspended Fly",
-                                "DB Incline Fly",
-                                "Lever Selectorized Incline Fly"
+                                "BB Incline Bench Press",
+                                "Cable Bench Press",
+                                "Cable Incline Bench Press",
+                                "DB Incline Bench Press",
+                                "Lever Plate-Loaded Bench Press",
+                                "Lever Selectorized Bench Press",
+                                "Smith Incline Bench Press"
                             ]
                         },
                         {
-                            "workoutName": "Cable Step-Down",
+                            "workoutName": "Cable Standing Leg Extension",
                             "muscleGroup": "Pectorlis Major-Sternal",
                             "reps": "20",
                             "sets": "3",
@@ -174,20 +177,24 @@
                             "variations": []
                         },
                         {
-                            "workoutName": "Lever (selectorized) Seated Reverse Fly",
+                            "workoutName": "Lying Rear Lateral Raise",
                             "muscleGroup": "Posterior Deltoid",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": []
+                            "variations": [
+                                "DB Lying Rear Lateral Raise",
+                                "Lever (plate loaded) Lying Rear Lateral Raise",
+                                "Lever (selectorized) Lying Rear Lateral Raise"
+                            ]
                         }
                     ]
                 },
                 {
-                    "date": "Saturday, 12/07/19",
+                    "date": "Monday, 12/09/19",
                     "workouts": [
                         {
-                            "workoutName": "DB Lying Pronation",
+                            "workoutName": "Lever (selectorized) Standing Pronation",
                             "muscleGroup": "Pronators",
                             "reps": "20",
                             "sets": "3",
@@ -206,34 +213,28 @@
                             ]
                         },
                         {
-                            "workoutName": "Sit-Ups",
+                            "workoutName": "Body Weight V-Up",
                             "muscleGroup": "Rectus Abdominis",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": [
-                                "Weighted Sit-ups",
-                                "Body Weight Sit-ups"
-                            ]
+                            "variations": []
                         },
                         {
-                            "workoutName": "Stretch Standing",
+                            "workoutName": "Stretch Lever",
                             "muscleGroup": "Rectus Femoris",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": [
-                                "Towel",
-                                "Apparatus"
-                            ]
+                            "variations": []
                         }
                     ]
                 },
                 {
-                    "date": "Sunday, 12/08/19",
+                    "date": "Tuesday, 12/10/19",
                     "workouts": [
                         {
-                            "workoutName": "Cable Standing Shoulder Internal Rotation",
+                            "workoutName": "Cable Seated Shoulder Internal Rotation",
                             "muscleGroup": "Subscapularis",
                             "reps": "20",
                             "sets": "3",
@@ -273,7 +274,7 @@
                     ]
                 },
                 {
-                    "date": "Monday, 12/09/19",
+                    "date": "Wednesday, 12/11/19",
                     "workouts": [
                         {
                             "workoutName": "Gripless Shrug",
@@ -288,7 +289,7 @@
                             ]
                         },
                         {
-                            "workoutName": "Body Weight Suspended Triceps Extension",
+                            "workoutName": "Sled Standing Triceps Dip",
                             "muscleGroup": "Triceps Brachii",
                             "reps": "20",
                             "sets": "3",
@@ -310,36 +311,32 @@
                             ]
                         },
                         {
-                            "workoutName": "Hip Adduction",
+                            "workoutName": "Side Bend",
                             "muscleGroup": "Adductors",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
-                            "variations": [
-                                "Cable Hip Adduction",
-                                "Lever Seated Hip Adduction",
-                                "Lever Lying Hip Adduction",
-                                "Lever Standing Hip Adduction",
-                                "Weight Hip Adduction"
-                            ]
+                            "variations": []
                         }
                     ]
                 },
                 {
-                    "date": "Tuesday, 12/10/19",
+                    "date": "Thursday, 12/12/19",
                     "workouts": [
                         {
-                            "workoutName": "Arnold Press",
+                            "workoutName": "Cable Bar",
                             "muscleGroup": "Anterior Deltoid",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": [
-                                "DB Arnold Press"
+                                "cable bar behind neck press",
+                                "cable bar military press",
+                                "cable bar shoulder press"
                             ]
                         },
                         {
-                            "workoutName": "Cable Supine Curl",
+                            "workoutName": "Suspended Arm Curl",
                             "muscleGroup": "Biceps Brachii",
                             "reps": "20",
                             "sets": "3",
@@ -347,19 +344,19 @@
                             "variations": []
                         },
                         {
-                            "workoutName": "Reverse Preacher Curl",
+                            "workoutName": "Reverse Curl",
                             "muscleGroup": "Brachioradialis",
                             "reps": "20",
                             "sets": "3",
                             "weight": "0",
                             "variations": [
-                                "BB Preacher Reverse Curl",
-                                "Cable Preacher Reverse Curl",
-                                "Lever (selectorized) Preacher Reverse Curl"
+                                "BB Reverse Curl",
+                                "Cable Reverse Curl",
+                                "Lever (selectorized) Reverse Curl"
                             ]
                         },
                         {
-                            "workoutName": "Body Weight Bird Dog on ball",
+                            "workoutName": "Body Weight Hanging Hyperextension",
                             "muscleGroup": "Erector Spinae",
                             "reps": "20",
                             "sets": "3",
@@ -370,38 +367,38 @@
                 }
             ],
             "tracker": {
-                "Side Bend": 1,
-                "Military Press": 1,
-                "DB Incline Curl": 1,
-                "Reverse Curl": 1,
+                "Side Bridge": 1,
+                "Arnold Press": 1,
+                "Prone Incline Curl": 1,
+                "Reverse Preacher Curl": 1,
                 "Suspended Pull Through": 1,
-                "Cable Kneeling Row": 1,
-                "Rear Lunge": 1,
-                "BB Good morning": 1,
-                "Upright Shoulder External Rotation": 1,
-                "Y Raise": 1,
-                "Cable Kneeling Bent-over Pulldown": 1,
-                "Cable Kneeling Twisting Crunch": 1,
+                "Lever (selectorized) Seated High Row": 1,
+                "BB Trap Bar Deadlift": 1,
+                "Hanging Hamstring Bridge": 1,
+                "DB Lying Shoulder External Rotation": 1,
+                "Raise": 1,
+                "Pullover": 1,
+                "Lever (selectorized) Standing Side Bend": 1,
                 "Chest Dips": 1,
-                "Flies": 1,
-                "Cable Step-Down": 1,
-                "Lever (selectorized) Seated Reverse Fly": 1,
-                "DB Lying Pronation": 1,
+                "Bench Press": 1,
+                "Cable Standing Leg Extension": 1,
+                "Lying Rear Lateral Raise": 1,
+                "Lever (selectorized) Standing Pronation": 1,
                 "BW Step-Up": 1,
-                "Sit-Ups": 1,
-                "Stretch Standing": 1,
-                "Cable Standing Shoulder Internal Rotation": 1,
+                "Body Weight V-Up": 1,
+                "Stretch Lever": 1,
+                "Cable Seated Shoulder Internal Rotation": 1,
                 "Seated Supination": 1,
                 "Front Lateral Raise": 1,
                 "Abdominal Vacuum": 1,
                 "Gripless Shrug": 1,
-                "Body Weight Suspended Triceps Extension": 1,
+                "Sled Standing Triceps Dip": 1,
                 "Reverse Wrist Curl": 1,
-                "Hip Adduction": 1,
-                "Arnold Press": 1,
-                "Cable Supine Curl": 1,
-                "Reverse Preacher Curl": 1,
-                "Body Weight Bird Dog on ball": 1
+                "Side Bend": 1,
+                "Cable Bar": 1,
+                "Suspended Arm Curl": 1,
+                "Reverse Curl": 1,
+                "Body Weight Hanging Hyperextension": 1
             }
         }
     ]

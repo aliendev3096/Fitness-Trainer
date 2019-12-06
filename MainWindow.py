@@ -124,11 +124,13 @@ class MainWindow(wx.Frame):
             json.dump(userData, updatedUserJson, indent=4);
     def OnDelete(self, event=None):
         routinePage = self.nb.GetPage(1)
+
         # Load new user existing routines
         with open('./profiles/{}.json'.format(self.active_user), 'r') as userjson:
             userData = json.load(userjson)
             userData["Routines"];
 
+        # Stage removal
         for routine in userData["Routines"]:
             if routine["routineName"] == self.active_routine["routineName"]:
                 userData["Routines"].remove(routine);
@@ -137,7 +139,14 @@ class MainWindow(wx.Frame):
         with open('./profiles/{}.json'.format(self.active_user), 'w+') as updatedUserJson:
             json.dump(userData, updatedUserJson, indent=4);
 
-        #To do: Remove from menu bar
+        # Remove from menu bar
+        routineMenu = self.windowMenuBar.GetMenu(4)
+        for menuItem in routineMenu.GetMenuItems():
+            menuName = menuItem.GetItemLabel().replace("&", "")
+            if menuName == self.active_routine["routineName"]:
+                routineMenu.Remove(menuItem)
+                routineMenu.SetTitle(userData["Routines"][0]["routineName"])
+                self.active_routine = userData["Routines"][0]["routineName"]
 
     def OnFileQuit(self, event=None):
         self.Close();

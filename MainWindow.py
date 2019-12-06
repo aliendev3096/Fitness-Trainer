@@ -91,8 +91,7 @@ class MainWindow(wx.Frame):
 
         self.SetMenuBar(self.windowMenuBar);
 
-    # Menu Event Handler
-    # To dos save notes
+    # Menu Event Handlers
     def OnSaveNotes(self, event=None):
         notesPage = self.nb.GetPage(2)
         with open('./db/{}-notes.txt'.format(self.active_user), 'w') as userNotes:
@@ -130,6 +129,7 @@ class MainWindow(wx.Frame):
         # Serialize and Save to json profile
         with open('./profiles/{}.json'.format(self.active_user), 'w+') as updatedUserJson:
             json.dump(userData, updatedUserJson, indent=4);
+
     def OnDelete(self, event=None):
         routinePage = self.nb.GetPage(1)
 
@@ -138,7 +138,7 @@ class MainWindow(wx.Frame):
             userData = json.load(userjson)
             userData["Routines"];
 
-        # Stage removal
+        # Stage json removal
         for routine in userData["Routines"]:
             if routine["routineName"] == self.active_routine["routineName"]:
                 userData["Routines"].remove(routine);
@@ -170,23 +170,20 @@ class MainWindow(wx.Frame):
     def OnFileQuit(self, event=None):
         self.Close();
 
-    # Menu Event Handler
     def OnExport(self, event=None):
         # To do
         self.Close();
 
-    # Menu Event Handler
     def OnAddProfile(self, event=None):
         # Open New Sub Window to Add Profile
         profileFrame = ProfileWindow.ProfileWindow(self, "Add Profile");
         profileFrame.OpenAddProfileScreen();
-    # Menu Event Handler
+
     def OnDeleteProfile(self, event=None):
         # Open New Sub Window to Delete Profile
         profileFrame = ProfileWindow.ProfileWindow(self, "Delete Profile");
         profileFrame.OpenDeleteProfileScreen();
 
-    # Menu Event Handler
     def OnSwitchUser(self, event=None):
         # Switch Current Active User
         menuId = event.GetId()
@@ -233,8 +230,6 @@ class MainWindow(wx.Frame):
                 self.routines = []
                 self.active_routine = None
 
-
-    # Menu Event Handler
     def OnSwitchRoutine(self, event=None):
         # Switch Current Active Routine
         menuId = event.GetId()
@@ -259,12 +254,9 @@ class MainWindow(wx.Frame):
 
         self.windowMenuBar.SetMenuLabel(4, routineName);
 
-
-    # Menu Event Handler
     def onLightTheme(self, event=None):
         self.SetBackgroundColour(wx.Colour(255, 255, 255));
 
-    # Menu Event Handler
     def onDarkTheme(self, event=None):
         self.SetBackgroundColour(wx.Colour(43, 45, 46));
         self.Update();

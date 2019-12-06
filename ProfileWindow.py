@@ -27,14 +27,16 @@ class ProfileWindow(wx.Frame):
         text = wx.StaticText(panel, label="Add Profile")
         sizer.Add(text, pos=(0, 0), flag=wx.TOP | wx.LEFT | wx.BOTTOM, border=5)
 
-        tc = wx.TextCtrl(panel)
-        sizer.Add(tc, pos=(1, 0), span=(1, 5),
+        self.editname = wx.TextCtrl(panel)
+        sizer.Add(self.editname, pos=(1, 0), span=(1, 5),
                   flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
 
-        buttonOk = wx.Button(panel, label="Ok", size=(90, 28))
-        buttonClose = wx.Button(panel, label="Close", size=(90, 28))
-        sizer.Add(buttonOk, pos=(3, 3))
-        sizer.Add(buttonClose, pos=(3, 4), flag=wx.RIGHT | wx.BOTTOM, border=10)
+        self.buttonOk = wx.Button(panel, label="Ok", size=(90, 28))
+        self.buttonOk.Bind(wx.EVT_BUTTON, self.onSaveProfile);
+        self.buttonClose = wx.Button(panel, label="Close", size=(90, 28))
+        self.buttonClose.Bind(wx.EVT_BUTTON, self.onClose);
+        sizer.Add(self.buttonOk, pos=(3, 3))
+        sizer.Add(self.buttonClose, pos=(3, 4), flag=wx.RIGHT | wx.BOTTOM, border=10)
 
         sizer.AddGrowableCol(1)
         sizer.AddGrowableRow(2)
@@ -49,6 +51,9 @@ class ProfileWindow(wx.Frame):
         self.deleteButton = wx.Button(self.panel, label="Delete Profile", pos=(200, 75));
 
         self.deleteButton.Bind(wx.EVT_BUTTON, self.onDeleteProfile);
+
+    def onClose(self, event=None):
+        self.Close();
 
     def onSaveProfile(self, event=None):
         initProfile = {};
@@ -66,11 +71,25 @@ class ProfileWindow(wx.Frame):
 
             # Generate User Notes
             with open(dbfilename, 'w') as dboutfile:
-                json.dump({}, dboutfile);
+                json.dump("", dboutfile);
 
         except EnvironmentError:
             wx.MessageBox('Something went wrong. Could not create profile', 'Info', wx.OK | wx.ICON_INFORMATION);
         finally:
+            mainWindow = self.GetParent()
+            profileMenu = mainWindow.windowMenuBar.GetMenu(3)
+            # Add new user to menu
+            profileTab = profileMenu.Append(wx.NewId(), "&{}".format(self.editname.Value),
+                "Change to Routine {}".format(self.editname.Value));
+            mainWindow.Bind(wx.EVT_MENU, mainWindow.OnSwitchUser, profileTab);
+
+            # Remove routine, new user would not have any
+            mainWindow.windowMenuBar.Remove(4)
+
+            profileMenu.SetTitle(self.editname.Value)
+            mainWindow.active_user = self.editname.Value
+            mainWindow.active_routine = []
+
             wx.MessageBox('Profile {} Created!'.format(self.editname.Value), 'Info', wx.OK | wx.ICON_INFORMATION);
             self.Close();
 
@@ -78,6 +97,29 @@ class ProfileWindow(wx.Frame):
 
         try:
             os.remove('./profiles/{}.json'.format(self.nameToBeDeleted.Value))
+            os.remove('./db/{}-notes.txt'.format(self.nameToBeDeleted.Value))
+
+            mainWindow = self.GetParent()
+            profileMenu = mainWindow.windowMenuBar.GetMenu(3)
+            menuItems = profileMenu.GetMenuItems()
+            for menuItem in menuItems:
+                menuName = menuItem.GetItemLabel().replace("&", "")
+                if menuName == self.nameToBeDeleted.Value:
+                    profileMenu.Remove(menuItem)
+                    nextExistingUser = menuItems[0].GetItemLabel().replace("&", "")
+                    profileMenu.SetTitle(nextExistingUser)
+
+                    # Load existing user
+                    with open('./profiles/{}.json'.format(nextExistingUser), 'r') as userjson:
+                        userData = json.load(userjson)
+                        userData["Routines"];
+
+                    mainWindow.active_user = nextExistingUser
+                    mainWindow.active_routine = userData["Routines"][0]
+            # Remove routines if there were any
+            if len(mainWindow.windowMenuBar.GetMenus()) > 4:
+                mainWindow.windowMenuBar.Remove(4);
+
         except EnvironmentError:
             wx.MessageBox('Something went wrong. Could not delete profile', 'Info', wx.OK | wx.ICON_INFORMATION);
         finally:

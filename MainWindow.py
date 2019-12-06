@@ -146,7 +146,18 @@ class MainWindow(wx.Frame):
             if menuName == self.active_routine["routineName"]:
                 routineMenu.Remove(menuItem)
                 routineMenu.SetTitle(userData["Routines"][0]["routineName"])
-                self.active_routine = userData["Routines"][0]["routineName"]
+                self.active_routine = userData["Routines"][0]
+
+        # Update List View if active page is routine page
+        if(self.nb.GetSelection() == 1):
+            workouts = []
+            sessions = self.active_routine["sessions"]
+            for session in sessions:
+                for workout in session["workouts"]:
+                    # Append the date to each workout for ObjectListView grouping
+                    workout["date"] = session["date"]
+                workouts.extend(session["workouts"])
+            self.routinePage.routineView.SetObjects(workouts)
 
     def OnFileQuit(self, event=None):
         self.Close();

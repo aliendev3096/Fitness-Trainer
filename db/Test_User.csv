@@ -1,0 +1,33 @@
+date,workoutName,muscleGroup,reps,sets,weight,variations
+"Thursday, 12/05/19",Side Bridge,Adductors,20,3,0,"['BW Angled Side Bridge', 'BW Bent Knee Side Bridge', 'BW Side Bridge', 'Suspended Side Bridge']"
+"Thursday, 12/05/19",Arnold Press,Anterior Deltoid,20,3,0,['DB Arnold Press']
+"Thursday, 12/05/19",Prone Incline Curl,Biceps Brachii,20,3,0,"['BB Prone Incline Curl', 'Cable Prone Incline Curl', 'DB Prone Incline Curl']"
+"Thursday, 12/05/19",Reverse Preacher Curl,Brachioradialis,20,3,0,"['BB Preacher Reverse Curl', 'Cable Preacher Reverse Curl', 'Lever (selectorized) Preacher Reverse Curl']"
+"Friday, 12/06/19",Suspended Pull Through,Erector Spinae,20,3,0,[]
+"Friday, 12/06/19",Lever (selectorized) Seated High Row,General Back,20,3,0,[]
+"Friday, 12/06/19",BB Trap Bar Deadlift,Gluteus Maximus,20,3,0,[]
+"Friday, 12/06/19",Hanging Hamstring Bridge,Hamstrings,20,3,0,[]
+"Saturday, 12/07/19",DB Lying Shoulder External Rotation,Infraspinatus,20,3,0,[]
+"Saturday, 12/07/19",Raise,Lateral Deltoid,20,3,0,['DB Raise']
+"Saturday, 12/07/19",Pullover,Latissimus Dorsi,20,3,0,"['BB Pullover', 'Cable Pullover', 'Lever (plate loaded) Pullover', 'Lever (selectorized) Pullover']"
+"Saturday, 12/07/19",Lever (selectorized) Standing Side Bend,Obliques,20,3,0,[]
+"Sunday, 12/08/19",Chest Dips,Pectoralis Minor,20,3,0,"['Assisted Chest Dip', 'Lever Chest Dips', 'Weighted Chest Dips']"
+"Sunday, 12/08/19",Bench Press,Pectorlis Major-Clavicular,20,3,0,"['BB Incline Bench Press', 'Cable Bench Press', 'Cable Incline Bench Press', 'DB Incline Bench Press', 'Lever Plate-Loaded Bench Press', 'Lever Selectorized Bench Press', 'Smith Incline Bench Press']"
+"Sunday, 12/08/19",Cable Standing Leg Extension,Pectorlis Major-Sternal,20,3,0,[]
+"Sunday, 12/08/19",Lying Rear Lateral Raise,Posterior Deltoid,20,3,0,"['DB Lying Rear Lateral Raise', 'Lever (plate loaded) Lying Rear Lateral Raise', 'Lever (selectorized) Lying Rear Lateral Raise']"
+"Monday, 12/09/19",Lever (selectorized) Standing Pronation,Pronators,20,3,0,[]
+"Monday, 12/09/19",BW Step-Up,Quadriceps,20,3,0,"['BW Lateral Ste[-Up', 'BW Step-Down - Alternating']"
+"Monday, 12/09/19",Body Weight V-Up,Rectus Abdominis,20,3,0,[]
+"Monday, 12/09/19",Stretch Lever,Rectus Femoris,20,3,0,[]
+"Tuesday, 12/10/19",Cable Seated Shoulder Internal Rotation,Subscapularis,20,3,0,[]
+"Tuesday, 12/10/19",Seated Supination,Supinators,20,3,0,"['DB Seated Supination', 'Lever (selectorized) Seated Supination']"
+"Tuesday, 12/10/19",Front Lateral Raise,Supraspinatus,20,3,0,"['Cable Front Lateral Raise', 'DB Front Lateral Raise']"
+"Tuesday, 12/10/19",Abdominal Vacuum,Transverse Abdominis,20,3,0,[]
+"Wednesday, 12/11/19",Gripless Shrug,Trapezius,20,3,0,"['Lever (plate loaded) Gripless Shrug', 'Lever (selectorized) Gripless Shrug', 'Sled Gripless Shrug']"
+"Wednesday, 12/11/19",Sled Standing Triceps Dip,Triceps Brachii,20,3,0,[]
+"Wednesday, 12/11/19",Reverse Wrist Curl,Wrist Extensors,20,3,0,"['BB Reverse Wrist Curl', 'Cable Reverse Wrist Curl', 'DB Reverse Wrist Curl', 'Lever (plate loaded) Reverse Wrist Curl', 'Lever (selectorized) Reverse Wrist Curl']"
+"Wednesday, 12/11/19",Side Bend,Adductors,20,3,0,[]
+"Thursday, 12/12/19",Cable Bar,Anterior Deltoid,20,3,0,"['cable bar behind neck press', 'cable bar military press', 'cable bar shoulder press']"
+"Thursday, 12/12/19",Suspended Arm Curl,Biceps Brachii,20,3,0,[]
+"Thursday, 12/12/19",Reverse Curl,Brachioradialis,20,3,0,"['BB Reverse Curl', 'Cable Reverse Curl', 'Lever (selectorized) Reverse Curl']"
+"Thursday, 12/12/19",Body Weight Hanging Hyperextension,Erector Spinae,20,3,0,[]

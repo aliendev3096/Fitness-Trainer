@@ -5,6 +5,7 @@ import wx;
 import ProfileWindow;
 import classes;
 import json;
+import csv;
 import os;
 import HomePanel;
 import RoutinePanel;
@@ -171,8 +172,27 @@ class MainWindow(wx.Frame):
         self.Close();
 
     def OnExport(self, event=None):
-        # To do
-        self.Close();
+        # Load Active Routine
+
+        # Export to CSV
+        sessions = []
+        with open("./db/{}.csv".format(self.active_user), 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=["date", "workoutName", "muscleGroup", "reps", "sets", "weight", "variations"])
+            writer.writeheader()
+            csvData = []
+            # if active routine is set, generate list
+            if self.active_routine is not None:
+                sessions = self.active_routine["sessions"]
+
+                # For each session, append the workouts
+                for session in sessions:
+                    for workout in session["workouts"]:
+                        # Append the date to each workout for ObjectListView grouping
+                        workout["date"] = session["date"]
+
+                    csvData.extend(session["workouts"])
+                for data in csvData:
+                    writer.writerow(data)
 
     def OnAddProfile(self, event=None):
         # Open New Sub Window to Add Profile

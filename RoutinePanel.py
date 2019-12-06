@@ -34,7 +34,7 @@ class RoutinePanel(wx.Panel):
         # Clear the routines
         self.sessions = []
         self.active_routine = self.GetParent().GetParent().active_routine
-        print(self.active_routine["routineName"])
+
         # if active routine is set, generate list
         if self.active_routine is not None:
             sessions = self.active_routine["sessions"]

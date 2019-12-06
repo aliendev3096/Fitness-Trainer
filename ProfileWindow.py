@@ -56,12 +56,18 @@ class ProfileWindow(wx.Frame):
         initProfile['Routines'] = [];
 
         filename = "./profiles/{}.json".format(self.editname.Value);
+        dbfilename = "./db/{}-notes.txt".format(self.editname.Value)
         try:
             if not os.path.exists('./profiles'):
                 os.makedirs('./profiles', 0o777)
 
             with open(filename, 'w') as outfile:
                 json.dump(initProfile, outfile);
+
+            # Generate User Notes
+            with open(dbfilename, 'w') as dboutfile:
+                json.dump({}, dboutfile);
+
         except EnvironmentError:
             wx.MessageBox('Something went wrong. Could not create profile', 'Info', wx.OK | wx.ICON_INFORMATION);
         finally:

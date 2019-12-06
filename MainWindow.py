@@ -39,6 +39,9 @@ class MainWindow(wx.Frame):
         # Creating menus with event bindings
         # Create File Menu
         fileTab = wx.Menu();
+
+        saveNotesOption = fileTab.Append(wx.NewId(), "&Save Notes", "Save Notes");
+        self.Bind(wx.EVT_MENU, self.OnSaveNotes, saveNotesOption);
         saveOption = fileTab.Append(wx.NewId(), "&Save Routine", "Save Weekly Routine");
         self.Bind(wx.EVT_MENU, self.OnSave, saveOption);
         fileExportOption = fileTab.Append(wx.NewId(), "&Export Routine", "Export Weekly Routine");
@@ -90,6 +93,11 @@ class MainWindow(wx.Frame):
 
     # Menu Event Handler
     # To dos save notes
+    def OnSaveNotes(self, event=None):
+        notesPage = self.nb.GetPage(2)
+        with open('./db/{}-notes.txt'.format(self.active_user), 'w') as userNotes:
+            userNotes.write(notesPage.text.GetValue())
+
     def OnSave(self, event=None):
         routinePage = self.nb.GetPage(1)
 

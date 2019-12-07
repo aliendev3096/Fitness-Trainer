@@ -33,8 +33,8 @@ class HomePanel(wx.Panel):
                               "** To Begin, please provide the following: start date, end date, workout routine type and which muscle groups you with " \
                               "to target. ** \n" \
                               "Workouts brought to you by: https://exrx.net/"
-        self.welcomeText = wx.StaticText(self, label="Welcome to Dynamite Fit", pos=(20,60));
-        self.infotext = wx.StaticText(self, label=description, pos=(20,80), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 130))
+        self.welcomeText = wx.StaticText(self, label="Welcome to Dynamite Fit", pos=(20,10));
+        self.infotext = wx.StaticText(self, label=description, pos=(20,40), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 130))
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
         self.vbox.Add(self.welcomeBox);
@@ -193,6 +193,7 @@ class HomePanel(wx.Panel):
         self.Bind(wx.EVT_TEXT, self.validateRoutineName, self.routineName)
         self.Bind(wx.EVT_BUTTON, self.onGenerate, self.generateWorkoutBtn)
         self.vbox.Add(self.routineMetaBox);
+
 
     # Home Event Handler
     def onPageChangeListener(self, event=None):

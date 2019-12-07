@@ -23,17 +23,17 @@ class HomePanel(wx.Panel):
         # Intro Text
         self.welcomeBox = wx.BoxSizer(wx.HORIZONTAL);
         description = "This application is not intended to help with weight loss. " \
-                              "The purpose of Dynamite Fit is to provide a feeling for diverse \n workouts to help you on your " \
+                              "The purpose of ReTrainer is to provide a feeling for diverse \n workouts to help you on your " \
                               "journey to healthiness. By no means should you follow these workouts strictly. \n You are " \
                               "free to manipulate your workouts as you want. If you are limited in anyway to perform any of these workouts, " \
                               "please do not feel obligated to \n do them as there are plenty of other workouts to choose from." \
-                              "Dynamite Fit is intended ONLY as a guide. \n" \
-                              "For the purpose of simplicity, Dynamite Fit generates workout only up to a year from the start date, " \
+                              "ReTrainer  is intended ONLY as a guide. \n" \
+                              "For the purpose of simplicity, ReTrainer generates workout only up to a year from the start date, " \
                               "although this is not recommended. \n" \
                               "** To Begin, please provide the following: start date, end date, workout routine type and which muscle groups you with " \
                               "to target. ** \n" \
                               "Workouts brought to you by: https://exrx.net/"
-        self.welcomeText = wx.StaticText(self, label="Welcome to Dynamite Fit", pos=(20,10));
+        self.welcomeText = wx.StaticText(self, label="Welcome to ReTrainer", pos=(20,10));
         self.infotext = wx.StaticText(self, label=description, pos=(20,40), style=wx.TE_MULTILINE|wx.BORDER_NONE|wx.TE_READONLY, size=(930, 130))
         self.welcomeBox.Add(self.welcomeText)
         self.welcomeBox.Add(self.infotext)
